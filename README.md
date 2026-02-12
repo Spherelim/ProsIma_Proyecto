@@ -1,3 +1,3 @@
 ## Proyecto de Procesamiento de Imagenes
 
-Solamente tenemos paginas XD
+Diseño responsivo del fronted de SoccerScan
