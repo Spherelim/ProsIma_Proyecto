@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url("Public/image/redFound.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#titulo{
+    font-family: Quicksilver;
+}
+
+
+#subtitulo{
+     font-family: Staatliches;
+}
+
+.wrapper-menu{
+    
+}
+
+#btn{
+    font-family: sunshine;
+}
