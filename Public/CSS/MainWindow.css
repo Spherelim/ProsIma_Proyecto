@@ -43,19 +43,24 @@
 
 
 body{
-    background-image: url("Public/image/redFound.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+ 
+    background-image: url("/Public/image/redFound.png");
+   
+    
 }
 
 #titulo{
     font-family: Quicksilver;
+    font-size: 80px;
+    color:#FFFFFF;
 }
 
 
 #subtitulo{
      font-family: Staatliches;
+     font-size: 60px;
+     color:#FFFFFF;
+
 }
 
 .wrapper-menu{
@@ -64,4 +69,7 @@ body{
 
 #btn{
     font-family: sunshine;
+    font-size: 60px;
+    color:#FFFFFF;
+    background-color: #3546F8;
 }
