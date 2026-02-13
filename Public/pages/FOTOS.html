@@ -6,7 +6,26 @@
     <link rel="stylesheet" href="Public/CSS/Fotos.css">
     <title>Soccer Scan</title>
 </head>
+
 <body>
     
+    <div id="navbar"></div>
+
+    <!--
+    Mau:
+    aqui basicamente tenemos que agarrar la camara...
+    honestamente no sé que ponerte aquí.
+    -->
+
+    <div id="camera-container">
+        <video id="camera-stream" autoplay></video>
+        <button id="capture-button">Capturar Foto</button>
+        <canvas id="photo-canvas" style="display: none;"></canvas>
+    </div>
+
 </body>
+
+<!-- Cript Para Implementar NavBar -->
+<script src="Public/scripts/navbar.js"></script>
+
 </html>

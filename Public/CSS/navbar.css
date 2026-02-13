@@ -1,0 +1,51 @@
+
+/*
+Mau:
+Es un Ejemplo basico, tampoco estoy haciendo una gran maravilla xd
+pero es lo mismo que digo del HTML, solo lo modificas aqui y pues ya se cambia en todas.
+*/
+
+.main-header {
+    whidth: 100%;
+    background: rgb(26, 138, 91);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+.navbar-logo {
+    font-family: "Staatliches";
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+.navbar-menu a {
+    font-family: "Staatliches";
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar-menu a::after {
+    content:  "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00eaff;
+    transition: width 0.3s;
+}
+
+.navbar-menu a:hover::after {
+    color: #000000;
+}
