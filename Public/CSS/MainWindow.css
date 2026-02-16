@@ -68,11 +68,11 @@ body{
 
 }
 
-.wrapper-menu{
-      
-      display: grid;
-      place-items: center;
-     
+.wrapper-menu {
+
+    display: grid;
+    place-items: center;
+   
 }
 
 #btn{
