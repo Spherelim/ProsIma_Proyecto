@@ -51,8 +51,11 @@ body{
 
 #titulo{
     font-family: Quicksilver;
+    font-style: italic;
     font-size: 80px;
     color:#FFFFFF;
+    text-align: center;
+    margin-top: 120px;
 }
 
 
@@ -60,16 +63,31 @@ body{
      font-family: Staatliches;
      font-size: 60px;
      color:#FFFFFF;
+     text-align: center;
+     margin: 20px;
 
 }
 
 .wrapper-menu{
-    
+      
+      display: grid;
+      place-items: center;
+     
 }
 
 #btn{
+    
+    text-decoration: none;
+    width: 348px;
+    height: 72px;
     font-family: sunshine;
     font-size: 60px;
     color:#FFFFFF;
     background-color: #3546F8;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #1f1e1e;
+    text-align: center;
+    margin-bottom: 20px;
+    
 }
