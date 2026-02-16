@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+ 
+    background-image: url("/Public/image/blueFound.png");
+   
+    
+}
+
+
+#titulo{
+    font-family: Quicksilver;
+    font-style: italic;
+    font-size: 80px;
+    color:#FFFFFF;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+.container{
+    background: url("../image/div-estadistica.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1020px;
+    height: 300px;
+    border-radius: 40px;
+    background-color: #D9D9D9;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+table{
+    width: 1020px;
+    height: 300px;
+    margin: 0 auto;
+}
+img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    
+    
+}
+
+th{
+
+    font-family:  Staatliches ;
+    font-size: 50px;
+    color: #1A1F7A;
+
+}
+
+
+td{
+    font-family:  sunshine ;
+    font-size: 50px;
+    color: #3546F8;
+    text-align: center;
+    vertical-align: center;
+    
+}
+
+.submenu{
+    text-align: center;
+    margin: 40px;
+}
+#btnBack{
+
+    text-decoration: none;
+    width: 385px;
+    height: 140px;
+    font-family: sunshine;
+    font-size: 20px;
+    color:#3546F8;
+    background-color: #FFFFFF;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #1f1e1e;
+    text-align:left;
+    margin: 20px;
+    padding: 10px;  
+
+}

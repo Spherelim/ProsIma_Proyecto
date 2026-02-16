@@ -3,52 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Public/CSS/Estadisticas.css">
+    <link rel="stylesheet" href="../CSS/Estadisticas.css">
     <title>Soccer Scan</title>
 </head>
 
-<!-- 
-Mau: 
-Por que no jala el NavBar?!!  😭
-PDT: si sé Poner Emojis  ( Windows + . ) 🗣️
--->
 
 <body> 
     
-    <div id="navbar"></div>
+   
+  
+   <h1 id="titulo">Listado</h1>
+
+   <div class="containerCard">
 
     <div class="container">
-        <h1>Estadísticas</h1>
-        <p>Aquí puedes ver las estadísticas de tu equipo Favorito!!.</p>
+        
         <div class="Tabla">
             <table>
                 <tr>
-                    <td>Equipo A</td>
-                    <td>10</td>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>20</td>
-                    <td>10</td>
+                    <th>Posicion</th>
+                    <th>Pais</th>
+                    <th>España</th>
                 </tr>
                 <tr>
-                    <td>Equipo B</td>
-                    <td>10</td>
-                    <td>5</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>18</td>
-                    <td>12</td>
+                    <td>1</td>
+                    <td><img src="../image/ESPAÑA_Escudo.png" alt=""></td>
+                    <td>17%</td>
+                    
                 </tr>
+               
                 <!-- Agrega más filas según sea necesario -->
             </table>
         </div>
     </div>
 
+    
+    <div class="container">
+        
+        <div class="Tabla">
+            <table>
+                <tr>
+                    <th>Posicion</th>
+                    <th>Pais</th>
+                    <th>España</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../image/ESPAÑA_Escudo.png" alt=""></td>
+                    <td>17%</td>
+                    
+                </tr>
+               
+                <!-- Agrega más filas según sea necesario -->
+            </table>
+        </div>
+    </div>
+
+   </div>
+    
+
+   <div class="submenu">
+ <a  id="btnBack"  href="../pages/estadisticasMenu.html">regresar</a>
+   </div>
+  
 
 </body>
 
-<!-- Cript Para Implementar NavBar -->
-<script src="/Public/components/navbar.html"></script>
 
 </html>
