@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Public/CSS/RA_Ready.css">
-    <title>Soccer Scan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cámara en HTML</title>
+  <style>
+    #video {
+      width: 640px;
+      height: 480px;
+      background: #000;
+    }
+  </style>
 </head>
-
 <body>
-    
-    <div id="navbar"></div>
+  <h1>Acceso a la cámara</h1>
+  <video id="video" autoplay playsinline></video>
 
-    <!--
-    Mau:
-    Me tienes que explicar esto... "RA_Ready", "RA_Seat" y "RA_Select".
-    -->
-    
+  <script>
+    // Pedir acceso a la cámara
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        const video = document.getElementById('video');
+        video.srcObject = stream;
+      })
+      .catch(error => {
+        console.error("Error al acceder a la cámara:", error);
+      });
+  </script>
 </body>
-
-<!-- Cript Para Implementar NavBar -->
-<script src="Public/scripts/navbar.js"></script>
-
 </html>

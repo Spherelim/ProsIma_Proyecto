@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Public/CSS/Trivia_Preguntas.css">
+    <link rel="stylesheet" href="../CSS/Trivia_Preguntas.css">
     <title>Soccer Scan</title>
 </head>
 
 <body>
-    
-    <div id="navbar"></div>
 
-    <!-- 
-    Mau:
-    Seccion de preguntas de Trivia.
-    Proximamente veremos que rollo con como cambiar las preguntas.
-    -->
 
-    <div class="imagen">
-        <img src="Public/Images/trivia_image.png" alt="Trivia Image" />
-    </div>
+    <h4 id="titulo">Pregunta 1</h4>
+    <p id="pregunta">¿Cuál es el país con más Copas Mundiales ganadas?</p>
 
-    <div class="question-section">
-        <h2>Pregunta 1:</h2>
-        <p>¿Cuál es el país con más Copas Mundiales ganadas?</p>
-        <ul>
-            <li>A) Alemania</li>
-            <li>B) Brasil</li>
-            <li>C) Italia</li>
-            <li>D) Argentina</li>
+    <div class="wrapper-preguntas">
+
+
+        <ul class="primeraFila">
+            <li class="btn">A) Alemania</li>
+            <li class="btn">B) Brasil</li>
+
         </ul>
 
-</body>
+        <ul class="segundaFila">
 
-<!-- Cript Para Implementar NavBar -->
-<script src="Public/scripts/navbar.js"></script>
+            <li class="btn">C) Italia</li>
+            <li class="btn">D) Argentina</li>
+        </ul>
+
+    </div>
+
+
+    <div class="submenu">
+        <a href="Trivia_Portada.html" id="btnBack"> Regresar</a>
+        <a href="Trivia_Preguntas.html" id="btnNext"> Siguiente</a>
+    </div>
+
+
+
+</body>
 
 </html>

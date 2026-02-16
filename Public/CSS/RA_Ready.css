@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cámara en HTML</title>
+  <style>
+    #video {
+      width: 640px;
+      height: 480px;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Acceso a la cámara</h1>
+  <video id="video" autoplay playsinline></video>
+
+  <script>
+    // Pedir acceso a la cámara
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        const video = document.getElementById('video');
+        video.srcObject = stream;
+      })
+      .catch(error => {
+        console.error("Error al acceder a la cámara:", error);
+      });
+  </script>
+</body>
+</html>

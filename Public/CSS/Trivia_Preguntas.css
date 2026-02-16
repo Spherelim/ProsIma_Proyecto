@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+ 
+    background-image: url("/Public/image/blueFound.png");
+   
+    
+}
+
+#titulo{
+    font-family: Quicksilver;
+    font-style: italic;
+    font-size: 80px;
+    color:#FFFFFF;
+    text-align: center;
+    margin-top: 120px;
+}
+
+
+#pregunta{
+     font-family: Staatliches;
+     font-size: 40px;
+     color:#FFFFFF;
+     text-align: center;
+     margin: 20px;
+
+}
+
+.wrapper-preguntas{
+
+ place-items: center;
+ justify-content: center;
+}
+
+.primeraFila {
+
+    list-style-type: none;
+    display: flex;
+   
+}
+
+.segundaFila {
+
+    list-style-type: none;
+    display: flex;
+   
+}
+
+.btn{
+    
+    text-decoration: none;
+    width: 385px;
+    height: 140px;
+    font-family: sunshine;
+    font-size: 60px;
+    color:#FFFFFF;
+    background-color: #C30007;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #1f1e1e;
+    text-align:left;
+    margin: 20px;
+    padding: 30px;   
+}
+
+.submenu{
+margin-top: 40px;
+text-align: center;
+}
+
+#btnBack{
+
+    text-decoration: none;
+    width: 385px;
+    height: 140px;
+    font-family: sunshine;
+    font-size: 20px;
+    color:#3546F8;
+    background-color: #FFFFFF;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #1f1e1e;
+    text-align:left;
+    margin: 20px;
+    padding: 10px;  
+
+}
+
+#btnNext{
+ text-decoration: none;
+    width: 385px;
+    height: 140px;
+    font-family: sunshine;
+    font-size: 20px;
+    color:#3546F8;
+    background-color: #FFFFFF;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #1f1e1e;
+    text-align:left;
+    margin: 20px;
+    padding: 10px;  
+}
+
