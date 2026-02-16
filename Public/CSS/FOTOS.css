@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+ 
+    background-image: url("/Public/image/grayFound.png");
+   
+    
+}
+
+
+.wrapper-trivia{
+      
+    background-color: #3546F8;
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    width: 1100px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #3546F8;
+}
+
+.close-btn {
+ 
+  position: fixed;   
+  top: 10px;        
+  right: 10px;       
+  font-size: 40px;  
+  cursor: pointer;   
+     
+}
+
+.subFiltro{
+   
+    text-align: center;
+    margin: 20px;
+}
+
+.sunbmenu-btn{
+    text-align: center;
+
+}
+#btn{
+
+    
+    width: 200px;
+    height: 40px;
+    font-family: sunshine;
+    font-size: 20px;
+    color:#3546F8;
+    background-color: #FFFFFF;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #1f1e1e;
+    text-align:left;
+    margin: 20px;
+    padding: 10px;  
+
+}
