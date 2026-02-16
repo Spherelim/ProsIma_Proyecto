@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Public/CSS/Videos_Questions.css">
+    <link rel="stylesheet" href="../CSS/Videos_Questions.css">
     <title>Soccer Scan</title>
 </head>
 
 <body>
-    
-    <div id="navbar"></div>
 
-    <!--
-    Mau:
-    Tambien.., no sé lo que vaz hacer aquí.
-    -->
+    <div class="close-btn"> <a href="MainWindow.HTML">✖</a></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
+    <nav id="submenu-preguntas">
+        <a href="#">Pregunta 1</a>
+        <a href="#">Pregunta 2</a>
+        <a href="#">Pregunta 3</a>
+        <a href="#">Pregunta 4</a>
+        <a href="#">Pregunta 5</a>
+        <a href="#">Pregunta 6</a>
+        <a href="#">Pregunta 7</a>
+        <a href="#">Pregunta 8</a>
+        <a href="#">Pregunta 9</a>
+        <a href="#">Pregunta 10</a>
+
+    </nav>
+
+    <script> function toggleMenu() { document.getElementById("submenu-preguntas").classList.toggle("active"); } </script>
+
+    <h4 id="titulo">Pregunta 1</h4>
+    <p id="pregunta">¿Cuál es el país con más Copas Mundiales ganadas?</p>
+    <div class="cardQuestion">
+
+        <div class="card">
+            <img class="imgVideo"      src="../image/box-question.png" alt=""  >
+
+        </div>
+
+
+    </div>
+
+    <div class="submenu">
+    <a href="" id="filtro">Filtros</a>
+
+    </div>
 </body>
 
-<!-- Cript Para Implementar NavBar -->
-<script src="Public/scripts/navbar.js"></script>
 
 </html>
