@@ -41,16 +41,25 @@
     box-sizing: border-box;
 }
 
+/*Aqui empieza el diseño de la pagina*/
 
 body{
  
     background-image: url("/Public/image/grayFound.png");
    
+    /* background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh; */
     
 }
 
 
-.wrapper-trivia{
+.wrapper-Foto{
       
     background-color: #3546F8;
     border-radius: 25px;
@@ -67,6 +76,19 @@ body{
 a{
     text-decoration: none;
     color: #3546F8;
+}
+
+.phone-camera{
+    width: 360px;
+    aspect-ratio: 9/16;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+#camera{
+    transform: scaleX(-1);
 }
 
 .close-btn {
@@ -89,7 +111,7 @@ a{
     text-align: center;
 
 }
-#btn{
+/* #btn{
 
     
     width: 200px;
@@ -105,4 +127,4 @@ a{
     margin: 20px;
     padding: 10px;  
 
-}
+} */

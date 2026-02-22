@@ -13,15 +13,17 @@
 
     <div class="close-btn"> <a href="MainWindow.HTML">✖</a></div>
 
-    <div class="wrapper-trivia">
+    <div class="wrapper-Foto">
 
-        <video id="camara" width="800" autoplay playsinline></video>
+        <div class="phone-camera">
+            <video id="camara" autoplay playsinline></video>
+        </div>
 
 
-        <div class="submenuBtn">
+        <!-- <div class="submenuBtn">
             <button id="btn" onclick="abrirCamara()">Abrir cámara</button>
             <button id="btn" onclick="cerrarCamara()">Cerrar cámara</button>
-        </div>
+        </div> -->
 
     </div>
 
@@ -29,29 +31,7 @@
         <img id="filtros" src="../image/filtros.png" alt="">
     </div>
 
-    <script>
-        let stream; // variable para guardar el flujo de la cámara
-
-        function abrirCamara() {
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function (s) {
-                    stream = s;
-                    document.getElementById('camara').srcObject = stream;
-                })
-                .catch(function (error) {
-                    console.log("Error al abrir la cámara: ", error);
-                });
-        }
-
-        function cerrarCamara() {
-            if (stream) {
-                // Detiene todas las pistas de video
-                stream.getTracks().forEach(track => track.stop());
-                document.getElementById('camara').srcObject = null;
-            }
-        }
-
-    </script>
+    <script src="/Public/scripts/camara.js"></script>
 
 </body>
 
