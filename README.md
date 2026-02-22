@@ -1,3 +1,5 @@
 ## Proyecto de Procesamiento de Imagenes
 
-Diseño responsivo del fronted de SoccerScan
+Integrantes del equipo:
+|-> Martha Lizbeth Hernandez Hernandez
+|-> Mauricio Eleuterio Ortiz Rodriguez
