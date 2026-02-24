@@ -7,7 +7,7 @@ const scene = new THREE.Scene();
 
 // Cámara 3D
 const camera = new THREE.PerspectiveCamera(
-    70,
+    70, // más cercas o más lejos
     container.clientWidth / container.clientHeight,
     0.1,
     1000

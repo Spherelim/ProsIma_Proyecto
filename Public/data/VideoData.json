@@ -1,0 +1,10 @@
+{
+    "video_1":{
+        "Desbloqueado": false,
+        "Ruta": "./public/video/video.mp3",
+        "imagen": "./public/image/imagen.jpg"
+    }
+
+
+
+}

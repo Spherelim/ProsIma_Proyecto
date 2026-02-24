@@ -1,0 +1,6 @@
+{
+    "imagen":{
+        "Nombre":"Messi",
+        "Ruta": "./public/image/imagen.jpg"
+    }
+}
