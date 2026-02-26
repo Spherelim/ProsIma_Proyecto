@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/RA_Portada.css">
     <title>Soccer Scan</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 
 <body>
-    
-    <div class="close-btn"> <a href="/index.html">✖</a></div>
-    <div class="wrapper-ra">
 
-    <img id="icon-ra" src="../image/icono-ra.png" alt="">
-    <h1 id="titulo">RA</h1>
-    <p id="txt">Escanea escudos de la selección
-    o coloca tu jugador favorito </p>
+    <div class="close-btn"> <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
+            href="/index.html">
+            <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal">
+            <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover">
 
-    <a id="btn"  href="../pages/RA_Ready.html">Entendido</a>
+        </a>
+
 
     </div>
-    
+    <div class="wrapper-ra">
+
+        <img id="icon-ra" src="../image/icono-ra.png" alt="">
+        <h1 id="titulo">RA</h1>
+        <p id="txt">Escanea escudos de la selección
+            o coloca tu jugador favorito </p>
+
+        <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+            <a href="../pages/RA_Ready.html">Entendido</a>
+        </button>
+
+    </div>
+
 
 </body>
 
