@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Public/CSS/MainWindow.css">
     <title>Soccer Scan</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
 
-    <H1 id="titulo">SOCCER SCAN</H1>
+    <!--  <section  class="animacion">
+        <marquee behavior="alternate" scrollamount="40">
 
-    <H2 id = "subtitulo">Menu principal</H2>
+            <marquee behavior="alternate" direction="down" scrollamount="30">
+                <img src="/Public/image/balon_2026.png" alt="" class="ball">
+            </marquee>
+
+        </marquee>
+    </section> -->
 
 
-    <div class="wrapper-menu">
-    
-        <a href="Public/pages/RA_Portada.html" id="btn"> RA </a>
-        <a href="Public/pages/Trivia_Portada.html" id="btn"> TRIVIA </a>
-        <a href="Public/pages/videoMenu.html" id="btn"> VIDEOS </a>
-        <a href="Public/pages/FOTOS.html" id="btn">FOTOS</a>
-        <a href="Public/pages/estadisticasMenu.html" id="btn"> ESTADISTICAS </a>
+    <div class="indexConteiner">
+        <H1 id="titulo">SOCCER SCAN</H1>
+
+        <H2 id="subtitulo">Menu principal</H2>
+
+
+        <div class="wrapper-menu">
+            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+                <a href="Public/pages/RA_Portada.html" id="btn"> RA </a>
+            </button>
+
+
+
+            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <a href="Public/pages/Trivia_Portada.html" id="btn"> TRIVIA </a>
+            </button>
+
+            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <a href="Public/pages/videoMenu.html" id="btn"> VIDEOS </a>
+            </button>
+
+            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <a href="Public/pages/FOTOS.html" id="btn">FOTOS</a>
+            </button>
+            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <a href="Public/pages/estadisticasMenu.html" id="btn"> ESTADISTICAS </a>
+            </button>
+
+
+
+
+        </div>
+
     </div>
+
 
 </body>
 
