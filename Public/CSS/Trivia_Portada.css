@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: "Quicksilver";
     src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
@@ -42,16 +43,16 @@
 }
 
 
-body{
- 
+body {
+
     background-image: url("/Public/image/grayFound.png");
-   
-    
+
+
 }
 
 
-.wrapper-trivia{
-      
+.wrapper-trivia {
+
     background-color: #3546F8;
     border-radius: 25px;
     display: grid;
@@ -65,37 +66,37 @@ body{
 
 
 
-#titulo{
+#titulo {
     font-family: sunshine;
     font-style: italic;
     font-size: 80px;
-    color:#FFFFFF;
+    color: #FFFFFF;
     text-align: center;
     margin-top: 200px;
 }
 
 
-#txt{
-    
+#txt {
+
     font-family: Afacado;
     color: #FFFFFF;
     text-align: center;
     font-size: 40px;
-    
+
 }
 
 
-#btn{
-    
+#btn {
+
     text-decoration: none;
     width: 252px;
     height: 80px;
     font-family: Afacado;
-    font-size:  30px;
+    font-size: 30px;
     font-style: italic;
-    color:#1A1F7A;
+    color: #1A1F7A;
     background-color: #D9D9D9;
-    border:none;
+    border: none;
     border-radius: 25px;
     box-shadow: 4px 4px 10px #1f1e1e;
     margin-bottom: 20px;
@@ -104,17 +105,29 @@ body{
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: #3546F8;
 }
 
 .close-btn {
- 
-  position: fixed;   
-  top: 10px;        
-  right: 10px;       
-  font-size: 40px;  
-  cursor: pointer;   
-     
+
+    position: fixed;
+    top: 70px;
+    right: 320px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.icon.hover {
+    display: none;
+}
+
+a:hover .icon.normal {
+    display: none;
+}
+
+a:hover .icon.hover {
+    display: inline;
 }
