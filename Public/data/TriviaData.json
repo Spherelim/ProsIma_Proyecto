@@ -1,42 +1,122 @@
 {
-    "Pregunta_1":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_1": {
+        "Texto": "¿Quienes son los Jugadores con más goles en el Mundial 2022?",
+        "Acertivo": false,
+        "Respuesta": "Leonel Messi y kilian Mbappé",
+        "Opciones": [
+            "Cristiano Ronaldo y Neymar",
+            "Leonel Messi y kilian Mbappé",
+            "Kane y Griezmann",
+            "Modric y Benzema"
+        ],
+        "correcta": 1
     },
-    "Pregunta_2":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_2": {
+        "Texto": "¿Que Jugador Metio un gol con la mano?",
+        "Acertivo": false,
+        "Respuesta": "Diego Maradona",
+        "Opciones": [
+            "Pelé",
+            "Maradona",
+            "Ronaldo",
+            "Messi"
+        ],
+        "correcta": 1
     },
-    "Pregunta_3":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_3": {
+        "Texto": "¿Fue penal?",
+        "Acertivo": false,
+        "Respuesta": "No",
+        "Opciones": [
+            "Si",
+            "No",
+            "Tal vez",
+            "Ninguna de las anteriores"
+        ],
+        "correcta": 1
     },
-    "Pregunta_4":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_4": {
+        "Texto": "¿En que mundial Colombia metio autogol y quien lo metio?",
+        "Acertivo": false,
+        "Respuesta": "En el mundial de 1994, Autogol de Andrés Escobar",
+        "Opciones": [
+            "Mundial 1998, Autogol de Valderrama",
+            "Mundial 1990, Autogol de Higuita",
+            "Mundial 1994, Autogol de Andrés Escobar",
+            "Mundial 2002, Autogol de Yepes"
+        ],
+        "correcta": 2
     },
-    "Pregunta_5":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_5": {
+        "Texto": "¿Quien fue el Pais que Nego la cede del Mundial?",
+        "Acertivo": false,
+        "Respuesta": "Colombia",
+        "Opciones": [
+            "Venezuela",
+            "Ecuador",
+            "Perú",
+            "Colombia"
+        ],
+        "correcta": 3
     },
-    "Pregunta_6":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_6": {
+        "Texto": "¿En que mundial Zidane Dio un cabezaso a otro jugador?",
+        "Acertivo": false,
+        "Respuesta": "Mundial de 2006, Alemania",
+        "Opciones": [
+            "Mundial 2002, Corea-Japón",
+            "Mundial 2006, Alemania",
+            "Mundial 2010, Sudáfrica",
+            "Mundial 1998, Francia"
+        ],
+        "correcta": 1
     },
-    "Pregunta_7":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_7": {
+        "Texto": "¿Cuando fue la primera vez que España gana un mundial?",
+        "Acertivo": false,
+        "Respuesta": "En el Mundial de 2010, Sudafrica",
+        "Opciones": [
+            "Mundial 2010, Sudáfrica",
+            "Mundial 2006, Alemania",
+            "Mundial 2014, Brasil",
+            "Mundial 2002, Corea-Japón"
+        ],
+        "correcta": 0
     },
-    "Pregunta_8":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_8": {
+        "Texto": "¿En que año fue la primera aparicion de pelé y los guantes de los arqueros?",
+        "Acertivo": false,
+        "Respuesta": "En el Mundial de 1958, Suecia",
+        "Opciones": [
+            "Mundial 1950, Brasil",
+            "Mundial 1954, Suiza",
+            "Mundial 1958, Suecia",
+            "Mundial 1962, Chile"
+        ],
+        "correcta": 2
     },
-    "Pregunta_9":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_9": {
+        "Texto": "¿Que equipo gano un mundial con un gol inexistente y en que mundial?",
+        "Acertivo": false,
+        "Respuesta": "Inglaterra, Mundial de 1966, Gol de Geoff Hurst",
+        "Opciones": [
+            "Brasil, 1970",
+            "Inglaterra, 1966",
+            "Alemania, 1974",
+            "Argentina, 1978"
+        ],
+        "correcta": 1
     },
-    "Pregunta_10":{
-        "Texto":"¿Quien es el Jugador conmás Goles en el Mundial 2018?",
-        "Acertivo": false
+    "Pregunta_10": {
+        "Texto": "¿Como se llamaba el perro que encontro la copa robada?",
+        "Acertivo": false,
+        "Respuesta": "Pickles",
+        "Opciones": [
+            "Rex",
+            "Buddy",
+            "Pickles",
+            "Max"
+        ],
+        "correcta": 2
     }
 }

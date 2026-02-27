@@ -10,16 +10,16 @@
 
 <body>
 
-    <div class="Pregunta">
+    <div class="Preguntas">
 
-        <h4 id="titulo">Pregunta 1</h4>
-        <p id="pregunta">¿Cuál es el país con más Copas Mundiales ganadas?</p>
+        <h4 id="titulo"></h4>
+        <p id="pregunta"></p>
 
     </div>
 
     <div class="wrapper-preguntas">
 
-        <ul class="primeraFila">
+        <!-- <ul class="primeraFila">
             <li class="btn">A) Alemania</li>
             <li class="btn">B) Brasil</li>
 
@@ -29,17 +29,17 @@
 
             <li class="btn">C) Italia</li>
             <li class="btn">D) Argentina</li>
-        </ul>
+        </ul> -->
 
     </div>
 
 
     <div class="submenu">
-        <a href="Trivia_Portada.html" id="btnBack"> Anterior</a>
-        <a href="Trivia_Preguntas.html" id="btnNext"> Siguiente</a>
+        <button onclick="window.location.href='Trivia_Portada.html'" id="btnBack">Anterior</button>
+        <button onclick="siguientePregunta()" id="btnNext">Siguiente</button>
     </div>
 
-
+    <script src="../scripts/Trivia_Quest/Preguntas.js"></script>
 
 </body>
 

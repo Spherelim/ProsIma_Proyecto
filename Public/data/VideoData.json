@@ -1,8 +1,15 @@
 {
     "video_1":{
         "Desbloqueado": false,
-        "Ruta": "./public/video/video.mp3",
-        "imagen": "./public/image/imagen.jpg"
+        "Ruta": "/Public/videos/video_1.mp4"
+    },
+    "video_2":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_2.mp4"
+    },
+    "video_9":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_9.mp4"
     }
 
 
