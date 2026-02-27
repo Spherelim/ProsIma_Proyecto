@@ -1,3 +1,19 @@
+:root {
+
+
+    --color-AC: #85B0F9;
+    --color-AM: #3546F8;
+    --color-AF: #1A1F7A;
+    --color-R: #C30007;
+    --color-B: #D9D9D9;
+    --letra-Afacado: 'Afacado', Afacad-VariableFont_wght;
+    --letra-Quicksilver: 'Quicksilver', Quicksilver;
+    --letra-Staatliches: 'Staatliches', Staatliches-Regular;
+    --letra-sunshine: 'sunshine', sunshineformulaDEMO;
+}
+
+
+
 @font-face {
     font-family: "Afacado";
     src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
@@ -8,6 +24,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: "Quicksilver";
     src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
@@ -42,105 +59,138 @@
 }
 
 
-body{
- 
+body {
+
     background-image: url("/Public/image/blueFound.png");
     overflow-y: hidden;
-    
+
 }
 
-#titulo{
+#titulo {
     font-family: Quicksilver;
     font-style: italic;
     font-size: 80px;
-    color:#FFFFFF;
+    color: #FFFFFF;
     text-align: center;
     margin-top: 120px;
 }
 
 
-#pregunta{
-     font-family: Staatliches;
-     font-size: 40px;
-     color:#FFFFFF;
-     text-align: center;
-     margin: 20px;
+#pregunta {
+    font-family: Staatliches;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 20px;
 
 }
 
-.wrapper-preguntas{
+.wrapper-preguntas {
 
- place-items: center;
- justify-content: center;
+    place-items: center;
+    justify-content: center;
 }
 
 .primeraFila {
 
     list-style-type: none;
     display: flex;
-   
+
 }
 
 .segundaFila {
 
     list-style-type: none;
     display: flex;
-   
+
 }
 
-.btn{
-    
+.btn {
+
     text-decoration: none;
-    width: 385px;
-    height: 140px;
+    width: 600px;
+    height: 150px;
     font-family: sunshine;
-    font-size: 60px;
-    color:#FFFFFF;
+    font-size: 50px;
+    color: #FFFFFF;
     background-color: #C30007;
-    border:none;
+    border: none;
     border-radius: 20px;
     box-shadow: 4px 4px 10px #1f1e1e;
-    text-align:left;
+    text-align: center;
     margin: 20px;
-    padding: 30px;   
+    padding: 20px 0px 20px 0px;
+
+    transition: background-color 0.5s ease, color 0.5s ease;
+    transition-delay: 0.2s;
+
+    transition: transform 0.2s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
-.submenu{
-margin-top: 10px;
-text-align: center;
+.btn:hover {
+    background-color: #FFFFFF;
+    color: var(--color-AM);
+    cursor: pointer;
+
 }
 
-#btnBack{
+.btn:active {
+    transform: scale(1.1);
+}
+
+.submenu {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#btnBack {
 
     text-decoration: none;
     width: 149px;
     height: 50px;
     font-family: sunshine;
     font-size: 20px;
-    color:#3546F8;
+    color: #3546F8;
     background-color: #FFFFFF;
-    border:none;
+    border: none;
     border-radius: 20px;
     box-shadow: 4px 4px 10px #1f1e1e;
-    text-align:center;
+    text-align: center;
     margin: 20px;
-    padding: 10px;  
+    padding: 10px;
 
 }
 
-#btnNext{
+.btnClick{
+    transition: transform 0.25s ease, background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.btnClick:hover {
+    background-color: var(--color-R);
+    color: #FFFFFF;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 6px 6px 14px #1f1e1e;
+}
+
+.btnClick:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 6px #1f1e1e inset;
+}
+
+
+#btnNext {
     text-decoration: none;
     width: 149px;
     height: 50px;
     font-family: sunshine;
     font-size: 20px;
-    color:#3546F8;
+    color: #3546F8;
     background-color: #FFFFFF;
-    border:none;
+    border: none;
     border-radius: 20px;
     box-shadow: 4px 4px 10px #1f1e1e;
-    text-align:center;
+    text-align: center;
     margin: 20px;
-    padding: 10px;  
+    padding: 10px;
 }
-
