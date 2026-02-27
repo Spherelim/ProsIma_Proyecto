@@ -6,6 +6,16 @@
   <title>Cámara en HTML</title>
   <link rel="stylesheet" href="../CSS/RA_Ready.css">
 
+  <script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-three.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-three.prod.js"></script>
 
@@ -18,6 +28,18 @@
 
         <div class="phone-camera">
             <video id="camara" autoplay playsinline></video>
+            <div id="coords-info" style="
+        position: absolute; 
+        top: 10px; 
+        left: 10px; 
+        color: white; 
+        background: rgba(0,0,0,0.5); 
+        padding: 5px; 
+        font-family: monospace;
+        pointer-events: none;
+        z-index: 10;">
+        Cargando coordenadas...
+    </div>
         </div>
 
 
