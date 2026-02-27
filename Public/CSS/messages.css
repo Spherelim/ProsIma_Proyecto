@@ -1,0 +1,86 @@
+:root{
+
+
+    --color-AC:#85B0F9;
+    --color-AM:#3546F8;
+    --color-AF:#1A1F7A;
+    --color-R:#C30007;
+    --color-B:#D9D9D9;
+    --letra-Afacado:'Afacado', Afacad-VariableFont_wght;
+    --letra-Quicksilver:'Quicksilver', Quicksilver;
+    --letra-Staatliches:'Staatliches', Staatliches-Regular;
+    --letra-sunshine:'sunshine', sunshineformulaDEMO;
+}
+
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodyCard{
+    background-color: #FFFFFF;
+}
+.titleCard{
+
+    font-family: var(--letra-Quicksilver);
+    color: var(--color-AM);
+}
+
+.colorIcon{
+
+    color: var(--color-R);
+}
+
+
+.btnOk{
+
+    background-color: var(--color-AM);
+    font-family: var(--letra-sunshine);
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.btnOk:hover{
+    background-color: var(--color-R);
+    border: none;
+    outline: none;
+}

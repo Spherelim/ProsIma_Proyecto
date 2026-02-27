@@ -15,23 +15,28 @@ fetch('../data/TriviaData.json')
 function mostrarPregunta(indice) {
 
     const wrapper = document.querySelector('.wrapper-preguntas');
-    
-    while(indice <= 10 && triviaData[`Pregunta_${indice}`]?.Acertivo){
+
+    while (indice <= 10 && triviaData[`Pregunta_${indice}`]?.Acertivo) {
         indice++;
     }
-    
-    if(indice > 10){
-        if(RespondioCorrectamenteTodaTrivia()){
-            alert("¡Felicidades! Has respondido correctamente todas las preguntas. 🎉");
+
+    if (indice > 10) {
+        if (RespondioCorrectamenteTodaTrivia()) {
+
+            Swal.fire({
+                title: "Drag me!",
+                icon: "success",
+                draggable: true
+            });
             document.getElementById('titulo').textContent = "¡Felicidades!";
             document.getElementById('pregunta').textContent = "Has respondido correctamente todas las preguntas. ¡Gracias por jugar!";
             wrapper.innerHTML = "";
-        }else{
+        } else {
             ReiniciarContador();
         }
         return;
     }
-    
+
     window.indice = indice;
     const pregunta = triviaData[`Pregunta_${indice}`];
 
@@ -49,20 +54,20 @@ function mostrarPregunta(indice) {
         </ul>
     `
 
-    wrapper.innerHTML = opcionesHTML;   
-   
+    wrapper.innerHTML = opcionesHTML;
+
 }
 
 function RespondioCorrectamenteTodaTrivia() {
     let todasCorrectas = true;
 
-    for(let i = 1; i <= 10; i++){
-        if(!triviaData[`Pregunta_${i}`].Acertivo){
+    for (let i = 1; i <= 10; i++) {
+        if (!triviaData[`Pregunta_${i}`].Acertivo) {
             todasCorrectas = false;
             break;
         }
     }
-    
+
     return todasCorrectas;
 }
 
@@ -77,17 +82,39 @@ function siguientePregunta() {
 }
 
 function respuestaCorrecta(esCorrecta) {
-    
-    if(esCorrecta){
-        triviaData[`Pregunta_${indice}`].Acertivo = true;
-        alert("¡Video Desbloqueado! 🎉");
 
+    if (esCorrecta) {
+        triviaData[`Pregunta_${indice}`].Acertivo = true;
+        /*  alert("¡Video Desbloqueado! 🎉"); */
+        Swal.fire({
+            title: "¡Video Desbloqueado!",
+            icon: "success",
+            draggable: true,
+            customClass: {
+                title: 'titleCard',
+                popup: 'bodyCard',
+                iconColor: 'colorIcon',
+                confirmButton: 'btnOk'
+
+            }
+        });
         indice++;
-        if(indice<=10){
+        if (indice <= 10) {
             mostrarPregunta(indice);
         }
-    }else{
-        alert("Respuesta incorrecta, intenta de nuevo.");
+    } else {
+        /* alert("Respuesta incorrecta, intenta de nuevo."); */
+        Swal.fire({
+            title: "Respuesta incorrecta, intenta de nuevo.",
+            icon: "error",
+            draggable: true,
+            customClass: {
+                title: 'titleCard',
+                popup: 'bodyCard',
+                iconColor: 'colorIcon',
+                confirmButton: 'btnOk'
+            }
+        });
     }
 }
 
