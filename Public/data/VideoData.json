@@ -1,17 +1,18 @@
 {
     "video_1":{
         "Desbloqueado": false,
-        "Ruta": "/Public/videos/video_1.mp4"
+        "Ruta": "/Public/videos/video_1.mp4",
+        "PreguntaAsociada": "Pregunta_1"
     },
     "video_2":{
         "Desbloqueado": false,
-        "Ruta": "/Public/videos/video_2.mp4"
+        "Ruta": "/Public/videos/video_2.mp4",
+        "PreguntaAsociada": "Pregunta_2"
     },
     "video_9":{
         "Desbloqueado": false,
-        "Ruta": "/Public/videos/video_9.mp4"
+        "Ruta": "/Public/videos/video_9.mp4",
+        "PreguntaAsociada": "Pregunta_9"
     }
-
-
 
 }

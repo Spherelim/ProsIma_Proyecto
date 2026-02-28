@@ -1,16 +1,19 @@
 let indice = 1;
 let triviaData = {};
+let videoData = {};
 let respuestasCorrectas = 0;
 
 // Cargar los datos de las preguntas desde el archivo JSON
-fetch('../data/TriviaData.json')
-    .then(response => response.json())
-    .then(data => {
-        triviaData = data;
+Promise.all([
+    fetch('../data/TriviaData.json').then(res => res.json()),
+    fetch('../data/VideoData.json').then(res => res.json())
+])
+    .then(([trivia, videos]) => {
+        triviaData = trivia;
+        videoData = videos;
         mostrarPregunta(indice);
     })
-    .catch(error => console.error('Error al cargar los datos de las preguntas:', error));
-
+    .catch(error => console.error('Error al cargar los datos:', error));
 
 function mostrarPregunta(indice) {
 
@@ -24,9 +27,16 @@ function mostrarPregunta(indice) {
         if (RespondioCorrectamenteTodaTrivia()) {
 
             Swal.fire({
-                title: "Drag me!",
+                title: "¡Gracias por participar!",
                 icon: "success",
-                draggable: true
+                draggable: true,
+                customClass: {
+                    title: 'titleCard',
+                    popup: 'bodyCard',
+                    iconColor: 'colorIcon',
+                    confirmButton: 'btnOk'
+
+                }
             });
             document.getElementById('titulo').textContent = "¡Felicidades!";
             document.getElementById('pregunta').textContent = "Has respondido correctamente todas las preguntas. ¡Gracias por jugar!";
@@ -84,7 +94,29 @@ function siguientePregunta() {
 function respuestaCorrecta(esCorrecta) {
 
     if (esCorrecta) {
-        triviaData[`Pregunta_${indice}`].Acertivo = true;
+         
+
+         // Actualizar trivia
+        const preguntaActual = `Pregunta_${indice}`;
+        triviaData[preguntaActual].Acertivo = true;
+        
+        const VideoDesbloquear = `video_${indice}`;
+        videoData[VideoDesbloquear].Desbloqueado = true;
+
+        // Buscar el video asociado a esta pregunta
+        // for (let videoKey in videoData) {
+        //     if (videoData[videoKey].PreguntaAsociada === preguntaActual) {
+        //         videoData[videoKey].Desbloqueado = true;
+               
+        //     }
+        // }
+        
+
+         
+        // Guardar cambios
+        // guardarEstadoVideos(videoData);
+        
+
         /*  alert("¡Video Desbloqueado! 🎉"); */
         Swal.fire({
             title: "¡Video Desbloqueado!",
@@ -98,6 +130,16 @@ function respuestaCorrecta(esCorrecta) {
 
             }
         });
+
+
+        const puto = triviaData[preguntaActual].Acertivo;
+        const marica = videoData[VideoDesbloquear].Desbloqueado;
+
+        alert("indice: " + indice +
+            "\n Video estado:" + marica +
+            "\n Pregunta estado:" + puto
+        );
+
         indice++;
         if (indice <= 10) {
             mostrarPregunta(indice);
@@ -124,3 +166,8 @@ function validarRespuesta(opcionSeleccionada) {
     const Validar = pregunta.correcta === opcionSeleccionada;
     respuestaCorrecta(Validar);
 }
+
+
+// function guardarEstadoVideos(videoData) {
+//     localStorage.setItem('videoData', JSON.stringify(videoData));
+// }
