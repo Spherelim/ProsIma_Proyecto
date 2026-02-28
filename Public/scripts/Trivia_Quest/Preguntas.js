@@ -114,8 +114,16 @@ function respuestaCorrecta(esCorrecta) {
 
          
         // Guardar cambios
-        // guardarEstadoVideos(videoData);
+        guardarEstadoVideos(videoData);
         
+        const puto = triviaData[preguntaActual].Acertivo;
+        const marica = videoData[VideoDesbloquear].Desbloqueado;
+
+        alert("indice: " + indice +
+            "\n Video estado:" + marica +
+            "\n Pregunta estado:" + puto
+        );
+
 
         /*  alert("¡Video Desbloqueado! 🎉"); */
         Swal.fire({
@@ -132,14 +140,7 @@ function respuestaCorrecta(esCorrecta) {
         });
 
 
-        const puto = triviaData[preguntaActual].Acertivo;
-        const marica = videoData[VideoDesbloquear].Desbloqueado;
-
-        alert("indice: " + indice +
-            "\n Video estado:" + marica +
-            "\n Pregunta estado:" + puto
-        );
-
+       
         indice++;
         if (indice <= 10) {
             mostrarPregunta(indice);
@@ -168,6 +169,6 @@ function validarRespuesta(opcionSeleccionada) {
 }
 
 
-// function guardarEstadoVideos(videoData) {
-//     localStorage.setItem('videoData', JSON.stringify(videoData));
-// }
+function guardarEstadoVideos(videoData) {
+    localStorage.setItem('videoData', JSON.stringify(videoData));
+}
