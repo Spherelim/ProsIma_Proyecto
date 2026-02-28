@@ -1,3 +1,17 @@
+:root {
+
+    --color-AC: #85B0F9;
+    --color-AM: #3546F8;
+    --color-AF: #1A1F7A;
+    --color-R: #C30007;
+    --color-B: #D9D9D9;
+    --letra-Afacado: 'Afacado', Afacad-VariableFont_wght;
+    --letra-Quicksilver: 'Quicksilver', Quicksilver;
+    --letra-Staatliches: 'Staatliches', Staatliches-Regular;
+    --letra-sunshine: 'sunshine', sunshineformulaDEMO;
+}
+
+
 @font-face {
     font-family: "Afacado";
     src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
@@ -8,6 +22,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: "Quicksilver";
     src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
@@ -42,71 +57,91 @@
 }
 
 
-body{
- 
+body {
+
     background-image: url("/Public/image/grayFound.png");
-   
-    
+    overflow-y: hidden;
+
 }
 
+.conteinerQuestion{
+position: fixed;
 
+top: 50%; 
+left: 50%;
+transform: translate(-50%, -50%);
+}
 
-#titulo{
+#titulo {
     font-family: Quicksilver;
     font-style: italic;
-    font-size: 80px;
-    color:#1A1F7A;
+    font-size: 70px;
+    color: #1A1F7A;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 50px; 
 }
 
 
-#pregunta{
-     font-family: Staatliches;
-     font-size: 40px;
-     color:#1A1F7A;
-     text-align: center;
-     margin: 20px;
+#pregunta {
+    font-family: Staatliches;
+    font-size: 30px;
+    color: #1A1F7A;
+    text-align: center;
+   
 
 }
 
-.card{
+.card {
     text-align: center;
     display: flex;
-   
+
 }
 
-.imgVideo{
-    width: 500px;
+.imgVideo {
+    width: 450px;
     height: auto;
     margin: 20px auto;
 }
 
-
+.wrapperOpc{
+    
+}
 .menu-toggle {
     font-size: 40px;
     font-family: sunshine;
     font-style: bold;
     cursor: pointer;
     color: #3546F8;
-    margin: 10px;
-  
+    margin: 50px 0px 0px 20px;
+    position: fixed; 
+    
+    z-index: 1100;
 }
+
+.menu-toggle:active{
+    
+}
+
 
 nav {
 
     display: none;
     position: fixed;
     background: #f4f4f4;
-    padding: 30px;
-    z-index: 1000px;
+    padding: 120px 0px 0px 30px;
+    z-index: 1000;
     width: 400px;
     height: 100%;
+
+   
 }
 
 nav.active {
     display: block;
-}
+    
+} 
+
+
 
 nav a {
 
@@ -120,6 +155,7 @@ nav a {
     background-size: cover;
     width: 300px;
     height: 65px;
+
 }
 
 nav a:hover {
@@ -128,39 +164,101 @@ nav a:hover {
 }
 
 
-a{
+a {
     text-decoration: none;
     color: #3546F8;
 }
 
-.close-btn {
- 
-  position: fixed;   
-  top: 10px;        
-  right: 10px;       
-  font-size: 40px;  
-  cursor: pointer;   
-     
+
+
+.submenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-
-.submenu{
-margin: 40px;
-text-align: center;
-}
-
-#filtro{
+.btnFiltro {
     text-decoration: none;
-    width: 385px;
-    height: 140px;
+    /* width: 385px;
+    height: 140px; */
     font-family: sunshine;
-    font-size: 20px;
-    color:#3546F8;
+    font-size: 15px;
+    color: #3546F8;
     background-color: #FFFFFF;
-    border:none;
+    border: none;
     border-radius: 20px;
-    box-shadow: 4px 4px 10px #1f1e1e;
-    text-align:center;
+    box-shadow: 2px 2px 10px #1f1e1e;
+    text-align: center;
     margin: 20px;
-    padding: 10px;  
+    padding: 10px;
+
+
+    transition: transform 0.25s ease, background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.btnFiltro:hover {
+    background-color: var(--color-AM);
+    transform: scale(1.05);
+    color: #FFFFFF;
+    box-shadow: 2px 2px 20px #1f1e1e;
+}
+
+.btnClick:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px #1f1e1e inset;
+}
+
+
+.wrapperFiltro {
+    text-align: center;
+    color: var(--color-AM);
+    font-family: var(--letra-sunshine);
+    /*  background-color: #FFFFFF; */
+    width: 350px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+}
+
+.wrapperFiltro option {
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #FFFFFF;
+    color: var(--color-AM);
+}
+
+
+.wrapperFiltro option:checked {
+    background-color: var(--color-AM);
+    color: #FFFFFF;
+}
+
+.wrapperFiltro:focus {
+    outline: none;
+}
+
+
+
+.close-btn {
+
+    position: fixed;
+    top: 100px;
+    right: 550px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+}
+
+.icon.hover {
+    display: none;
+}
+
+a:hover .icon.normal {
+    display: none;
+}
+
+a:hover .icon.hover {
+    display: inline;
 }

@@ -5,47 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Videos_Questions.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Soccer Scan</title>
+
 </head>
 
 <body>
 
-    <div class="close-btn"> <a href="index.html">✖</a></div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <nav id="submenu-preguntas">
-        <a href="#">Pregunta 1</a>
-        <a href="#">Pregunta 2</a>
-        <a href="#">Pregunta 3</a>
-        <a href="#">Pregunta 4</a>
-        <a href="#">Pregunta 5</a>
-        <a href="#">Pregunta 6</a>
-        <a href="#">Pregunta 7</a>
-        <a href="#">Pregunta 8</a>
-        <a href="#">Pregunta 9</a>
-        <a href="#">Pregunta 10</a>
+    <div class="close-btn">
+        <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: " href="/index.html">
+            <img src="/Public/image/icon-salirV2.png" alt="Regresar" class="icon normal">
+            <img src="/Public/image/icon-salirV.png" alt="Regresar" class="icon hover">
 
-    </nav>
+        </a>
+    </div>
 
-    <script> function toggleMenu() { document.getElementById("submenu-preguntas").classList.toggle("active"); } </script>
+    <div class="wrapperOpc">
+        <div class="menu-toggle"><img src="/Public/image/icon-opc.png" alt=""></div>
 
-    <h4 id="titulo">Pregunta 1</h4>
-    <p id="pregunta">¿Cuál es el país con más Copas Mundiales ganadas?</p>
-    <div class="cardQuestion">
+        <nav id="submenu-preguntas" class="hidden">
 
-        <div class="card">
-            <img class="imgVideo"      src="../image/box-question.png" alt=""  >
+
+            <a href="#">Pregunta 1</a>
+            <a href="#">Pregunta 2</a>
+            <a href="#">Pregunta 3</a>
+            <a href="#">Pregunta 4</a>
+            <a href="#">Pregunta 5</a>
+            <a href="#">Pregunta 6</a>
+            <a href="#">Pregunta 7</a>
+            <a href="#">Pregunta 8</a>
+            <a href="#">Pregunta 9</a>
+            <a href="#">Pregunta 10</a>
+
+        </nav>
+
+    </div>
+
+    <div class="conteinerQuestion">
+
+
+        <h4 id="titulo">Pregunta 1</h4>
+        <p id="pregunta">¿Cuál es el país con más Copas Mundiales ganadas?</p>
+        <div class="cardQuestion">
+
+            <div class="card">
+                <img class="imgVideo" src="../image/box-question.png" alt="">
+
+            </div>
+
 
         </div>
 
+        <div class="submenu">
 
+            <div class="containerSelect">
+                <select name="Filtros" id="opcFiltro" class="wrapperFiltro">
+                    <option value="default" class="opc">Selecciona un filtro</option>
+                    <option value="1" class="opc">Filtro 1</option>
+                    <option value="2" class="opc">Filtro 2</option>
+                    <option value="3" class="opc">Filtro 3</option>
+                    <option value="4" class="opc">Filtro 4</option>
+                </select>
+            </div>
+
+
+            <a href="#" class="btnFiltro">Aplicar</a>
+
+        </div>
     </div>
 
-    <div class="submenu">
-    <a href="" id="filtro">Filtros</a>
-
-    </div>
 </body>
 
+<script src="/Public/scripts/videosQuestion.js"></script>
 
 </html>
