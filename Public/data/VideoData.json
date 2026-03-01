@@ -9,10 +9,44 @@
         "Ruta": "/Public/videos/video_2.mp4",
         "PreguntaAsociada": "Pregunta_2"
     },
+    "video_3":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_3.mp4",
+        "PreguntaAsociada": "Pregunta_3"
+    },
+    "video_4":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_4.mp4",
+        "PreguntaAsociada": "Pregunta_4"
+    },
+    "video_5":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_5.mp4",
+        "PreguntaAsociada": "Pregunta_5"
+    },
+    "video_6":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_6.mp4",
+        "PreguntaAsociada": "Pregunta_6"
+    },
+    "video_7":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_7.mp4",
+        "PreguntaAsociada": "Pregunta_7 "
+    },
+    "video_8":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_8.mp4",
+        "PreguntaAsociada": "Pregunta_8"
+    },
     "video_9":{
         "Desbloqueado": false,
         "Ruta": "/Public/videos/video_9.mp4",
         "PreguntaAsociada": "Pregunta_9"
+    },
+    "video_10":{
+        "Desbloqueado": false,
+        "Ruta": "/Public/videos/video_10.mp4",
+        "PreguntaAsociada": "Pregunta_10"
     }
-
 }
