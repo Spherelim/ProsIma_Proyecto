@@ -1,4 +1,5 @@
-import * as THREE from 'three';
+// import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
@@ -32,7 +33,8 @@ export function cargarModelo(ruta, escena, onLoadCallback) {
                 objLoader.setMaterials(materials);
                 objLoader.setPath(basePath);
 
-                objLoader.load(fileName, (obj) => {
+                objLoader.load(fileName, (obj) => {                    
+
                     obj.scale.set(1, 1, 1);
                     obj.position.set(0, 0, 0);
                     escena.add(obj);
@@ -70,7 +72,6 @@ export function cargarModelo(ruta, escena, onLoadCallback) {
         (error) => console.error('Error al cargar el modelo:', error)
     );
 }
-
 
 
 export function ScaleModel(model,scale){

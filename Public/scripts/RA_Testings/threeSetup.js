@@ -1,11 +1,13 @@
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 //import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 const container = document.querySelector(".phone-camera");
 const infoPanel = document.querySelector("#coords-info");
 
 //importacion de models.js
 import {cargarModelo, ScaleModel} from './models.js';
+import { crearLuces } from './luces.js';
 
 // Escena
 let scene = null;  
@@ -55,7 +57,7 @@ let ChibiModel = null;
 let mixers = [];
 
 function InitModel(){
-    cargarModelo('/Public/models/chaparroFBX.fbx',
+    cargarModelo('/Public/models/chaparroObj.obj',
         scene,
         (modelo,mixer) =>{
             ChibiModel = modelo;
@@ -81,18 +83,75 @@ container.addEventListener("wheel", (event) => {
 //InitModel();
 
 const ItemImg = document.getElementById("ItemImg");
-ItemImg.addEventListener("click", () =>{
-    alert("¡Imagen clickeada!");
+const btn1 = document.getElementById("A-1");
+const btn2 = document.getElementById("A-2");
+const btn3 = document.getElementById("A-3");
 
+
+let clock = new THREE.Clock();
+
+
+ItemImg.addEventListener("click", () =>{
+    //alert("¡Imagen clickeada!");
+
+    btn1.src = "/Public/image/Acciones/button1.png";
+    btn2.src = "/Public/image/Acciones/button2.png";
+    btn3.src = "/Public/image/Acciones/button3.png";
     // Eliminar la imagen al hacer click
     ItemImg.remove();
 
+    // para poder ver el modelo 3D
     CrearProyeccion3D();
+
     InitModel();
+    crearLuces(scene);
     animate();
 
-    
 });
+
+btn1.addEventListener("click", () =>{
+    //alert("¡Botón 1 clickeado!");
+    scene.remove(ChibiModel);
+    Actions(1);
+});
+
+btn2.addEventListener("click", () =>{
+    //alert("¡Botón 2 clickeado!");
+    scene.remove(ChibiModel);
+    Actions(2);
+});
+
+btn3.addEventListener("click", () =>{
+    //alert("¡Botón 3 clickeado!");
+    scene.remove(ChibiModel);
+    Actions(3);
+});
+
+function Actions(number){
+
+    switch (number) {
+        case 1:
+            ChibiModel = '/Public/models/Animations/macarenaGLB.glb';
+            break;
+        case 2:
+            ChibiModel = '/Public/models/Animations/hiphopGLB.glb';
+            break;
+        case 3:
+            ChibiModel = '/Public/models/Animations/soccerGLB.glb';
+            break;
+        default:
+            console.error('Acción no reconocida:', number);
+    }
+
+    cargarModelo(ChibiModel,
+        scene,
+        (modelo,mixer) =>{
+            ChibiModel = modelo;
+            console.log('Modelo Cargado',modelo);
+            if(mixer) mixers.push(mixer);            
+        }
+    );
+}
 
 
 // 🔄 Animación
@@ -100,12 +159,19 @@ function animate(){
     requestAnimationFrame(animate);
     controls.update();
 
-    ScaleModel(ChibiModel,0.01);
+    ScaleModel(ChibiModel,5.0);
 
     if(infoPanel){
         infoPanel.innerHTML = `
             <b>Camera Position:</b> (${camera.position.x.toFixed(2)}, ${camera.position.y.toFixed(2)}, ${camera.position.z.toFixed(2)})<br>
         `
+    }
+
+    const delta = clock.getDelta();
+    mixers.forEach((m)=> m.update(delta));
+
+    if(ChibiModel){
+
     }
 
     // cube.rotation.x += 0.01;
