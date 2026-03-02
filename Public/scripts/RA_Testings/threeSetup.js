@@ -5,27 +5,44 @@ const container = document.querySelector(".phone-camera");
 const infoPanel = document.querySelector("#coords-info");
 
 //importacion de models.js
-import {cargarModelo} from './models.js';
+import {cargarModelo, ScaleModel} from './models.js';
 
 // Escena
-const scene = new THREE.Scene();
+let scene = null;  
 
 // Cámara 3D
-const camera = new THREE.PerspectiveCamera(
+let camera = null;
+
+// Renderer
+let renderer = null;
+
+// Controles de órbita
+let controls = null;
+
+function CrearProyeccion3D(){
+    // Creamos la escena
+    scene = new THREE.Scene();
+
+    // camara
+    camera = new THREE.PerspectiveCamera(
     70, // más cercas o más lejos
     container.clientWidth / container.clientHeight,
     0.1,
     1000
-);
+    );
 
-camera.position.z = 5;
+    camera.position.z = 5;
 
-// Renderer
-const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-renderer.setSize(container.clientWidth, container.clientHeight);
-renderer.setPixelRatio(window.devicePixelRatio);
+    // Renderer
+    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
-container.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
+
+    controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+}
 
 // 🧊 Cubo
 // const geometry = new THREE.BoxGeometry();
@@ -38,7 +55,7 @@ let ChibiModel = null;
 let mixers = [];
 
 function InitModel(){
-    cargarModelo('/Public/models/chaparro.fbx',
+    cargarModelo('/Public/models/chaparroFBX.fbx',
         scene,
         (modelo,mixer) =>{
             ChibiModel = modelo;
@@ -50,12 +67,9 @@ function InitModel(){
     );
 }
 
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-
 container.addEventListener("wheel", (event) => {
     event.preventDefault();
-    const scaleAmount = event.deltaY * -0.001;
+    // const scaleAmount = event.deltaY * -0.001;
 
     // cube.scale.x = Math.max(0.1, cube.scale.x + scaleAmount);
     // cube.scale.y = Math.max(0.1, cube.scale.y + scaleAmount);
@@ -63,11 +77,30 @@ container.addEventListener("wheel", (event) => {
 
 },{passive: false});
 
-InitModel();
+// Cargar el modelo
+//InitModel();
+
+const ItemImg = document.getElementById("ItemImg");
+ItemImg.addEventListener("click", () =>{
+    alert("¡Imagen clickeada!");
+
+    // Eliminar la imagen al hacer click
+    ItemImg.remove();
+
+    CrearProyeccion3D();
+    InitModel();
+    animate();
+
+    
+});
+
+
 // 🔄 Animación
 function animate(){
     requestAnimationFrame(animate);
     controls.update();
+
+    ScaleModel(ChibiModel,0.01);
 
     if(infoPanel){
         infoPanel.innerHTML = `
@@ -81,11 +114,11 @@ function animate(){
     renderer.render(scene, camera);
 }
 
-animate();
+//animate();
 
 // 🔁 Resize responsive
-window.addEventListener("resize", () => {
-    camera.aspect = container.clientWidth / container.clientHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, container.clientHeight);
-});
+// window.addEventListener("resize", () => {
+//     camera.aspect = container.clientWidth / container.clientHeight;
+//     camera.updateProjectionMatrix();
+//     renderer.setSize(container.clientWidth, container.clientHeight);
+// });

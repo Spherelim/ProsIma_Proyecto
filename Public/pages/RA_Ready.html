@@ -19,15 +19,30 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-three.prod.js"></script>
 
+
+<!-- A-Frame -->
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+<!-- AR.js -->
+<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+
 </head>
 <body>
   
     <div class="close-btn"> <a href="/index.html">✖</a></div>    
 
+
+    <div class="Item-zone">
+        <!-- <h1>¡Listo para la Realidad Aumentada!</h1>
+        <p>Apunta tu cámara hacia el marcador para ver el modelo 3D.</p> -->
+        <img id="ItemImg" >
+    </div>
+
     <div class="wrapper-RA">
 
-        <div class="phone-camera">
-            <video id="camara" autoplay playsinline></video>
+        <div class="phone-camera" id="arContainer">
+            <video id="camara" autoplay playsinline></video>            
+
             <div id="coords-info" style="
         position: absolute; 
         top: 10px; 
@@ -48,9 +63,10 @@
             <button id="btn" onclick="cerrarCamara()">Cerrar cámara</button>
         </div> -->
 
-    </div>
+    </div>  
 
   
+    <script src="/Public/scripts/RA_Testings/RA_Actions.js"></script>
     <script src="/Public/scripts/camara.js"></script>
     <script type="module" src="/Public/scripts/RA_Testings/threeSetup.js"></script>
     <!-- <script type="module" src="/Public/scripts/RA_Testings/RA_Scaner.js"></script> -->

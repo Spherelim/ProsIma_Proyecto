@@ -64,11 +64,14 @@ export function cargarModelo(ruta, escena, onLoadCallback) {
             }
 
             if (onLoadCallback) onLoadCallback(modelo, mixer);
+            
         },
         (xhr) => console.log(`Cargando modelo: ${(xhr.loaded / xhr.total) * 100}%`),
         (error) => console.error('Error al cargar el modelo:', error)
     );
 }
+
+
 
 export function ScaleModel(model,scale){
     model.scale.set(scale,scale,scale);
