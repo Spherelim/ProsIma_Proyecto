@@ -1,7 +1,8 @@
-## Proyecto de Procesamiento de Imagenes
+# Proyecto de Procesamiento de Imagenes
 
 Integrantes del equipo:\
 |-> Martha Lizbeth Hernandez Hernandez\
-|-> Mauricio Eleuterio Ortiz Rodriguez\
+|-> Mauricio Eleuterio Ortiz Rodriguez
 
-![Alt text](https://lastfm.freetls.fastly.net/i/u/500x500/b036efc6dc94c1092d4f6a3bbf381ee4.jpg)
+## Feeling
+![Alt text](https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUycTB3amZjZWs2MGZsdjlpcjY5ajF3YmExdzh2OWozcXptMXdheW1hZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/d0RRZHiz9QaSQ/giphy.gif)
