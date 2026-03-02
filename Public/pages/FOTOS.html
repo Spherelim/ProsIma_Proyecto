@@ -6,30 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Fotos.css">
     <title>Soccer Scan</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
 
 
-    <div class="close-btn"> <a href="/index.html">✖</a></div>
+    <div class="close-btn"> <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
+            href="/index.html">
+            <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal">
+            <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover">
+
+        </a>
+    </div>
 
     <div class="wrapper-Foto">
 
         <div class="phone-camera">
             <video id="camara" autoplay playsinline></video>
+
+           <img id="overlay" class="overlay" src="" alt="">
         </div>
 
-
-        <!-- <div class="submenuBtn">
-            <button id="btn" onclick="abrirCamara()">Abrir cámara</button>
-            <button id="btn" onclick="cerrarCamara()">Cerrar cámara</button>
-        </div> -->
-
+        <!-- Menú de filtros -->
+        <div class="subFiltro">
+            <ul>
+                <li><img class="opcFiltro" src="/Public/image/btnFoto.png" alt=""></li>
+                <li><img class="opcFiltro" src="/Public/image/filtro1.png" alt=""></li>
+                <li><img class="opcFiltro" src="/Public/image/filtro2.png" alt=""></li>
+                <li><img class="opcFiltro" src="/Public/image/filtro3.png" alt=""></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="subFiltro">
-        <img id="filtros" src="../image/filtros.png" alt="">
-    </div>
+
+
 
     <script src="/Public/scripts/camara.js"></script>
 

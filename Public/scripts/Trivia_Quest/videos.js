@@ -73,19 +73,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             if (videoAsociado.Desbloqueado) {
-                
+
                 videoContainer.innerHTML = `
-                
-                <video class="videoPlayer" controls>
-                    <source src="${videoAsociado.Ruta}" type="video/mp4">
-                </video>
+                 
+                  <div class="cardQuestion">
+                        </div  class="card" id="videoContainer">
+                            <video class="videoPlayer" controls>
+                                <source src="${videoAsociado.Ruta}" type="video/mp4">
+                            </video>
+                        </div>
+                  </div>
             `;
                 console.log("Video mostrado para:", id);
             } else {
-               
+
                 videoContainer.innerHTML = '<img class="imgVideo" src="../image/box-question.png" alt="Video bloqueado">';
 
-               
+
                 if (!pregunta.Acertivo) console.log("Pregunta no acertada");
                 if (videoAsociado && !videoAsociado.Desbloqueado) console.log("Video no desbloqueado");
                 if (!videoAsociado) console.log("No hay video asociado");

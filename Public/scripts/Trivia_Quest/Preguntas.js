@@ -119,11 +119,11 @@ function respuestaCorrecta(esCorrecta) {
         const puto = triviaData[preguntaActual].Acertivo;
         const marica = videoData[VideoDesbloquear].Desbloqueado;
 
-        alert("indice: " + indice +
+       /*  alert("indice: " + indice +
             "\n Video estado:" + marica +
             "\n Pregunta estado:" + puto
         );
-
+ */
 
         /*  alert("¡Video Desbloqueado! 🎉"); */
         Swal.fire({

@@ -110,9 +110,6 @@ transform: translate(-50%, -50%);
 }
 
 
-.wrapperOpc{
-    
-}
 .menu-toggle {
     font-size: 40px;
     font-family: sunshine;
@@ -255,6 +252,7 @@ a {
     width: 50px;
     height: 50px;
     cursor: pointer;
+    z-index: 1;
 
 }
 
