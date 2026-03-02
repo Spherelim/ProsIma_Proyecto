@@ -46,3 +46,19 @@ startCamera();
 //         document.getElementById('camara').srcObject = null;
 //     }
 // }
+
+
+
+const filtros = document.querySelectorAll('.opcFiltro');
+const overlay = document.getElementById('overlay');
+
+filtros.forEach((filtro, index) => {
+  filtro.addEventListener('click', () => {
+    switch(index) {
+      case 0: video.style.filter = 'none'; break;
+      case 1: video.style.filter = 'grayscale(1)'; break;
+      case 2: video.style.filter = 'sepia(1)'; break;
+      case 3: video.style.filter = 'contrast(1.5) brightness(1.2)'; break;
+    }
+  });
+});
