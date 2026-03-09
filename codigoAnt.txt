@@ -1,0 +1,216 @@
+ <!-- 
+    <div class="close-btn"> <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
+            href="/index.html">
+            <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal">
+            <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover">
+
+        </a>
+    </div> -->
+
+
+
+    <div class="fondo-conteiner">
+
+        <div class="camera-conteiner">
+
+            <div class="camera">
+                 <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" class="arScene">
+                    <a-marker preset="hiro">
+                        <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                            <a-sphere radius="5" color="blue"></a-sphere>
+                        </a-entity>
+                    </a-marker>
+                    <a-entity camera></a-entity>
+                </a-scene>
+
+
+
+            </div>
+
+            <div class="menu-camera">
+
+
+                <ul  class="ul-icons">
+                    <li>
+                        <button class="btn">
+                        <img src="/Public/image/icon-cerrarMenu.png" alt="">
+                        </button>
+                    </li>
+                        
+ 
+                    <li>
+                        <button class="btnFolder">
+                            <img src="/Public/image/icon-folder.png" alt="">
+                        </button>
+                       
+                    </li>
+
+                    <li>
+                        <button class="btn">
+                             <img src="/Public/image/icon-camara.png" alt="">
+                        </button>
+                       
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+//CSS  
+
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*aqui empieza el diseño de la pagina*/
+
+body {
+
+  
+    background-image: url("/Public/image/grayFound.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+
+    height: 100vb;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fondo-conteiner {
+
+    background-color: #3546F8;
+    width: 1200px;
+    height: 640px;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-conteiner {
+    background-color: #D9D9D9;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+
+    display: grid;
+
+
+}
+
+.camera {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    
+}
+
+.arScene {
+    width: 400px;
+    height: 600px;
+}
+
+.menu-camera {
+   position: absolute;
+   top: 550px;
+   width: 400px;
+   height: 80px;
+}
+
+.ul-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.btn{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.btnFolder{
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+.close-btn {
+
+    position: fixed;
+    top: 70px;
+    right: 320px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.icon.hover {
+    display: none;
+}
+
+a:hover .icon.normal {
+    display: none;
+}
+
+a:hover .icon.hover {
+    display: inline;
+}

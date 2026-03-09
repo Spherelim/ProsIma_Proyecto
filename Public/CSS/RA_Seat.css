@@ -1,0 +1,164 @@
+
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*aqui empieza el diseño de la pagina*/
+body{
+    overflow: hidden;
+    background-color: transparent;
+}
+
+
+.screen-detail {
+
+  
+    background-image: url("/Public/image/ra_fondo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+
+.fondo-conteiner {
+
+    background-image: url("/Public/image/fondo-azul.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1200px;
+    height: 640px;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-conteiner {
+    background-image: url("/Public/image/camera-marco.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+
+    display: grid;
+
+
+}
+
+.camera {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    
+}
+
+.arScene {
+    width: 400px;
+    height: 600px;
+}
+
+.menu-camera {
+   position: absolute;
+   top: 520px;
+   width: 400px;
+   height: 80px;
+   z-index: 1;
+}
+
+.ul-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.btn{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.btnFolder{
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+.close-btn {
+
+    position: fixed;
+    top: 60px;
+    right: 200px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.icon.hover {
+    display: none;
+}
+
+a:hover .icon.normal {
+    display: none;
+}
+
+a:hover .icon.hover {
+    display: inline;
+}
