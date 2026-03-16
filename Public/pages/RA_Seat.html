@@ -9,6 +9,7 @@
     <title>Soccer Scan</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
@@ -34,25 +35,26 @@
 
                 <ul class="ul-icons">
                     <li>
-                        <button class="btn">
-                            <img src="/Public/image/icon-cerrarMenu.png" alt="">
+                        <button class="btnFolder" id="anim1">
+
+                            <img src="/Public/image/icon-dance1.png" alt="">
                         </button>
                     </li>
 
 
                     <li>
-                        <button class="btnFolder">
-                            <img src="/Public/image/icon-folder.png" alt="">
+                        <button class="btnFolder" id="anim2">
+                            <img src="/Public/image/icon.-dance2.png" alt="">
                         </button>
 
                     </li>
 
-                    <li>
+                    <!--  <li>
                         <button class="btn">
                             <img src="/Public/image/icon-camara.png" alt="">
                         </button>
 
-                    </li>
+                    </li> -->
 
 
                 </ul>
@@ -119,10 +121,26 @@
             <!-- <a-box position="0 0.5 0" material="color: red;" rotation="0 45 0"></a-box> -->
             <a-entity position="0 0 0" scale="0.1 0.1 0.1">
 
-                <a-entity position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/pose-t.glb"></a-entity>
+
+                <a-entity  id="normal"
+                position="0 0 0" 
+                scale="1" 
+                rotation="-90 0 0"
+                gltf-model="/Public/models/animations/MexicoDance.glb" 
+                visible="true"></a-entity>
 
 
+                <a-entity  id="Baile1"
+                position="0 0 0" 
+                scale="1" 
+                rotation="-90 0 0"
+                gltf-model="/Public/models/animations/MexicoDance.glb"
+                animation-mixer="clip: *; loop: repeat"
+                visible="false"></a-entity>
+
+
+                 
+           </a-entity>
         </a-marker>
         <a-entity camera position="0 0 0"></a-entity>
     </a-scene>
@@ -131,5 +149,6 @@
 
 </body>
 
+<script src="/Public/scripts/RA/RA.js"></script>
 
 </html>
