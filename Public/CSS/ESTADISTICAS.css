@@ -61,12 +61,12 @@ body{
 
 
 .container{
-    background: url("../image/div-estadistica.png");
+    /* background: url("../image/div-estadistica.png"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 1020px;
-    height: 300px;
+    width: 70%;
+    height: auto;
     border-radius: 40px;
     background-color: #D9D9D9;
     margin: 40px auto;
@@ -78,12 +78,20 @@ table{
     height: 300px;
     margin: 0 auto;
 }
+
+#Cedes{
+    width: 120px;
+    height: 160px;
+}
+
+#Mundiales{
+    width: 160px;
+    height: 120px;
+}
+
 img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    
-    
+    width: 120px;
+    height: 120px;     
 }
 
 th{
@@ -101,6 +109,7 @@ td{
     color: #3546F8;
     text-align: center;
     vertical-align: center;
+    padding: 15px 30px;
     
 }
 
@@ -124,5 +133,93 @@ td{
     text-align:left;
     margin: 20px;
     padding: 10px;  
+
+}
+
+/*RESPONSIBO!!!*/
+
+@media (max-width: 480px) {
+    /*Para celulares pequeños*/
+
+    #titulo {
+        font-size: 30px;
+    }
+
+    th {
+        font-size: 16px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    .container{
+        width: 95%;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    /*Para celulares normales*/
+
+    #titulo {
+        font-size: 40px;
+        margin-top: 40px;
+    }
+
+    .container{
+        width: 95%;
+    }
+
+    /* th {
+        font-size: 20px;
+    }
+
+    td {
+        font-size: 18px;
+    } */
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #btnBack {
+        width: 200px;
+        height: auto;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+}
+
+
+@media (min-width: 769px) and (max-width:1024px) {
+    /*para tablets*/
+    
+    .container{
+        width: 95%;
+    }
+    
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /*Para Laptops pequeños*/
+
+    .container{
+        width: 95%;
+    }
+    
+}
+
+@media (min-width: 1441px) {
+
+    
 
 }

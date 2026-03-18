@@ -1,227 +1,227 @@
 {
     "Mundial 1930":{
-        "imagen":"Public/image/Mundiales/WSC_1930.jpg",
-        "cede":"Public/image/Mundiales/Uruguay.png",
+        "imagen":"/image/Mundiales/WSC_1930.jpg",
+        "cede":"/image/Mundiales/Uruguay.png",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Uruguay_1930.webp",
-            "equipo2": "Public/image/Mundiales/Selecciones/Argentina_1930.webp"
+            "equipo1":"/image/Mundiales/Selecciones/Uruguay_1930.webp",
+            "equipo2": "/image/Mundiales/Selecciones/Argentina_1930.webp"
         },
         "resultado":"4 - 2",
-        "ganador":"Public/image/Mundiales/Selecciones/Uruguay_1930.webp"
+        "ganador":"/image/Mundiales/Selecciones/Uruguay_1930.webp"
     },
     "Mundial 1934":{
-        "imagen":"Public/image/Mundiales/WSC_1934.jpg",
-        "cede":"Public/image/Mundiales/Italia1934.png",
+        "imagen":"/image/Mundiales/WSC_1934.jpg",
+        "cede":"/image/Mundiales/Italia1934.png",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Italia_1934.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Checoslovaquia_1934.png"
+            "equipo1":"/image/Mundiales/Selecciones/Italia_1934.png",
+            "equipo2": "/image/Mundiales/Selecciones/Checoslovaquia_1934.png"
         },
         "resultado":"2 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/Italia_1934.png"
+        "ganador":"/image/Mundiales/Selecciones/Italia_1934.png"
     },
     "Mundial 1938":{
-        "imagen":"Public/image/Mundiales/WSC_1938.webp",
-        "cede":"Public/image/Mundiales/Francia.webp",
+        "imagen":"/image/Mundiales/WSC_1938.webp",
+        "cede":"/image/Mundiales/Francia.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Italia_1934.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Hungria_1938.png"
+            "equipo1":"/image/Mundiales/Selecciones/Italia_1934.png",
+            "equipo2": "/image/Mundiales/Selecciones/Hungria_1938.png"
         },
         "resultado":"4 - 2",
-        "ganador":"Public/image/Mundiales/Selecciones/Italia_1934.png"
+        "ganador":"/image/Mundiales/Selecciones/Italia_1934.png"
     },
     "Mundial 1950":{
-        "imagen":"Public/image/Mundiales/WSC_1950.webp",
-        "cede":"Public/image/Mundiales/Brazil.webp",
+        "imagen":"/image/Mundiales/WSC_1950.webp",
+        "cede":"/image/Mundiales/Brazil.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Uruguay_1930.webp",
-            "equipo2": "Public/image/Mundiales/Selecciones/Brazil_1950.png"
+            "equipo1":"/image/Mundiales/Selecciones/Uruguay_1930.webp",
+            "equipo2": "/image/Mundiales/Selecciones/Brazil_1950.png"
         },
         "resultado":"2 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/Uruguay_1930.webp"
+        "ganador":"/image/Mundiales/Selecciones/Uruguay_1930.webp"
     },
     "Mundial 1954":{
-        "imagen":"Public/image/Mundiales/WSC_1954.webp",
-        "cede":"Public/image/Mundiales/Suiza.webp",
+        "imagen":"/image/Mundiales/WSC_1954.webp",
+        "cede":"/image/Mundiales/Suiza.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Alemania_1954.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Hungria_1954.png"
+            "equipo1":"/image/Mundiales/Selecciones/Alemania_1954.png",
+            "equipo2": "/image/Mundiales/Selecciones/Hungria_1954.png"
         },
         "resultado":"3 - 2",
-        "ganador":"Public/image/Mundiales/Selecciones/Alemania_1954.png"
+        "ganador":"/image/Mundiales/Selecciones/Alemania_1954.png"
     },
     "Mundial 1958":{
-        "imagen":"Public/image/Mundiales/WSC_1958.webp",
-        "cede":"Public/image/Mundiales/Suecia.png",
+        "imagen":"/image/Mundiales/WSC_1958.webp",
+        "cede":"/image/Mundiales/Suecia.png",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Brazil_1958.png",
-            "equipo2": "Public/image/Mundiales/Suecia.png"
+            "equipo1":"/image/Mundiales/Selecciones/Brazil_1958.png",
+            "equipo2": "/image/Mundiales/Suecia.png"
         },
         "resultado":"5 - 2",
-        "ganador":"Public/image/Mundiales/Selecciones/Brazil_1958.png"
+        "ganador":"/image/Mundiales/Selecciones/Brazil_1958.png"
     },
     "Mundial 1962":{
-        "imagen":"Public/image/Mundiales/WSC_1962.webp",
-        "cede":"Public/image/Mundiales/Chile.webp",
+        "imagen":"/image/Mundiales/WSC_1962.webp",
+        "cede":"/image/Mundiales/Chile.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Brazil_1962.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Checoslovaquia_1962.png"
+            "equipo1":"/image/Mundiales/Selecciones/Brazil_1962.png",
+            "equipo2": "/image/Mundiales/Selecciones/Checoslovaquia_1962.png"
         },
         "resultado":"3 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/Brazil_1962.png"
+        "ganador":"/image/Mundiales/Selecciones/Brazil_1962.png"
     },
     "Mundial 1966":{
-        "imagen":"Public/image/Mundiales/WSC_1966.jpg",
-        "cede":"Public/image/Mundiales/Inglaterra",
+        "imagen":"/image/Mundiales/WSC_1966.jpg",
+        "cede":"/image/Mundiales/Inglaterra.png",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Inglaterra_1966.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Alemania_1966.png"
+            "equipo1":"/image/Mundiales/Selecciones/Inglaterra_1966.png",
+            "equipo2": "/image/Mundiales/Selecciones/Alemania_1966.png"
         },
         "resultado":"4 - 2",
-        "ganador":"Public/image/Mundiales/Selecciones/Inglaterra_1966.png"
+        "ganador":"/image/Mundiales/Selecciones/Inglaterra_1966.png"
     },
     "Mundial 1970":{
-        "imagen":"Public/image/Mundiales/WSC_1970.png",
-        "cede":"Public/image/Mundiales/México.webp",
+        "imagen":"/image/Mundiales/WSC_1970.png",
+        "cede":"/image/Mundiales/México.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Brazil_1970.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Italia_1970.png"
+            "equipo1":"/image/Mundiales/Selecciones/Brazil_1970.png",
+            "equipo2": "/image/Mundiales/Selecciones/Italia_1970.png"
         },
         "resultado":"4 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/Brazil_1970.png"
+        "ganador":"/image/Mundiales/Selecciones/Brazil_1970.png"
     },
     "Mundial 1974":{
-        "imagen":"Public/image/Mundiales/WSC_1974.webp",
-        "cede":"Public/image/Mundiales/Alemania.webp",
+        "imagen":"/image/Mundiales/WSC_1974.webp",
+        "cede":"/image/Mundiales/Alemania.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Alemania_1974.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/PaisesBajos_1974.png"
+            "equipo1":"/image/Mundiales/Selecciones/Alemania_1974.png",
+            "equipo2": "/image/Mundiales/Selecciones/PaisesBajos_1974.png"
         },
         "resultado":"2 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/Alemania_1974.png"
+        "ganador":"/image/Mundiales/Selecciones/Alemania_1974.png"
     },
     "Mundial 1978":{
-        "imagen":"Public/image/Mundiales/WSC_1978.svg",
-        "cede":"Public/image/Mundiales/Argentina.webp",
+        "imagen":"/image/Mundiales/WSC_1978.svg",
+        "cede":"/image/Mundiales/Argentina.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Argentina_1978.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/PaisesBajos_1974.png"
+            "equipo1":"/image/Mundiales/Selecciones/Argentina_1978.png",
+            "equipo2": "/image/Mundiales/Selecciones/PaisesBajos_1974.png"
         },
         "resultado":"3 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/Argentina_1978.png"
+        "ganador":"/image/Mundiales/Selecciones/Argentina_1978.png"
     },
     "Mundial 1982":{
-        "imagen":"Public/image/Mundiales/WSC_1982.jpg",
-        "cede":"Public/image/Mundiales/España.webp",
+        "imagen":"/image/Mundiales/WSC_1982.jpg",
+        "cede":"/image/Mundiales/España.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Italia_1982.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Alemania_1982.png"
+            "equipo1":"/image/Mundiales/Selecciones/Italia_1982.png",
+            "equipo2": "/image/Mundiales/Selecciones/Alemania_1982.png"
         },
         "resultado":"3 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/Italia_1982.png"
+        "ganador":"/image/Mundiales/Selecciones/Italia_1982.png"
     },
     "Mundial 1986":{
-        "imagen":"Public/image/Mundiales/WSC_1986.jpg",
-        "cede":"Public/image/Mundiales/México.webp",
+        "imagen":"/image/Mundiales/WSC_1986.jpg",
+        "cede":"/image/Mundiales/México.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Argentina_1986.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Alemania_1982.png"
+            "equipo1":"/image/Mundiales/Selecciones/Argentina_1986.png",
+            "equipo2": "/image/Mundiales/Selecciones/Alemania_1982.png"
         },
         "resultado":"3 - 2",
-        "ganador":"Public/image/Mundiales/Selecciones/Argentina_1986.png"
+        "ganador":"/image/Mundiales/Selecciones/Argentina_1986.png"
     },
     "Mundial 1990":{
-        "imagen":"Public/image/Mundiales/WSC_1990.jpg",
-        "cede":"Public/image/Mundiales/Italia.webp",
+        "imagen":"/image/Mundiales/WSC_1990.jpg",
+        "cede":"/image/Mundiales/Italia.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Argentina_1990.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Alemania_1982.png"
+            "equipo1":"/image/Mundiales/Selecciones/Argentina_1990.png",
+            "equipo2": "/image/Mundiales/Selecciones/Alemania_1982.png"
         },
         "resultado":"1 - 0",
-        "ganador":"Public/image/Mundiales/Selecciones/Alemania_1982.png"
+        "ganador":"/image/Mundiales/Selecciones/Alemania_1982.png"
     },
     "Mundial 1994":{
-        "imagen":"Public/image/Mundiales/WSC_1994.png",
-        "cede":"Public/image/Mundiales/EstadosUnidos.png",
+        "imagen":"/image/Mundiales/WSC_1994.png",
+        "cede":"/image/Mundiales/EstadosUnidos.png",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Brazil_1994.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/"
+            "equipo1":"/image/Mundiales/Selecciones/Brazil_1994.png",
+            "equipo2": "/image/Mundiales/Selecciones/Italia_1994.png"
         },
         "resultado":"0 - 0 (3:2 pen.)",
-        "ganador":"Public/image/Mundiales/Selecciones/Brazil_1998.png"
+        "ganador":"/image/Mundiales/Selecciones/Brazil_1998.png"
     },
     "Mundial 1998":{
-        "imagen":"Public/image/Mundiales/WSC_1998.webp",
-        "cede":"Public/image/Mundiales/Francia.webp",
+        "imagen":"/image/Mundiales/WSC_1998.webp",
+        "cede":"/image/Mundiales/Francia.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Francia_1998.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Brazil_1998.png"
+            "equipo1":"/image/Mundiales/Selecciones/Francia_1998.png",
+            "equipo2": "/image/Mundiales/Selecciones/Brazil_1998.png"
         },
         "resultado":"3 - 0",
-        "ganador":"Public/image/Mundiales/Selecciones/Francia_1998.png"
+        "ganador":"/image/Mundiales/Selecciones/Francia_1998.png"
     },
     "Mundial 2002":{
-        "imagen":"Public/image/Mundiales/WSC_2002.jpg",
-        "cede":"Public/image/Mundiales/Cedes_2002.webp",
+        "imagen":"/image/Mundiales/WSC_2002.jpg",
+        "cede":"/image/Mundiales/Cedes_2002.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Brazil_1998.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Alemania_2002.png"
+            "equipo1":"/image/Mundiales/Selecciones/Brazil_1998.png",
+            "equipo2": "/image/Mundiales/Selecciones/Alemania_2002.png"
         },
         "resultado":"2 - 0",
-        "ganador":"Public/image/Mundiales/Selecciones/Brazil_2002.png"
+        "ganador":"/image/Mundiales/Selecciones/Brazil_2002.png"
     },
     "Mundial 2006":{
-        "imagen":"Public/image/Mundiales/WSC_2006.jpg",
-        "cede":"Public/image/Mundiales/Alemania.webp",
+        "imagen":"/image/Mundiales/WSC_2006.jpg",
+        "cede":"/image/Mundiales/Alemania.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Italia_2006.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Francia_2006.png"
+            "equipo1":"/image/Mundiales/Selecciones/Italia_2006.png",
+            "equipo2": "/image/Mundiales/Selecciones/Francia_2006.png"
         },
         "resultado":"1 - 1 (5:3 pen.)",
-        "ganador":"Public/image/Mundiales/Selecciones/Italia_2010.png"
+        "ganador":"/image/Mundiales/Selecciones/Italia_2010.png"
     },
     "Mundial 2010":{
-        "imagen":"Public/image/Mundiales/WSC_2010.jpg",
-        "cede":"Public/image/Mundiales/",
+        "imagen":"/image/Mundiales/WSC_2010.jpg",
+        "cede":"/image/Mundiales/Sudafrica.webp",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/",
-            "equipo2": "Public/image/Mundiales/Selecciones/"
-        },
-        "resultado":"2 - 1",
-        "ganador":"Public/image/Mundiales/Selecciones/"
-    },
-    "Mundial 2014":{
-        "imagen":"Public/image/Mundiales/WSC_2014.jpg",
-        "cede":"Public/image/Mundiales/Sudafrica.webp",
-        "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/España_2010.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/PaisesBajos_2010.png"
+            "equipo1":"/image/Mundiales/Selecciones/España_2010.png",
+            "equipo2": "/image/Mundiales/Selecciones/PaisesBajos_2010.png"
         },
         "resultado":"1 - 0",
-        "ganador":"Public/image/Mundiales/Selecciones/España_2014.png"
+        "ganador":"/image/Mundiales/Selecciones/España_2014.png"
+    },
+    "Mundial 2014":{
+        "imagen":"/image/Mundiales/WSC_2014.jpg",
+        "cede":"/image/Mundiales/Brazil.webp",
+        "final":{
+            "equipo1":"/image/Mundiales/Selecciones/Alemania_2014.png",
+            "equipo2": "/image/Mundiales/Selecciones/Argentina_2018.png"
+        },  
+        "resultado":"1 - 0",
+        "ganador":"/image/Mundiales/Selecciones/Alemania_2018.png"
     },
     "Mundial 2018":{
-        "imagen":"Public/image/Mundiales/WSC_2018.jpg",
-        "cede":"Public/image/Mundiales/Rusia.png",
+        "imagen":"/image/Mundiales/WSC_2018.jpg",
+        "cede":"/image/Mundiales/Rusia.png",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Francia_2018.png",
-            "equipo2": "Public/image/Mundiales/Selecciones/Croacia_2018"
+            "equipo1":"/image/Mundiales/Selecciones/Francia_2018.png",
+            "equipo2": "/image/Mundiales/Selecciones/Croacia_2018.png"
         },
         "resultado":"4 - 2",
-        "ganador":"Public/image/Mundiales/Selecciones/Francia_2022.png"
+        "ganador":"/image/Mundiales/Selecciones/Francia_2022.png"
     },
     "Mundial 2022":{
-        "imagen":"Public/image/Mundiales/WSC_2022.jpg",
-        "cede":"Public/image/Mundiales/Catar",
+        "imagen":"/image/Mundiales/WSC_2022.jpg",
+        "cede":"/image/Mundiales/Catar.png",
         "final":{
-            "equipo1":"Public/image/Mundiales/Selecciones/Argentina_2018",
-            "equipo2": "Public/image/Mundiales/Selecciones/Francia_2022.png"
+            "equipo1":"/image/Mundiales/Selecciones/Argentina_2018.png",
+            "equipo2": "/image/Mundiales/Selecciones/Francia_2022.png"
         },
         "resultado":"3 - 3 (4:2 pen.)",
-        "ganador":"Public/image/Mundiales/Selecciones/Argentina_2022"
+        "ganador":"/image/Mundiales/Selecciones/Argentina_2022.png"
     },
     "Mundial 2026":{
-        "imagen":"Public/image/Mundiales/WSC_2026.png",
-        "cede":"Public/image/Mundiales/Cedes_2026",
+        "imagen":"/image/Mundiales/WSC_2026.jpg",
+        "cede":"/image/Mundiales/Cedes_2026.png",
         "final":{
             "equipo1":"",
             "equipo2": ""
