@@ -48,17 +48,20 @@ startCamera();
 // }
 
 
-
+// Hola liz, porfis pon comentarios para saber que ase cada cosa ;D
+// Yo tambien pondre comentarios desde el día de hoy, 22/03/2026
 const filtros = document.querySelectorAll('.opcFiltro');
 const overlay = document.getElementById('overlay');
 
+// De donde agarra el "grayscale" y lo demas?
+
 filtros.forEach((filtro, index) => {
-  filtro.addEventListener('click', () => {
-    switch(index) {
-      case 0: video.style.filter = 'none'; break;
-      case 1: video.style.filter = 'grayscale(1)'; break;
-      case 2: video.style.filter = 'sepia(1)'; break;
-      case 3: video.style.filter = 'contrast(1.5) brightness(1.2)'; break;
-    }
-  });
+    filtro.addEventListener('click', () => {
+        switch(index) {
+            case 0: video.style.filter = 'none'; break;
+            case 1: video.style.filter = 'grayscale(1)'; break;
+            case 2: video.style.filter = 'sepia(1)'; break;
+            case 3: video.style.filter = 'contrast(1.5) brightness(1.2)'; break;
+        }
+    });
 });

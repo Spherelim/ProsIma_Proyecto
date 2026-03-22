@@ -11,21 +11,24 @@
 
 <body>
 
-
-    <div class="close-btn"> <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
+    <div class="close-btn"> 
+        <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
             href="/index.html">
             <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal">
             <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover">
-
         </a>
     </div>
 
+    <!-- contenedor de la camara -->
     <div class="wrapper-Foto">
 
+        <!-- Esta es la camara -->
         <div class="phone-camera">
+            <!-- prende la camara automaticamente -->
             <video id="camara" autoplay playsinline></video>
 
-           <img id="overlay" class="overlay" src="" alt="">
+            <!-- Pone el filtro encima de la camara -->
+            <img id="overlay" class="overlay" src="" alt="">
         </div>
 
         <!-- Menú de filtros -->
@@ -39,9 +42,7 @@
         </div>
     </div>
 
-
-
-
+    <!-- script de la camara -->
     <script src="/Public/scripts/camara.js"></script>
 
 </body>
