@@ -75,15 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
             if (videoAsociado.Desbloqueado) {
 
                 videoContainer.innerHTML = `
-                 
-                  <div class="cardQuestion">
+                
+                <div class="cardQuestion">
                         </div  class="card" id="videoContainer">
-                            <video class="videoPlayer" controls>
+                            <video id="videoPlayer" class="videoPlayer" controls>
                                 <source src="${videoAsociado.Ruta}" type="video/mp4">
                             </video>
                         </div>
-                  </div>
-            `;
+                </div>
+                `;
+
+                // simpre pondra el filtro aun que cambie de video.
+                aplicarFiltroActual();
+
                 console.log("Video mostrado para:", id);
             } else {
 
