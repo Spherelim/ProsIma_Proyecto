@@ -105,7 +105,6 @@
 
 
     <a-scene embedde arjs>
-       
         <!-- MEXICO -->
         <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Mexico.patt">
 
@@ -137,15 +136,12 @@
         <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-portugal.patt">
 
             <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
                 <a-entity id="portugalNormal" position="0 0 0" scale="1" rotation="-90 0 0"
                     gltf-model="/Public/models/idle/portugalIdle.glb" visible="true"></a-entity>
 
-
-               <!--  <a-entity id="Portugal1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity> -->
+                <a-entity id="Portugal1" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/PortugalDance1.glb" animation-mixer="clip: * ; loop: repeat"
+                    visible="false"></a-entity>
 
                 <a-entity id="Portugal2" position="0 0 0" scale="1" rotation="-90 0 0"
                     gltf-model="/Public/models/animations/PortugalDance1.glb" animation-mixer="clip: macarena ; loop: repeat"
@@ -155,9 +151,6 @@
 
         </a-marker>
         <a-entity camera position="0 0 0"></a-entity>
-
-
-
 
     </a-scene>
 

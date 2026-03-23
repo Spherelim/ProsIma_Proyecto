@@ -25,8 +25,6 @@ btnFolder.addEventListener("click", () => {
 })
 
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById("anim1").addEventListener("click", function (e) {
