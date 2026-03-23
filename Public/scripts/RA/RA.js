@@ -50,6 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const Eua1 = document.querySelector("#Eua1");
         const Eua2 = document.querySelector("#Eua2");
 
+        //España
+        const españaNormal = document.querySelector("#españaNormal");
+        const esp1 = document.querySelector("#españa1");
+        const esp2 = document.querySelector("#españa2");
+
+
 
 
         // Mostrar Baile1 y ocultar Baile2
@@ -74,6 +80,10 @@ document.addEventListener('DOMContentLoaded', function () {
         Eua1.setAttribute('visible', 'true');
         Eua2.setAttribute('visible', 'false');
 
+        //España
+        españaNormal.setAttribute('visible', 'false');
+        esp1.setAttribute('visible', 'true');
+        esp2.setAttribute('visible', 'false');
 
         // Si quieres agregar animación al modelo
         baile1.setAttribute('animation-mixer', 'clip: *; loop: repeat');
@@ -99,6 +109,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const Eua1 = document.querySelector("#Eua1");
         const Eua2 = document.querySelector("#Eua2");
 
+        //España
+        const españaNormal = document.querySelector("#españaNormal");
+        const esp1 = document.querySelector("#españa1");
+        const esp2 = document.querySelector("#españa2");
+
+
         // Mostrar Baile2 y ocultar Baile1
         normal.setAttribute('visible', 'false');
         baile2.setAttribute('visible', 'true');
@@ -120,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
         EuaNormal.setAttribute('visible', 'false');
         Eua1.setAttribute('visible', 'false');
         Eua2.setAttribute('visible', 'true');
+
+        //España
+        españaNormal.setAttribute('visible', 'false');
+        esp1.setAttribute('visible', 'false');
+        esp2.setAttribute('visible', 'true');
+
 
 
         // Si quieres agregar animación al modelo
@@ -149,6 +171,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const Eua1 = document.querySelector("#Eua1");
         const Eua2 = document.querySelector("#Eua2");
 
+        //España
+        const españaNormal = document.querySelector("#españaNormal");
+        const esp1 = document.querySelector("#españa1");
+        const esp2 = document.querySelector("#españa2");
+
+
 
         // Mostrar Baile1 y ocultar Baile2
         normal.setAttribute('visible', 'true');
@@ -169,6 +197,11 @@ document.addEventListener('DOMContentLoaded', function () {
         EuaNormal.setAttribute('visible', 'true');
         Eua1.setAttribute('visible', 'false');
         Eua2.setAttribute('visible', 'false');
+
+        //España
+        españaNormal.setAttribute('visible', 'true');
+        esp1.setAttribute('visible', 'false');
+        esp2.setAttribute('visible', 'false');
 
     });
 
