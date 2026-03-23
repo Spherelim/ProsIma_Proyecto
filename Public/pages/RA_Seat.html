@@ -105,28 +105,16 @@
 
 
     <a-scene embedde arjs>
-        <!--  <a-marker preset="patt">
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-                 <a-entity 
-                position="0 0 0" 
-                scale="1"
-                rotation="-90 0 0"
-                gltf-model="/Public/models/pose-t.glb"></a-entity>
-
-        </a-marker> -->
-
-
+       
         <!-- MEXICO -->
         <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Mexico.patt">
-            <!-- Este es el contenido 3D que aparecerá sobre el marcador. -->
-            <!-- Un simple cubo rojo -->
-            <!-- <a-box position="0 0.5 0" material="color: red;" rotation="0 45 0"></a-box> -->
+
             <a-entity position="0 0 0" scale="0.1 0.1 0.1">
 
 
                 <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" visible="true"></a-entity>
+                    gltf-model="/Public/models/idle/mexicoIdle.glb" animation-mixer="clip: *; loop: repeat"
+                    visible="true"></a-entity>
 
 
                 <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
@@ -142,143 +130,30 @@
             </a-entity>
         </a-marker>
         <a-entity camera position="0 0 0"></a-entity>
-        
+
+
+
         <!-- PORTUGAL -->
         <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-portugal.patt">
-            <!-- Este es el contenido 3D que aparecerá sobre el marcador. -->
-            <!-- Un simple cubo rojo -->
-            <!-- <a-box position="0 0.5 0" material="color: red;" rotation="0 45 0"></a-box> -->
+
             <a-entity position="0 0 0" scale="0.1 0.1 0.1">
 
 
-                <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" visible="true"></a-entity>
+                <a-entity id="portugalNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/idle/portugalIdle.glb" visible="true"></a-entity>
 
 
-                <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
+               <!--  <a-entity id="Portugal1" position="0 0 0" scale="1" rotation="-90 0 0"
                     gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip: *; loop: repeat"
+                    visible="false"></a-entity> -->
+
+                <a-entity id="Portugal2" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/PortugalDance1.glb" animation-mixer="clip: macarena ; loop: repeat"
                     visible="false"></a-entity>
-
-                <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
 
             </a-entity>
+
         </a-marker>
-
-
-        <!-- FRANCIA -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-portugal.patt">
-            <!-- Este es el contenido 3D que aparecerá sobre el marcador. -->
-            <!-- Un simple cubo rojo -->
-            <a-box position="0 0.5 0" material="color: red;" rotation="0 45 0"></a-box>
-            <!-- <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" visible="true"></a-entity>
-
-
-                <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity> -->
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-       
-        <!-- EUA -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-eua.patt">
-            <!-- Este es el contenido 3D que aparecerá sobre el marcador. -->
-            <!-- Un simple cubo rojo -->
-            <a-box position="0 0.5 0" material="color: red;" rotation="0 45 0"></a-box>
-            <!-- <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" visible="true"></a-entity>
-
-
-                <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity> -->
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- ESPAÑA -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-españa.patt">
-            <!-- Este es el contenido 3D que aparecerá sobre el marcador. -->
-            <!-- Un simple cubo rojo -->
-            <a-box position="0 0.5 0" material="color: red;" rotation="0 45 0"></a-box>
-            <!-- <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" visible="true"></a-entity>
-
-
-                <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity> -->
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-
-        <!-- COREA DEL SUR -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-corea.patt">
-            <!-- Este es el contenido 3D que aparecerá sobre el marcador. -->
-            <!-- Un simple cubo rojo -->
-            <a-box position="0 0.5 0" material="color: red;" rotation="0 45 0"></a-box>
-            <!-- <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" visible="true"></a-entity>
-
-
-                <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity> -->
-        </a-marker>
-
         <a-entity camera position="0 0 0"></a-entity>
 
 
