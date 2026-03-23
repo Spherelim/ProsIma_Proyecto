@@ -184,6 +184,30 @@
         <a-entity camera position="0 0 0"></a-entity>
 
 
+        <!-- EUA -->
+        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-eua.patt">
+           
+            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+
+
+                <a-entity id="EuaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/idle/EuaIdle.glb" visible="true"></a-entity>
+
+
+                <a-entity id="Eua1" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/EuaDance.glb" animation-mixer="clip: macarena; loop: repeat"
+                    visible="false"></a-entity>
+
+                <a-entity id="Eua2" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/EuaDance1.glb" animation-mixer="clip: soccer; loop: repeat"
+                    visible="false"></a-entity>
+
+
+
+            </a-entity>
+        </a-marker>
+
+        <a-entity camera position="0 0 0"></a-entity>
 
 
     </a-scene>

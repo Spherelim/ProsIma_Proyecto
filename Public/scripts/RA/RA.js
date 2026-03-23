@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const francia1 = document.querySelector("#Francia1");
         const francia2 = document.querySelector("#Francia2");
 
+        //EUA
+        const EuaNormal = document.querySelector("#EuaNormal");
+        const Eua1 = document.querySelector("#Eua1");
+        const Eua2 = document.querySelector("#Eua2");
 
 
 
@@ -65,6 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
         francia2.setAttribute('visible', 'false');
 
 
+        //EUA    
+        EuaNormal.setAttribute('visible', 'false');
+        Eua1.setAttribute('visible', 'true');
+        Eua2.setAttribute('visible', 'false');
+
+
         // Si quieres agregar animación al modelo
         baile1.setAttribute('animation-mixer', 'clip: *; loop: repeat');
     });
@@ -79,15 +89,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const portugal1 = document.querySelector("#Portugal1");
         const portugal2 = document.querySelector("#Portugal2");
 
-    
-        
         //Francia
-
         const franciaNormal = document.querySelector("#franciaIdle");
         const francia1 = document.querySelector("#Francia1");
         const francia2 = document.querySelector("#Francia2");
 
-
+        //EUA
+        const EuaNormal = document.querySelector("#EuaNormal");
+        const Eua1 = document.querySelector("#Eua1");
+        const Eua2 = document.querySelector("#Eua2");
 
         // Mostrar Baile2 y ocultar Baile1
         normal.setAttribute('visible', 'false');
@@ -101,10 +111,15 @@ document.addEventListener('DOMContentLoaded', function () {
         portugal2.setAttribute('visible', 'true');
 
 
-         //Francia
+        //Francia
         franciaNormal.setAttribute('visible', 'false');
         francia1.setAttribute('visible', 'false');
         francia2.setAttribute('visible', 'true');
+
+        //EUA
+        EuaNormal.setAttribute('visible', 'false');
+        Eua1.setAttribute('visible', 'false');
+        Eua2.setAttribute('visible', 'true');
 
 
         // Si quieres agregar animación al modelo
@@ -122,12 +137,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const portugal1 = document.querySelector("#Portugal1");
         const portugal2 = document.querySelector("#Portugal2");
 
-        
-        //Francia
 
+        //Francia
         const franciaNormal = document.querySelector("#franciaIdle");
         const francia1 = document.querySelector("#Francia1");
         const francia2 = document.querySelector("#Francia2");
+
+
+        //EUA
+        const EuaNormal = document.querySelector("#EuaNormal");
+        const Eua1 = document.querySelector("#Eua1");
+        const Eua2 = document.querySelector("#Eua2");
 
 
         // Mostrar Baile1 y ocultar Baile2
@@ -145,7 +165,10 @@ document.addEventListener('DOMContentLoaded', function () {
         francia1.setAttribute('visible', 'false');
         francia2.setAttribute('visible', 'false');
 
-        
+        //EUA
+        EuaNormal.setAttribute('visible', 'true');
+        Eua1.setAttribute('visible', 'false');
+        Eua2.setAttribute('visible', 'false');
 
     });
 
