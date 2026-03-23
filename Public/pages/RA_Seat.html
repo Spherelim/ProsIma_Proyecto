@@ -118,11 +118,11 @@
 
 
                 <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
+                    gltf-model="/Public/models/animations/MexicoDance.glb"
+                    animation-mixer="clip: macarena; loop: repeat" visible="false"></a-entity>
 
                 <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: *; loop: repeat"
+                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: soccer; loop: repeat"
                     visible="false"></a-entity>
 
 
@@ -130,7 +130,6 @@
             </a-entity>
         </a-marker>
         <a-entity camera position="0 0 0"></a-entity>
-
 
 
         <!-- PORTUGAL -->
@@ -149,12 +148,39 @@
                     animation-mixer="clip: macarena ; loop: repeat" visible="false"></a-entity>
 
                 <a-entity id="Portugal2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/PortugalDance.glb"
-                    animation-mixer="clip: * ; loop: repeat" visible="false"></a-entity>
+                    gltf-model="/Public/models/animations/PortugalDance.glb" animation-mixer="clip: * ; loop: repeat"
+                    visible="false"></a-entity>
 
             </a-entity>
 
         </a-marker>
+        <a-entity camera position="0 0 0"></a-entity>
+
+
+        <!-- FRANCIA -->
+        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-francia.patt">
+              <!-- Este es el contenido 3D que aparecerá sobre el marcador. -->
+           
+            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+
+
+                <a-entity id="franciaIdle" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/franciaIdle.glb" visible="true"></a-entity>
+
+
+                <a-entity id="Francia1" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/FranciaDance.glb" animation-mixer="clip: *; loop: repeat"
+                    visible="false"></a-entity>
+
+                <a-entity id="Francia2" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/FranciaDance1.glb" animation-mixer="clip: *; loop: repeat"
+                    visible="false"></a-entity>
+
+
+
+            </a-entity>
+        </a-marker>
+
         <a-entity camera position="0 0 0"></a-entity>
 
 
