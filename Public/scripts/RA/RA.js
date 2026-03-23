@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const esp1 = document.querySelector("#españa1");
         const esp2 = document.querySelector("#españa2");
 
-
+        //corea
+        const corea = document.querySelector("#coreaNormal");
+        const cor1 = document.querySelector("#corea1");
+        const cor2 = document.querySelector("#corea2");
 
 
         // Mostrar Baile1 y ocultar Baile2
@@ -84,6 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
         españaNormal.setAttribute('visible', 'false');
         esp1.setAttribute('visible', 'true');
         esp2.setAttribute('visible', 'false');
+
+        //corea
+        corea.setAttribute('visible', 'false');
+        cor1.setAttribute('visible', 'true');
+        cor2.setAttribute('visible', 'false');
 
         // Si quieres agregar animación al modelo
         baile1.setAttribute('animation-mixer', 'clip: *; loop: repeat');
@@ -114,6 +122,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const esp1 = document.querySelector("#españa1");
         const esp2 = document.querySelector("#españa2");
 
+        //corea
+        const corea = document.querySelector("#coreaNormal");
+        const cor1 = document.querySelector("#corea1");
+        const cor2 = document.querySelector("#corea2");
+
 
         // Mostrar Baile2 y ocultar Baile1
         normal.setAttribute('visible', 'false');
@@ -142,8 +155,11 @@ document.addEventListener('DOMContentLoaded', function () {
         esp1.setAttribute('visible', 'false');
         esp2.setAttribute('visible', 'true');
 
-
-
+        //corea
+        corea.setAttribute('visible', 'false');
+        cor1.setAttribute('visible', 'false');
+        cor2.setAttribute('visible', 'true');
+        
         // Si quieres agregar animación al modelo
         baile2.setAttribute('animation-mixer', 'clip: *; loop: repeat');
     });
@@ -177,6 +193,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const esp2 = document.querySelector("#españa2");
 
 
+        //corea
+        const corea = document.querySelector("#coreaNormal");
+        const cor1 = document.querySelector("#corea1");
+        const cor2 = document.querySelector("#corea2");
+
 
         // Mostrar Baile1 y ocultar Baile2
         normal.setAttribute('visible', 'true');
@@ -202,6 +223,11 @@ document.addEventListener('DOMContentLoaded', function () {
         españaNormal.setAttribute('visible', 'true');
         esp1.setAttribute('visible', 'false');
         esp2.setAttribute('visible', 'false');
+
+        //corea
+        corea.setAttribute('visible', 'true');
+        cor1.setAttribute('visible', 'false');
+        cor2.setAttribute('visible', 'false');
 
     });
 

@@ -213,7 +213,7 @@
 
         <!-- ESPAÑA -->
         <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-españa.patt">
-           
+
             <a-entity position="0 0 0" scale="0.1 0.1 0.1">
 
 
@@ -235,6 +235,33 @@
         </a-marker>
 
         <a-entity camera position="0 0 0"></a-entity>
+
+
+        <!-- COREA DEL SUR -->
+        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-corea.patt">
+           
+            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+
+
+                <a-entity id="coreaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/idle/coreaIdle.glb" visible="true"></a-entity>
+
+
+                <a-entity id="corea1" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/coreaDance.glb" animation-mixer="clip: *; loop: repeat"
+                    visible="false"></a-entity>
+
+                <a-entity id="corea2" position="0 0 0" scale="1" rotation="-90 0 0"
+                    gltf-model="/Public/models/animations/coreaDance1.glb" animation-mixer="clip: *; loop: repeat"
+                    visible="false"></a-entity>
+
+
+
+            </a-entity>
+        </a-marker>
+
+        <a-entity camera position="0 0 0"></a-entity>
+
 
 
 
