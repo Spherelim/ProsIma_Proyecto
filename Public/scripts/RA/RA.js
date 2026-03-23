@@ -60,6 +60,27 @@ document.addEventListener('DOMContentLoaded', function () {
         const cor1 = document.querySelector("#corea1");
         const cor2 = document.querySelector("#corea2");
 
+        //canada
+        const canada = document.querySelector("#canadaNormal");
+        const can1 = document.querySelector("#canada1");
+        const can2 = document.querySelector("#canada2");
+
+
+         //brasil
+        const brasil = document.querySelector("#BrasilNormal");
+        const brasil1 = document.querySelector("#brasil1");
+        const brasil2 = document.querySelector("#brasil2");
+
+        //Argentina
+        const argentina = document.querySelector("#argNormal");
+        const arg1 = document.querySelector("#arg1");
+        const arg2 = document.querySelector("#arg2");
+
+
+        //alemania
+        const alem = document.querySelector("#almNormal");
+        const alem1 = document.querySelector("#alm1");
+        const alem2 = document.querySelector("#alm2");
 
         // Mostrar Baile1 y ocultar Baile2
         normal.setAttribute('visible', 'false');
@@ -93,6 +114,26 @@ document.addEventListener('DOMContentLoaded', function () {
         cor1.setAttribute('visible', 'true');
         cor2.setAttribute('visible', 'false');
 
+        //canada
+        canada.setAttribute('visible', 'false');
+        can1.setAttribute('visible', 'true');
+        can2.setAttribute('visible', 'false');
+
+        //brasil
+        brasil.setAttribute('visible', 'false');
+        brasil1.setAttribute('visible', 'true');
+        brasil2.setAttribute('visible', 'false');
+
+        //argentina
+        argentina.setAttribute('visible', 'false');
+        arg1.setAttribute('visible', 'true');
+        arg2.setAttribute('visible', 'false');
+
+        //alemania
+        alem.setAttribute('visible', 'false');
+        alem1.setAttribute('visible', 'true');
+        alem2.setAttribute('visible', 'false');
+    
         // Si quieres agregar animación al modelo
         baile1.setAttribute('animation-mixer', 'clip: *; loop: repeat');
     });
@@ -128,6 +169,29 @@ document.addEventListener('DOMContentLoaded', function () {
         const cor2 = document.querySelector("#corea2");
 
 
+        //canada
+        const canada = document.querySelector("#canadaNormal");
+        const can1 = document.querySelector("#canada1");
+        const can2 = document.querySelector("#canada2");
+
+
+        //brasil
+        const brasil = document.querySelector("#BrasilNormal");
+        const brasil1 = document.querySelector("#brasil1");
+        const brasil2 = document.querySelector("#brasil2");
+
+        //Argentina
+        const argentina = document.querySelector("#argNormal");
+        const arg1 = document.querySelector("#arg1");
+        const arg2 = document.querySelector("#arg2");
+
+        //alemania
+        const alem = document.querySelector("#almNormal");
+        const alem1 = document.querySelector("#alm1");
+        const alem2 = document.querySelector("#alm2");
+
+       
+
         // Mostrar Baile2 y ocultar Baile1
         normal.setAttribute('visible', 'false');
         baile2.setAttribute('visible', 'true');
@@ -159,7 +223,27 @@ document.addEventListener('DOMContentLoaded', function () {
         corea.setAttribute('visible', 'false');
         cor1.setAttribute('visible', 'false');
         cor2.setAttribute('visible', 'true');
-        
+
+        //canada
+        canada.setAttribute('visible', 'false');
+        can1.setAttribute('visible', 'false');
+        can2.setAttribute('visible', 'true');
+
+        //brasil
+        brasil.setAttribute('visible', 'false');
+        brasil1.setAttribute('visible', 'false');
+        brasil2.setAttribute('visible', 'true');
+
+        //argentina
+        argentina.setAttribute('visible', 'false');
+        arg1.setAttribute('visible', 'false');
+        arg2.setAttribute('visible', 'true');
+
+        //alemania
+        alem.setAttribute('visible', 'false');
+        alem1.setAttribute('visible', 'false');
+        alem2.setAttribute('visible', 'true');
+
         // Si quieres agregar animación al modelo
         baile2.setAttribute('animation-mixer', 'clip: *; loop: repeat');
     });
@@ -198,6 +282,26 @@ document.addEventListener('DOMContentLoaded', function () {
         const cor1 = document.querySelector("#corea1");
         const cor2 = document.querySelector("#corea2");
 
+        //canada
+        const canada = document.querySelector("#canadaNormal");
+        const can1 = document.querySelector("#canada1");
+        const can2 = document.querySelector("#canada2");
+
+        //brasil
+        const brasil = document.querySelector("#BrasilNormal");
+        const brasil1 = document.querySelector("#brasil1");
+        const brasil2 = document.querySelector("#brasil2");
+
+       
+        //Argentina
+        const argentina = document.querySelector("#argNormal");
+        const arg1 = document.querySelector("#arg1");
+        const arg2 = document.querySelector("#arg2");
+
+        //alemania
+        const alem = document.querySelector("#almNormal");
+        const alem1 = document.querySelector("#alm1");
+        const alem2 = document.querySelector("#alm2");
 
         // Mostrar Baile1 y ocultar Baile2
         normal.setAttribute('visible', 'true');
@@ -228,6 +332,26 @@ document.addEventListener('DOMContentLoaded', function () {
         corea.setAttribute('visible', 'true');
         cor1.setAttribute('visible', 'false');
         cor2.setAttribute('visible', 'false');
+
+        //canada
+        canada.setAttribute('visible', 'true');
+        can1.setAttribute('visible', 'false');
+        can2.setAttribute('visible', 'false');
+
+        //canada
+        brasil.setAttribute('visible', 'true');
+        brasil1.setAttribute('visible', 'false');
+        brasil2.setAttribute('visible', 'false');
+
+        //argentina
+        argentina.setAttribute('visible', 'true');
+        arg1.setAttribute('visible', 'false');
+        arg2.setAttribute('visible', 'false');
+
+        //alemania
+        alem.setAttribute('visible', 'true');
+        alem1.setAttribute('visible', 'false');
+        alem2.setAttribute('visible', 'false');
 
     });
 
