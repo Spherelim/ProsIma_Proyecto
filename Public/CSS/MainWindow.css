@@ -1,3 +1,17 @@
+:root{
+
+    --color-AC:#85B0F9;
+    --color-AM:#3546F8;
+    --color-AF:#1A1F7A;
+    --color-R:#C30007;
+    --color-B:#D9D9D9;
+    --letra-Afacado:'Afacado', Afacad-VariableFont_wght;
+    --letra-Quicksilver:'Quicksilver', Quicksilver;
+    --letra-Staatliches:'Staatliches', Staatliches-Regular;
+    --letra-sunshine:'sunshine', sunshineformulaDEMO;
+}
+
+
 @font-face {
     font-family: "Afacado";
     src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
@@ -51,7 +65,7 @@ body{
 
 .indexConteiner{
    
-    margin-top: 60px;
+    margin-top: 30px;
     position: relative;
     z-index: 2;
 
@@ -100,40 +114,5 @@ body{
     text-align: center;
     margin-bottom: 20px;
     
-}
-
-
-
-.animacion{
-   position: fixed;
-   z-index: 1;
-   top: 0; 
-   left: 0; 
-   width: 100%; 
-   height: 100%;
-}
-
-marquee{
-    
-    height: 100vh;
-    
-}
-
-.ball{
-    position: absolute;
-    
-    
-    max-width: 300px;
-    animation: animate 4s linear  infinite;
-   
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
 }
 

@@ -1,0 +1,24 @@
+{
+  "name": "prosima_proyecto",
+  "version": "1.0.0",
+  "description": "Integrantes del equipo:\\\r |-> Martha Lizbeth Hernandez Hernandez\\\r |-> Mauricio Eleuterio Ortiz Rodriguez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./Public/src/input.css -o ./Public/src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spherelim/ProsIma_Proyecto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spherelim/ProsIma_Proyecto/issues"
+  },
+  "homepage": "https://github.com/Spherelim/ProsIma_Proyecto#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
