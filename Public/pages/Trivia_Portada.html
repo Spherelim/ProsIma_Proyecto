@@ -4,32 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/Trivia_Portada.css">
     <title>Soccer Scan</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../src/output.css">
+
 
 </head>
 
-<body>
+<body
+    class="bg-[url('/Public/image/grayFound.png')]  bg-center bg-no-repeat lg:bg-repeat  bg-cover  overflow-y-hidden  sm:overflow-hidden grid place-content-center h-screen ">
 
-    <div class="close-btn"> <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
-            href="/index.html">
-            <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal">
-            <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover">
+   <div class="close-btn  relative top-14 left-58 sm:top-13 sm:left-58 cursor-pointer">
+        <a class=" group inline-block transition duration-300 ease-in-out hover:scale-120 hover: " href="/index.html">
+            <img src="/Public/image/icon-salir.png" alt="Regresar" class="w-10 h-10 sm:w-10 sm:h-10 icon normal block group-hover:hidden">
+            <img src="/Public/image/icon-hover.png" alt="Regresar" class="w-10 h-10 sm:w-10 sm:h-10 icon hover hidden group-hover:inline">
 
         </a>
     </div>
 
-    <div class="wrapper-trivia">
+    <div class="wrapper-trivia bg-[#3546F8]  w-70 h-90 sm:w-70 sm:h-80 lg:w-130
+    grid justify-center content-center rounded-[25px] gap-5 text-center">
 
+        <h1 id="titulo" class="font-[sunshine] text-[30px] sm:text-[30px]
+        text-[#D9D9D9]">¡Bienvenido a trivia!</h1>
+        <p id="txt" class="font-[afacado] text-[20px] sm:text-[20]
+        text-[#D9D9D9]">Contesta las preguntas y en tu apartado de videos encontraras respuesta. </p>
 
-        <h1 id="titulo">¡Bienvenido a trivia!</h1>
-        <p id="txt">Contesta las preguntas y en tu apartado de videos encontraras respuesta. </p>
-
-
-        <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
-            <a id="btn" href="Trivia_Preguntas.html">Listo</a>
+        <div class="flex justify-center items-center">
+        <button class="btn bg-[#D9D9D9] w-20 h-10 
+        sm:w-20 sm:h-8 rounded-[25px]
+        shadow-[4px_4px_10px_#1A1F7A] 
+        transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+                <a id="btn" class="text-[#1A1F7A] 
+                font-[afacado] italic text-[18px] sm:text-[18px]" href="Trivia_Preguntas.html">Listo</a>
         </button>
+
+        </div>
 
     </div>
 
