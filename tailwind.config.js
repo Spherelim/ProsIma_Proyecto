@@ -2,7 +2,7 @@ export default {
   content: ["./*.html", "./Public/**/*.{html,js}"],
   theme: {
     extend: {
-       colors: {
+       color: {
         azulClaro: "var(--color-AC)",
         azulMedio: "var(--color-AM)",
         azulFuerte: "var(--color-AF)",
