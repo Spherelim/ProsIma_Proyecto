@@ -27,12 +27,24 @@
         <p id="txt">Aquí puedes ver las estadísticas de tu equipo Favorito!!. </p>
 
 
-        <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+        <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" 
+        onclick="marcarInicio()">
             <a id="btn" href="ESTADISTICAS.html">Entendido</a>
         </button>
     </div>
 
+    <script>
+        if(localStorage.getItem("EstadIniciada")==="true"){
+            window.location.href = "ESTADISTICAS.html";
+        }
+    </script>
+
 </body>
 
+    <script>
+        function marcarInicio() {
+            localStorage.setItem("EstadIniciada","true");
+        }
+    </script>
 
 </html>
