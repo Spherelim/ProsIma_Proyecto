@@ -9,9 +9,22 @@ Promise.all([
     fetch('../data/VideoData.json').then(res => res.json())
 ])
     .then(([trivia, videos]) => {
-        triviaData = trivia;
+        const triviaGuardada = localStorage.getItem('triviaData');
+        
+        if (triviaGuardada) {
+            triviaData = JSON.parse(triviaGuardada);
+        } else {
+            triviaData = trivia;
+        }
+
         videoData = videos;
-        mostrarPregunta(indice);
+
+        if(RespondioCorrectamenteTodaTrivia()){
+            mostrarFinal();
+            return;            
+        } else{
+            mostrarPregunta(indice);
+        }
     })
     .catch(error => console.error('Error al cargar los datos:', error));
 
@@ -23,29 +36,34 @@ function mostrarPregunta(indice) {
         indice++;
     }
 
-    if (indice > 10) {
-        if (RespondioCorrectamenteTodaTrivia()) {
-
-            Swal.fire({
-                title: "¡Gracias por participar!",
-                icon: "success",
-                draggable: true,
-                customClass: {
-                    title: 'titleCard',
-                    popup: 'bodyCard',
-                    iconColor: 'colorIcon',
-                    confirmButton: 'btnOk'
-
-                }
-            });
-            document.getElementById('titulo').textContent = "¡Felicidades!";
-            document.getElementById('pregunta').textContent = "Has respondido correctamente todas las preguntas. ¡Gracias por jugar!";
-            wrapper.innerHTML = "";
-        } else {
-            ReiniciarContador();
-        }
+    if(indice > 10){
+        mostrarFinal();
         return;
     }
+
+    // if (indice > 10) {
+    //     if (RespondioCorrectamenteTodaTrivia()) {
+
+    //         Swal.fire({
+    //             title: "¡Gracias por participar!",
+    //             icon: "success",
+    //             draggable: true,
+    //             customClass: {
+    //                 title: 'titleCard',
+    //                 popup: 'bodyCard',
+    //                 iconColor: 'colorIcon',
+    //                 confirmButton: 'btnOk'
+
+    //             }
+    //         });
+    //         document.getElementById('titulo').textContent = "¡Felicidades!";
+    //         document.getElementById('pregunta').textContent = "Has respondido correctamente todas las preguntas. ¡Gracias por jugar!";
+    //         wrapper.innerHTML = "";
+    //     } else {
+    //         ReiniciarContador();
+    //     }
+    //     return;
+    // }
 
     window.indice = indice;
     const pregunta = triviaData[`Pregunta_${indice}`];
@@ -60,12 +78,37 @@ function mostrarPregunta(indice) {
         </ul>
         <ul class="segundaFila">
             <li class="btn" onclick="validarRespuesta(2)">${pregunta.Opciones[2]}</li>
-             <li class="btn" onclick="validarRespuesta(3)">${pregunta.Opciones[3]}</li>
+            <li class="btn" onclick="validarRespuesta(3)">${pregunta.Opciones[3]}</li>
         </ul>
     `
 
     wrapper.innerHTML = opcionesHTML;
 
+}
+
+// Para que no tenga que volver a mostrar la trivia
+function mostrarFinal() {
+    const wrapper = document.querySelector('.wrapper-preguntas');
+
+    document.getElementById('titulo').textContent = "¡Felicidades!";
+    document.getElementById('pregunta').textContent = "Has respondido correctamente todas las preguntas. ¡Gracias por jugar!";
+
+    document.getElementById('btnNext').style.display = "none";
+
+    wrapper.innerHTML = ``;
+    
+    // Swal.fire({
+    //     title:"¡Felicidades!",
+    //     text: "Terminaste la trivia :D",
+    //     icon: "success"
+    // });
+
+}
+
+// yaya salte alv fuchi pto pendejo 
+function salirTrivia(){
+    // localStorage.removeItem("triviaIniciada");
+    window.location.href = "/index.html";
 }
 
 function RespondioCorrectamenteTodaTrivia() {
@@ -94,12 +137,13 @@ function siguientePregunta() {
 function respuestaCorrecta(esCorrecta) {
 
     if (esCorrecta) {
-         
 
          // Actualizar trivia
         const preguntaActual = `Pregunta_${indice}`;
         triviaData[preguntaActual].Acertivo = true;
         
+        guardarEstadoTrivia();
+
         const VideoDesbloquear = `video_${indice}`;
         videoData[VideoDesbloquear].Desbloqueado = true;
 
@@ -107,19 +151,17 @@ function respuestaCorrecta(esCorrecta) {
         // for (let videoKey in videoData) {
         //     if (videoData[videoKey].PreguntaAsociada === preguntaActual) {
         //         videoData[videoKey].Desbloqueado = true;
-               
         //     }
         // }
         
 
-         
         // Guardar cambios
         guardarEstadoVideos(videoData);
         
         const puto = triviaData[preguntaActual].Acertivo;
         const marica = videoData[VideoDesbloquear].Desbloqueado;
 
-       /*  alert("indice: " + indice +
+        /*  alert("indice: " + indice +
             "\n Video estado:" + marica +
             "\n Pregunta estado:" + puto
         );
@@ -140,11 +182,11 @@ function respuestaCorrecta(esCorrecta) {
         });
 
 
-       
         indice++;
-        if (indice <= 10) {
-            mostrarPregunta(indice);
-        }
+        // if (indice <= 10) {
+        //     mostrarPregunta(indice);
+        // }
+        mostrarPregunta(indice);
     } else {
         /* alert("Respuesta incorrecta, intenta de nuevo."); */
         Swal.fire({
@@ -168,6 +210,9 @@ function validarRespuesta(opcionSeleccionada) {
     respuestaCorrecta(Validar);
 }
 
+function guardarEstadoTrivia() {
+    localStorage.setItem('triviaData', JSON.stringify(triviaData));
+}
 
 function guardarEstadoVideos(videoData) {
     localStorage.setItem('videoData', JSON.stringify(videoData));
