@@ -41,14 +41,25 @@
         <button class="btn w-31.5 h-10 sm:w-35 sm:h-11 md:w-40 md:h-12  lg:w-63 lg:h-20  bg-[#D9D9D9]  font-[afacado] text-[22px] sm:text-[25] md:text-[28] lg:text-[30px] italic text-[#1A1F7A]
         border-none rounded-[25px] shadow-[4px_4px_10px_#1f1e1e]
         mb-[ 20px] flex justify-center items-center  
-        transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+        transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" 
+        onclick="marcarInicio()">
             <a href="../pages/RA_Seat.html" class="">Entendido</a>
         </button>
 
     </div>
 
+    <script>
+        if(localStorage.getItem("RaIniciada")==="true"){
+            window.location.href = "../pages/RA_Seat.html";
+        }
+    </script>
 
 </body>
 
+<script>
+        function marcarInicio() {
+            localStorage.setItem("RaIniciada","true");
+        }
+    </script>
 
 </html>

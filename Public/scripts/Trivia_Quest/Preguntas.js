@@ -93,9 +93,15 @@ function mostrarFinal() {
     document.getElementById('titulo').textContent = "¡Felicidades!";
     document.getElementById('pregunta').textContent = "Has respondido correctamente todas las preguntas. ¡Gracias por jugar!";
 
-    document.getElementById('btnNext').style.display = "none";
+    // document.getElementById('btnNext').style.display = "none";
 
-    wrapper.innerHTML = ``;
+    wrapper.innerHTML = "";
+
+    wrapper.innerHTML = `
+        <div id="pregunta">
+            <p>¡Has desbloqueado todos los videos!</p>
+        </div>
+    `;
     
     // Swal.fire({
     //     title:"¡Felicidades!",
