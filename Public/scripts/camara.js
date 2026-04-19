@@ -65,3 +65,33 @@ filtros.forEach((filtro, index) => {
         }
     });
 });
+
+
+const btnFoto = document.getElementById('btnFoto');
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+const preview = document.getElementById('preview');
+
+btnFoto.addEventListener('click', () => {
+    
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    context.filter = video.style.filter;
+
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    if (overlay.src) {
+        context.drawImage(overlay, 0, 0, canvas.width, canvas.height);
+    }
+
+    const dataURL = canvas.toDataURL('image/png');
+
+    preview.src = dataURL;
+
+    const link = document.createElement('a');
+    link.href = dataURL;
+    link.download = 'foto.png';
+    link.click();
+
+});
