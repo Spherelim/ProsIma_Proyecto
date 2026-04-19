@@ -4,57 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Public/CSS/MainWindow.css">
-     <title>Soccer Scan</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--  <link rel="stylesheet" href="Public/CSS/MainWindow.css"> -->
+    <title>Soccer Scan</title>
+    <link rel="stylesheet" href="./Public/src/output.css">
 
 </head>
 
-<body>
+<body
+    class="bg-[url('/Public/image/redFound.png')] bg bg-center bg-no-repeat bg-cover  overflow-y-hidden  lg:bg-repeat">
 
-    <!-- <section  class="animacion">
-        <marquee behavior="alternate" scrollamount="40">
+    <!-- indexContainer -->
+    <div class="grid justify-items-center items-center h-screen  lg:mt-7.5  ">
 
-            <marquee behavior="alternate" direction="down" scrollamount="30">
-                <img src="/Public/image/balon_2026.png" alt="" class="ball">
-            </marquee>
+        <div class="check">
+            <H1 id="titulo"
+                class="font-[quicksilver] italic text-[45px] sm:text-[60px] lg:text-[80px]   text-[#D9D9D9]  text-center  pb-0">
+                SOCCER
+                SCAN</H1>
 
-        </marquee>
-    </section> -->
-
-    <div class="indexConteiner">
-        <H1 id="titulo">SOCCER SCAN</H1>
-
-        <H2 id="subtitulo">Menu principal</H2>
-
-
-        <div class="wrapper-menu">
-            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:outline-4 hover:outline-white 
-               px-4 py-2 rounded">
-                <a href="Public/pages/RA_Portada.html" id="btn"> RA </a>
-            </button>
-
-            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:outline-4 hover:outline-white 
-               px-4 py-2 rounded">
-                <a href="Public/pages/Trivia_Portada.html" id="btn"> TRIVIA </a>
-            </button>
-
-            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:outline-4 hover:outline-white 
-               px-4 py-2 rounded">
-                <a href="Public/pages/videoMenu.html" id="btn"> VIDEOS </a>
-            </button>
-
-            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:outline-4 hover:outline-white 
-               px-4 py-2 rounded">
-                <a href="Public/pages/FOTOS.html" id="btn">FOTOS</a>
-            </button>
-            <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:outline-4 hover:outline-white 
-               px-4 py-2 rounded">
-                <a href="Public/pages/estadisticasMenu.html" id="btn"> ESTADISTICAS </a>
-            </button>
+            <H2 id="subtitulo"
+                class="font-[staatliches] text-[40px]  sm:text-[30px] lg:text-[60px]  text-[#D9D9D9] text-center m-0">
+                Menu
+                principal</H2>
 
 
+            <div class="wrapper-menu grid place-items-center relative gap-2.5 lg:gap-4 ">
+                <button
+                    class="btn w-55 h-12 sm:w-55 sm:h-10 lg:w-87 lg:h-18  font-[sunshine] text-[35px]  sm:text-[30px] lg:text-[60px] text-[#D9D9D9] bg-[#3546F8] border-none rounded-xl lg:rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center lg:mb-5 
+                transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 active:-translate-y-1 active:scale-110 hover:outline-4 hover:outline-white px-4 py-2 rounded">
 
+                    <a href="Public/pages/RA_Portada.html" id="btn" class="no-underline"> RA </a>
+
+                </button>
+
+                <button
+                    class="btn w-55 h-12 sm:w-55 sm:h-10 lg:w-87 lg:h-18  font-[sunshine] text-[35px]  sm:text-[30px] lg:text-[60px] text-[#D9D9D9] bg-[#3546F8] border-none rounded-xl lg:rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center lg:mb-5 
+                 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 active:-translate-y-1 active:scale-110 hover:outline-4 hover:outline-white px-4 py-2 rounded">
+                    <a href="Public/pages/Trivia_Portada.html" id="btn"> TRIVIA </a>
+                </button>
+
+                <button
+                    class="btn w-55 h-12 sm:w-55 sm:h-10 lg:w-87 lg:h-18 font-[sunshine] text-[35px]  sm:text-[30px] lg:text-[60px] text-[#D9D9D9] bg-[#3546F8] border-none rounded-xl lg:rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center lg:mb-5 
+                 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 active:-translate-y-1 active:scale-110 hover:outline-4 hover:outline-white px-4 py-2 rounded">
+                    <a href="Public/pages/videoMenu.html" id="btn"> VIDEOS </a>
+                </button>
+
+                <button
+                    class="btn w-55 h-12 sm:w-55 sm:h-10 lg:w-87 lg:h-18  font-[sunshine] text-[35px]  sm:text-[30px] lg:text-[60px] text-[#D9D9D9] bg-[#3546F8] border-none rounded-xl lg:rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center lg:mb-5 
+                 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 active:-translate-y-1 active:scale-110 hover:outline-4 hover:outline-white px-4 py-2 rounded">
+                    <a href="Public/pages/FOTOS.html" id="btn">FOTOS</a>
+                </button>
+                <button
+                    class="btn w-55 h-12 sm:w-55 sm:h-10 lg:w-87 lg:h-18  font-[sunshine] text-[35px]  sm:text-[30px] lg:text-[60px] text-[#D9D9D9] bg-[#3546F8] border-none rounded-xl lg:rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center lg:mb-5 
+                 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 active:-translate-y-1 active:scale-110 hover:outline-4 hover:outline-white px-4 py-2 rounded">
+                    <a href="Public/pages/estadisticasMenu.html" id="btn"> ESTADISTICAS </a>
+                </button>
+
+            </div>
 
         </div>
 
@@ -62,6 +68,5 @@
 
 
 </body>
-
 
 </html>
