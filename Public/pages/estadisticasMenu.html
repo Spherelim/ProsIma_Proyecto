@@ -4,47 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/estadisticasMenu.css">v
     <title>Soccer Scan</title>
+    <link rel="stylesheet" href="../src/output.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 
-<body>
+<body
+    class="bg-[url('/Public/image/grayFound.png')] bg bg-center bg-no-repeat bg-cover  overflow-y-hidden  lg:bg-repeat  grid place-items-center h-screen ">
 
-    <div class="close-btn"> <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
-            href="/index.html">
-            <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal">
-            <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover">
+
+
+    <div class="close-btn hidden md:fixed  md:top-12 md:right-10  lg:top-15 lg:right-62.5
+         w-12 h-12 sm:w-12 sm:h-12 md:w-15 md:h-15 lg:w-20 lg:h-20 cursor-pointer">
+        <a class="group inline-block transition duration-300 ease-in-out hover:scale-120 hover: " href="/index.html">
+            <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal block group-hover:hidden">
+            <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover hidden group-hover:inline">
 
         </a>
     </div>
 
-    <div class="wrapper-trivia">
 
 
-        <h1 id="titulo">Estadisticas</h1>
-        <p id="txt">Aquí puedes ver las estadísticas de tu equipo Favorito!!. </p>
+    <div class="wrapper-trivia  bg-[#3546F8] rounded-[25px]  
+    w-85 h-110 sm:w-85 sm:h-120  md:w-180 md:h-140
+    lg:w-275 lg:h-160 grid place-items-center content-center  gap-10 lg:gap-16 ">
+
+        <div class="txtContainer ">
+            <h1 id="titulo"
+                class="font-[sunshine]  text-[50px] sm:text-[55px]  md:text-[65px] lg:text-[80px] text-[#D9D9D9] text-center ">
+                Estadisticas</h1>
+            <p id="txt"
+                class="w-[300px] sm:w-[300px] md:w-[500px] lg:w-[1000px]  italic font-[afacado] text-[27px] sm:text-[27px] md:text-[28px] lg:text-[40px] text-[#D9D9D9] text-center  lg:p-0">
+                Aquí puedes ver las estadísticas de tu equipo Favorito!!. </p>
+
+        </div>
 
 
-        <button class="btn transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" 
-        onclick="marcarInicio()">
-            <a id="btn" href="ESTADISTICAS.html">Entendido</a>
-        </button>
+        <div class="bContainer">
+
+            <button class="btn w-31.5 h-10 sm:w-35 sm:h-11 md:w-40 md:h-12  lg:w-63 lg:h-20  bg-[#D9D9D9]  font-[afacado] text-[22px] sm:text-[25] md:text-[28] lg:text-[30px] italic text-[#1A1F7A]
+        border-none rounded-[25px] shadow-[4px_4px_10px_#1f1e1e]
+        mb-[ 20px] flex justify-center items-center  
+        transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" onclick="marcarInicio()">
+                <a id="btn" href="ESTADISTICAS.html">Entendido</a>
+            </button>
+
+        </div>
+
     </div>
 
-    <script>
-        if(localStorage.getItem("EstadIniciada")==="true"){
+    <!--   <script>
+        if (localStorage.getItem("EstadIniciada") === "true") {
             window.location.href = "ESTADISTICAS.html";
         }
-    </script>
+    </script> -->
 
 </body>
 
-    <script>
-        function marcarInicio() {
-            localStorage.setItem("EstadIniciada","true");
-        }
-    </script>
+<!-- <script>
+    function marcarInicio() {
+        localStorage.setItem("EstadIniciada", "true");
+    }
+</script> -->
 
 </html>
