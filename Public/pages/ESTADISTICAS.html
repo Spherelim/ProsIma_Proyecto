@@ -4,36 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/Estadisticas.css">
+    <link rel="stylesheet" href="../src/output.css">
+
     <title>Soccer Scan</title>
 </head>
 
 
-<body>
+<body class="bg-[url('/Public/image/blueFound.png')] bg bg-center bg-repeat overflow-x-hidden ">
 
 
 
-    <h1 id="titulo">Listado</h1>
+    
+    <div class="txtsContainer">
+        <h1 id="titulo"
+            class="italic  font-[Quicksilver] text-[#D9D9D9] text-[15px] text-center  sm:text-[45px] md:text-[40px] lg:text-[80px]">
+            Estadisticas</h1>
 
+    </div>
+
+  
     <div class="containerCard">
 
         <div class="container">
 
-            <div class="Tabla">
-                <table id="tablaMundiales">
-                    <tr>
-                        <th>Mundial</th>
-                        <th>Cede</th>
-                        <th>final</th>
-                        <th>resultado</th>
-                        <th>ganador</th>
+            <div class="Tabla flex justify-center items-center ">
+                <table id="tablaMundiales" class="bg-[#D9D9D9] w-[800px] lg:w-[1400px] border-2 sm:border-6 lg:border-8 border-[#D9D9D9] ">
+                    <tr class="font-[Staatliches] text-[#1A1F7A] text-[10px] md:text-[25px] lg:text-[40px] bg-[#85B0F9] 
+                    ">
+                        <th class="text-center ">Mundial</th>
+                        <th class="text-center">Cede</th>
+                        <th class="text-center">final</th>
+                        <th class="text-center">resultado</th>
+                        <th class="text-center">ganador</th>
                     </tr>
                     <tr>
                         
 
                     </tr>
 
-                    <!-- Agrega más filas según sea necesario -->
+                    
                 </table>
 
             </div>
@@ -42,14 +51,39 @@
 
         
 
+        
+   
     </div>
-
-
-    <div class="submenu">
-        <a id="btnBack" href="/index.html">regresar</a>
+    <br>
+  
+    <div class="btn flex justify-center items-center ">
+    
+        <div class="submenu
+            w-16 h-8
+            sm:w-20 sm:h-8
+            md:w-[88px] md:h-8
+            lg:w-30 lg:h-10
+            bg-[#D9D9D9]
+            font-[sunshine]
+            text-[15px]
+            sm:text-[20px]
+            md:text-[22px]
+            lg:text-[25px]
+            text-[#3546F8]
+            rounded-[15px]
+            shadow-[4px_4px_10px_#1f1e1e]
+            flex justify-center items-center">
+    
+            <a id="btnBack" href="/index.html">Salir</a>
+    
+        </div>
+    
     </div>
+    <br>
+    
 
     <script src="/Public/scripts/Estadistica/Estadistica.js"></script>
+    
 </body>
 
 

@@ -80,7 +80,7 @@
         "ganador":"/image/Mundiales/Selecciones/Inglaterra_1966.png"
     },
     "Mundial 1970":{
-        "imagen":"/image/Mundiales/WSC_1970.png",
+        "imagen":"/image/Mundiales/WSC_1970.jpg",
         "cede":"/image/Mundiales/México.webp",
         "final":{
             "equipo1":"/image/Mundiales/Selecciones/Brazil_1970.png",
@@ -100,7 +100,7 @@
         "ganador":"/image/Mundiales/Selecciones/Alemania_1974.png"
     },
     "Mundial 1978":{
-        "imagen":"/image/Mundiales/WSC_1978.svg",
+        "imagen":"/image/Mundiales/WSC_1978.png",
         "cede":"/image/Mundiales/Argentina.webp",
         "final":{
             "equipo1":"/image/Mundiales/Selecciones/Argentina_1978.png",
@@ -150,7 +150,7 @@
         "ganador":"/image/Mundiales/Selecciones/Brazil_1998.png"
     },
     "Mundial 1998":{
-        "imagen":"/image/Mundiales/WSC_1998.webp",
+        "imagen":"/image/Mundiales/WSC_1998.png",
         "cede":"/image/Mundiales/Francia.webp",
         "final":{
             "equipo1":"/image/Mundiales/Selecciones/Francia_1998.png",
@@ -180,7 +180,7 @@
         "ganador":"/image/Mundiales/Selecciones/Italia_2010.png"
     },
     "Mundial 2010":{
-        "imagen":"/image/Mundiales/WSC_2010.jpg",
+        "imagen":"/image/Mundiales/WSC_2010.png",
         "cede":"/image/Mundiales/Sudafrica.webp",
         "final":{
             "equipo1":"/image/Mundiales/Selecciones/España_2010.png",
