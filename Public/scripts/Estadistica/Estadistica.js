@@ -24,15 +24,41 @@ function AgregarDatos() {
         const fila = document.createElement("tr");
 
         fila.innerHTML = `
-            <td>${mundial} <img src="../${data.imagen}" id="Cedes"></td>
-            <td><img src="../${data.cede}" alt="cede" id="Mundiales"></td>
-            <td>
-                <img src="../${data.final.equipo1}" alt="eq1">
-                vs
-                <img src="../${data.final.equipo2}" alt="eq2">
+            <td class="font-[Staatliches] text-center text-[10px] md:text-[18px] lg:text-[25px] text-[#1A1F7A]">${mundial} 
+
+            <div class="flex items-center justify-center gap-4">
+            <img src="../${data.imagen}" id="Cedes" class="  w-7  md:w-12 lg:w-16 ">
+            </div>
+            
             </td>
-            <td>${data.resultado}</td>
-            <td><img src="../${data.ganador}" alt="ganador"></td>
+
+
+            <td >
+            <div class="flex items-center justify-center gap-4">
+              <img src="../${data.cede}" alt="cede" id="Mundiales" class=" w-7  md:w-12 lg:w-16  rounded-full">
+            </div>
+           
+            </td>
+
+            
+            <td class="font-[Staatliches] text-center text-[10px] lg:text-[25px] text-[#1A1F7A]" >
+                 <div class="flex items-center justify-center gap-4">
+                 <img src="../${data.final.equipo1}" alt="eq1" class="w-7  md:w-12 lg:w-16   h-auto">
+                 <span class="font-bold text-[10px] md:text-[18px] lg:text-[25px]">vs</span>
+                 <img src="../${data.final.equipo2}" alt="eq2" class="w-7  md:w-12 lg:w-16   h-auto">
+            </div>
+            </td>
+
+
+            <td class="font-[Staatliches] text-center text-[10px] md:text-[18px] lg:text-[25px] text-[#1A1F7A]">${data.resultado}</td>
+
+
+            <td >
+            <div class="flex items-center justify-center gap-4">
+            <img src="../${data.ganador}" alt="ganador" class="w-7  md:w-12 lg:w-16    content-center">
+            </div>
+            
+            </td>
         `;
 
         tabla.appendChild(fila);

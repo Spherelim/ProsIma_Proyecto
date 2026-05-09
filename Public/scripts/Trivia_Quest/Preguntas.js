@@ -72,13 +72,21 @@ function mostrarPregunta(indice) {
     document.getElementById('pregunta').textContent = pregunta.Texto;
 
     let opcionesHTML = `
-        <ul class="primeraFila">
-            <li class="btn" onclick="validarRespuesta(0)">${pregunta.Opciones[0]}</li>
-            <li class="btn" onclick="validarRespuesta(1)">${pregunta.Opciones[1]}</li>
+        <ul class="primeraFila grid grid-cols-2  gap-2 md:gap-4 lg:gap-5 ">
+            <li class="btn flex justify-center items-center font-[sunshine] text-[#FFFFFF] text-[25px] sm:text-[35px] lg:text-[50px] w-[150px] h-[130px] sm:w-[300px] sm:h-[140px] lg:w-[600px] lg:h-[150px] bg-[#C30007] rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center transition-all 
+            duration-500 delay-200 ease-in-out hover:bg-white 
+            hover:text-[#3546F8] hover:scale-110" onclick="validarRespuesta(0)">${pregunta.Opciones[0]}</li>
+            <li class="btn flex justify-center items-center font-[sunshine] text-[#FFFFFF] text-[25px]  sm:text-[35px]  lg:text-[50px] w-[150px] h-[130px] sm:w-[300px] sm:h-[140px]  lg:w-[600px] lg:h-[150px] bg-[#C30007] rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center transition-all 
+            duration-500 delay-200 ease-in-out hover:bg-white 
+            hover:text-[#3546F8] hover:scale-110" onclick="validarRespuesta(1)">${pregunta.Opciones[1]}</li>
         </ul>
-        <ul class="segundaFila">
-            <li class="btn" onclick="validarRespuesta(2)">${pregunta.Opciones[2]}</li>
-            <li class="btn" onclick="validarRespuesta(3)">${pregunta.Opciones[3]}</li>
+        <ul class="segundaFila grid grid-cols-2 gap-2 lg:gap-5">
+            <li class="btn flex justify-center items-center font-[sunshine] text-[#FFFFFF] text-[25px] md:text-[35px]  lg:text-[50px] w-[150px] h-[130px] sm:w-[300px] sm:h-[140px]  lg:w-[600px] lg:h-[150px] bg-[#C30007] rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center transition-all 
+            duration-500 delay-200 ease-in-out hover:bg-white 
+            hover:text-[#3546F8] hover:scale-110" onclick="validarRespuesta(2)">${pregunta.Opciones[2]}</li>
+            <li class="btn flex justify-center items-center font-[sunshine] text-[#FFFFFF] text-[25px] sm:text-[35px]  lg:text-[50px] w-[150px] h-[130px] sm:w-[300px] sm:h-[140px]  lg:w-[600px] lg:h-[150px] bg-[#C30007] rounded-[20px] shadow-[4px_4px_10px_#1f1e1e] text-center transition-all 
+            duration-500 delay-200 ease-in-out hover:bg-white 
+            hover:text-[#3546F8] hover:scale-110" onclick="validarRespuesta(3)">${pregunta.Opciones[3]}</li>
         </ul>
     `
 
