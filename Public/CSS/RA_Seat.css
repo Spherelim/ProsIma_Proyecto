@@ -1,35 +1,23 @@
-@font-face { font-family:"Afacado"; src:url(/Public/fonts/Afacad-VariableFont_wght.ttf) format("truetype"); }
-@font-face { font-family:"Quicksilver"; src:url(/Public/fonts/Quicksilver.ttf) format("truetype"); }
-@font-face { font-family:"Staatliches"; src:url(/Public/fonts/Staatliches-Regular.ttf) format("truetype"); }
-@font-face { font-family:"sunshine"; src:url(/Public/fonts/sunshineformulaDEMO.otf) format("opentype"); }
+@font-face{font-family:"Afacado";src:url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")}
+@font-face{font-family:"Quicksilver";src:url(/Public/fonts/Quicksilver.ttf)format("truetype")}
+@font-face{font-family:"Staatliches";src:url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")}
+@font-face{font-family:"sunshine";src:url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")}
 
-:root {
-    --color-AC:#85B0F9; --color-AM:#3546F8; --color-AF:#1A1F7A;
-    --color-R:#C30007; --color-B:#D9D9D9;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{overflow:hidden}
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body { overflow:hidden; }
+body>canvas{display:none!important}
+body>video{display:none!important}
 
-/* Bloquear canvas/video fuera del visor */
-body > canvas { display:none !important; }
-body > video { display:none !important; }
+#camera-wrapper{contain:strict;overflow:hidden}
+#camera-wrapper canvas{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important}
+a-scene{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important}
 
-#camera-wrapper { contain:strict; overflow:hidden; }
+.icon.hover{display:none}
+a:hover .icon.normal{display:none}
+a:hover .icon.hover{display:inline}
 
-#camera-wrapper canvas { 
-    position:absolute !important; top:0 !important; left:0 !important;
-    width:100% !important; height:100% !important;
-}
+#guide-text{transition:opacity 0.4s}
 
-a-scene { 
-    position:absolute !important; top:0 !important; left:0 !important;
-    width:100% !important; height:100% !important;
-}
-
-@media (max-width:640px) {
-    #camera-wrapper { width:85% !important; border-radius:15px; }
-}
-@media (min-width:641px) and (max-width:1024px) {
-    #camera-wrapper { width:40% !important; }
-}
+@media(max-width:640px){#camera-wrapper{width:85%!important;border-radius:15px}}
+@media(min-width:641px) and (max-width:1024px){#camera-wrapper{width:40%!important}}
