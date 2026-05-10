@@ -1,382 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Soccer Scan - AR Países</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/Public/scripts/tailwind-config.js"></script>
     <link rel="stylesheet" href="/Public/CSS/RA_Seat.css">
-    <title>Soccer Scan</title>
+    
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
-    <link rel="stylesheet" href="../src/output.css">
-
-
-
 </head>
 
+<body style="margin:0; padding:0; overflow:hidden; background:url('/Public/image/grayFound.png') center/cover; width:100vw; height:100vh; display:flex; align-items:center; justify-content:center;">
 
-
-<div class="close-btn"> <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: "
-        href="/index.html">
-        <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon normal">
-        <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover">
-
-    </a>
-</div>
-
-<div class="screen-detail">
-
-    <div class="fondo-conteiner">
-
-        <div class="camera-conteiner">
-
-
-            <div class="menu-camera">
-
-
-                <ul class="ul-icons">
-                    <li>
-                        <button class="btn" id="anim1" style="display: none;">
-
-                            <img id="imgAnim1" src="/Public/image/icon-dance1.png" alt="">
-                        </button>
-                    </li>
-
-
-                    <li>
-                        <button class="btnFolder" id="btnClose">
-                            <img id="Folder" src="/Public/image/icon-folder.png" alt="">
-                        </button>
-
-                    </li>
-
-                    <li>
-                        <button class="btn" id="anim2" style="display: none;">
-                            <img id="imgAnim2" src="/Public/image/icon.-dance2.png" alt="">
-                        </button>
-
-                    </li>
-
-
-                </ul>
-            </div>
-
-        </div>
-
+    <!-- BOTÓN CERRAR -->
+    <div style="position:fixed; top:15px; right:15px; z-index:999;">
+        <a href="/index.html">
+            <img src="/Public/image/icon-salir.png" alt="Salir" style="width:40px; height:40px;" class="normal">
+            <img src="/Public/image/icon-hover.png" alt="Salir" style="width:40px; height:40px; display:none;" class="hover">
+        </a>
     </div>
 
-</div>
-
-
-
-<!-- 
-  <div class="menu-camera">
-
-
-                <ul class="ul-icons">
-                    <li>
-                        <button class="btn">
-                            <img src="/Public/image/icon-cerrarMenu.png" alt="">
-                        </button>
-                    </li>
-
-
-                    <li>
-                        <button class="btnFolder">
-                            <img src="/Public/image/icon-folder.png" alt="">
-                        </button>
-
-                    </li>
-
-                    <li>
-                        <button class="btn">
-                            <img src="/Public/image/icon-camara.png" alt="">
-                        </button>
-
-                    </li>
-
-
-                </ul>
-            </div> -->
-
-<body>
-
-
-
-    <a-scene embedde arjs>
-
-        <!-- MEXICO -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Mexico.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/mexicoIdle.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="true"></a-entity>
-
-
-                <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance.glb"
-                    animation-mixer="clip: macarena; loop: repeat" visible="false"></a-entity>
-
-                <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip: soccer; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- PORTUGAL -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-portugal.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="portugalNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/portugalIdle.glb" visible="true"></a-entity>
-
-
-
-                <a-entity id="Portugal1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/PortugalDance1.glb"
-                    animation-mixer="clip: macarena ; loop: repeat" visible="false"></a-entity>
-
-                <a-entity id="Portugal2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/PortugalDance.glb" animation-mixer="clip: * ; loop: repeat"
-                    visible="false"></a-entity>
-
-            </a-entity>
-
-        </a-marker>
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- FRANCIA -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-francia.patt">
-
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="franciaIdle" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/FranciaIdle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="Francia1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/FranciaDance.glb"
-                    animation-mixer="clip: macarena; loop: repeat" visible="false"></a-entity>
-
-                <a-entity id="Francia2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/FranciaDance1.glb"
-                    animation-mixer="clip: soccer; loop: repeat" visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- EUA -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-eua.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="EuaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/EuaIdle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="Eua1" position="0 0 0" scale="0.5" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/EuaDance.glb" animation-mixer="clip: macarena; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="Eua2" position="0 0 0" scale="0.5" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/EuaDance1.glb" animation-mixer="clip: soccer; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-
-        <!-- ESPAÑA -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-españa.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="españaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/espIdle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="españa1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/EspDance.glb" animation-mixer="clip: macarena; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="españa2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/EspDance1.glb" animation-mixer="clip: soccer; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- COREA DEL SUR -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-corea.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="coreaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/coreaIdle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="corea1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/coreaDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="corea2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/coreaDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- Canada -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-canada.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="canadaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/canadaIdle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="canada1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/canadaDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="canada2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/canadaDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-
-        <!-- Brasil -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Brasil.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="BrasilNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/Brasil_Idle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="brasil1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/BrasilDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="brasil2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/BrasilDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- Argentina -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Argentina.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="argNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/ArgentinaIdle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="arg1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/ArgentinaDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="arg2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/ArgentinaDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-        <!-- Alemania -->
-        <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-alemania.patt">
-
-            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-
-
-                <a-entity id="almNormal" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/idle/AlemaniaIdle.glb" visible="true"></a-entity>
-
-
-                <a-entity id="alm1" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/AlemaniaDance.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-                <a-entity id="alm2" position="0 0 0" scale="1" rotation="-90 0 0"
-                    gltf-model="/Public/models/animations/AlemaniaDance1.glb" animation-mixer="clip: *; loop: repeat"
-                    visible="false"></a-entity>
-
-
-
-            </a-entity>
-        </a-marker>
-
-        <a-entity camera position="0 0 0"></a-entity>
-
-
-
-
-    </a-scene>
-
-
-
+    <!-- MARCO DECORATIVO -->
+    <div style="position:relative; width:min(95vw, 1100px); height:min(60vw, 600px); max-height:90vh;
+                background:url('/Public/image/div-camera.png') center/100% 100% no-repeat;
+                display:flex; align-items:center; justify-content:center;">
+        
+        <!-- VISOR -->
+        <div id="camera-wrapper" style="position:relative; width:clamp(200px, 30%, 320px); aspect-ratio:9/16; 
+                    overflow:hidden; border-radius:20px; background:#000;
+                    border:3px solid rgba(53,70,248,0.4); box-shadow:0 0 30px rgba(53,70,248,0.3);">
+            
+            <!-- A-FRAME -->
+            <a-scene embedde arjs style="position:absolute; top:0; left:0; width:100%; height:100%;">
+                
+                <!-- MÉXICO -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Mexico.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="normal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/mexicoIdle.glb" animation-mixer="clip:*; loop:repeat" visible="true"></a-entity>
+                        <a-entity id="Baile1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/MexicoDance.glb" animation-mixer="clip:macarena; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="Baile2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/MexicoDance1.glb" animation-mixer="clip:soccer; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- PORTUGAL -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-portugal.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="portugalNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/portugalIdle.glb" visible="true"></a-entity>
+                        <a-entity id="Portugal1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/PortugalDance1.glb" animation-mixer="clip:macarena; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="Portugal2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/PortugalDance.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- FRANCIA -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-francia.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="franciaIdle" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/FranciaIdle.glb" visible="true"></a-entity>
+                        <a-entity id="Francia1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/FranciaDance.glb" animation-mixer="clip:macarena; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="Francia2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/FranciaDance1.glb" animation-mixer="clip:soccer; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- EUA -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-eua.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="EuaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/EuaIdle.glb" visible="true"></a-entity>
+                        <a-entity id="Eua1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/EuaDance.glb" animation-mixer="clip:macarena; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="Eua2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/EuaDance1.glb" animation-mixer="clip:soccer; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- ESPAÑA -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-españa.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="españaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/espIdle.glb" visible="true"></a-entity>
+                        <a-entity id="españa1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/EspDance.glb" animation-mixer="clip:macarena; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="españa2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/EspDance1.glb" animation-mixer="clip:soccer; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- COREA -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-corea.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="coreaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/coreaIdle.glb" visible="true"></a-entity>
+                        <a-entity id="corea1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/coreaDance.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="corea2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/coreaDance1.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- CANADÁ -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-canada.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="canadaNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/canadaIdle.glb" visible="true"></a-entity>
+                        <a-entity id="canada1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/canadaDance.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="canada2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/canadaDance1.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- BRASIL -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Brasil.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="BrasilNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/Brasil_Idle.glb" visible="true"></a-entity>
+                        <a-entity id="brasil1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/BrasilDance.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="brasil2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/BrasilDance1.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- ARGENTINA -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-Argentina.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="argNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/ArgentinaIdle.glb" visible="true"></a-entity>
+                        <a-entity id="arg1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/ArgentinaDance.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="arg2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/ArgentinaDance1.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <!-- ALEMANIA -->
+                <a-marker preset="pattern" type="pattern" url="/Public/makers/pattern-alemania.patt">
+                    <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                        <a-entity id="almNormal" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/idle/AlemaniaIdle.glb" visible="true"></a-entity>
+                        <a-entity id="alm1" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/AlemaniaDance.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                        <a-entity id="alm2" position="0 0 0" scale="1" rotation="-90 0 0"
+                            gltf-model="/Public/models/animations/AlemaniaDance1.glb" animation-mixer="clip:*; loop:repeat" visible="false"></a-entity>
+                    </a-entity>
+                </a-marker>
+
+                <a-entity camera position="0 0 0"></a-entity>
+            </a-scene>
+
+            <!-- TEXTO -->
+            <div id="guide-text" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:10; pointer-events:none; transition:opacity 0.4s;">
+                <div style="background:rgba(0,0,0,0.7); padding:10px 18px; border-radius:20px; border:1px solid rgba(255,255,255,0.2);">
+                    <p style="color:white; font-size:14px; margin:0; font-family:sans-serif;">📷 Apunta a un marcador</p>
+                </div>
+            </div>
+
+            <!-- BOTONES -->
+            <div style="position:absolute; bottom:10px; left:0; right:0; z-index:20; display:flex; justify-content:center; gap:10px;">
+                <button id="anim1" style="display:none; width:36px; height:36px; border-radius:50%; background:white; border:2px solid #3546F8; cursor:pointer;">
+                    <img id="imgAnim1" src="/Public/image/icon-dance1.png" style="width:17px; height:17px;">
+                </button>
+                <button id="btnClose" style="width:44px; height:44px; border-radius:50%; background:#3546F8; border:2px solid rgba(255,255,255,0.5); cursor:pointer;">
+                    <img id="Folder" src="/Public/image/icon-folder.png" style="width:22px; height:22px; filter:invert(1);">
+                </button>
+                <button id="anim2" style="display:none; width:36px; height:36px; border-radius:50%; background:white; border:2px solid #3546F8; cursor:pointer;">
+                    <img id="imgAnim2" src="/Public/image/icon.-dance2.png" style="width:17px; height:17px;">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Public/scripts/RA/RA.js"></script>
+    
+    <script>
+        // Eliminar canvas fuera del visor
+        setTimeout(() => {
+            document.querySelectorAll('canvas').forEach(c => {
+                if (!c.closest('#camera-wrapper')) c.remove();
+            });
+        }, 2000);
+        
+        const obs = new MutationObserver((mutations) => {
+            mutations.forEach(m => {
+                m.addedNodes.forEach(node => {
+                    if (node.tagName === 'CANVAS' && !node.closest('#camera-wrapper')) node.remove();
+                });
+            });
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+    </script>
 </body>
-
-<script src="/Public/scripts/RA/RA.js"></script>
-
 </html>
