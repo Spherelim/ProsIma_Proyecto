@@ -1,17 +1,6 @@
-
-//*Este es para el menu
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const submenu = document.querySelector("nav");
-
-    toggle.addEventListener("click", function () {
-        submenu.classList.toggle("active");
-    });
-});
-
+//* videos.js - Versión corregida
 
 //*Este es para mandar los datos a titulo y pregunta
-
 document.addEventListener("DOMContentLoaded", () => {
     const tituloEl = document.getElementById("titulo");
     const preguntaEl = document.getElementById("pregunta");
@@ -30,25 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Cargar estado guardado de videos si existe
             const videosGuardados = localStorage.getItem('videoData');
-            console.log(videosGuardados);
+            console.log("Videos guardados:", videosGuardados);
+            
             if (videosGuardados) {
                 videos = JSON.parse(videosGuardados);
-
-                console.log("videos:" + videos);
+                console.log("Videos cargados de localStorage:", videos);
             } else {
                 videos = dataVideos;
-
-                console.log("dataVideos:" + dataVideos);
+                console.log("Videos cargados de JSON:", dataVideos);
             }
         })
         .catch(err => console.error("Error cargando JSON:", err));
 
     submenu.addEventListener("click", (e) => {
         e.preventDefault();
-        if (e.target.tagName === "A") {
-            const id = e.target.getAttribute("data-id");
-
-            console.log("Este es el id: " + id);
+        const link = e.target.closest("a"); // Mejor que verificar tagName
+        if (link) {
+            const id = link.getAttribute("data-id");
+            console.log("ID seleccionado:", id);
             mostrarPregunta(id);
         }
     });
@@ -56,56 +44,46 @@ document.addEventListener("DOMContentLoaded", () => {
     function mostrarPregunta(id) {
         // Busca la pregunta en el objeto preguntas 
         const pregunta = preguntas[id];
-
         console.log("Pregunta encontrada:", pregunta);
 
         if (pregunta) {
-
-
             tituloEl.textContent = id.replace("_", " ");
-
             preguntaEl.textContent = pregunta.Texto;
 
-
             const videoAsociado = Object.values(videos).find(v => v.PreguntaAsociada === id);
-
             console.log("Video asociado:", videoAsociado);
 
-
-            if (videoAsociado.Desbloqueado) {
-
+            if (videoAsociado && videoAsociado.Desbloqueado) {
                 videoContainer.innerHTML = `
-                
-                <div class="cardQuestion">
-                        </div  class="card" id="videoContainer">
-                            <video id="videoPlayer" class="videoPlayer" controls>
+                    <div class="cardQuestion">
+                        <div class="card">
+                            <video id="videoPlayer" class="videoPlayer w-full h-auto rounded-xl" controls>
                                 <source src="${videoAsociado.Ruta}" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
-                </div>
+                    </div>
                 `;
 
-                // simpre pondra el filtro aun que cambie de video.
-                aplicarFiltroActual();
+                // Siempre pondrá el filtro aunque cambie de video
+                if (typeof aplicarFiltroActual === 'function') {
+                    aplicarFiltroActual();
+                }
 
-                console.log("Video mostrado para:", id);
+                console.log("✅ Video mostrado para:", id);
             } else {
+                videoContainer.innerHTML = `
+                    <img class="imgVideo w-full h-auto object-contain rounded-xl" 
+                         src="../image/box-question.png" 
+                         alt="Video bloqueado">
+                `;
 
-                videoContainer.innerHTML = '<img class="imgVideo" src="../image/box-question.png" alt="Video bloqueado">';
-
-
-                if (!pregunta.Acertivo) console.log("Pregunta no acertada");
-                if (videoAsociado && !videoAsociado.Desbloqueado) console.log("Video no desbloqueado");
-                if (!videoAsociado) console.log("No hay video asociado");
+                if (!pregunta.Acertivo) console.log("❌ Pregunta no acertada");
+                if (videoAsociado && !videoAsociado.Desbloqueado) console.log("🔒 Video no desbloqueado");
+                if (!videoAsociado) console.log("⚠️ No hay video asociado");
             }
-
-
         } else {
-
             console.error("No se encontró la pregunta con id:", id);
-
         }
     }
-
-
 });

@@ -1,81 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/Public/scripts/tailwind-config.js"></script>
+    
+    <!-- Tus estilos originales (solo fuentes y lo que Tailwind no puede hacer) -->
     <link rel="stylesheet" href="../CSS/Videos_Questions.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Soccer Scan</title>
-
+    
+    <title>Soccer Scan - Videos</title>
 </head>
 
-<body>
+<body class="min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
+      style="background-image: url('/Public/image/grayFound.png');">
 
-
-    <div class="close-btn">
-        <a class="inline-block transition duration-300 ease-in-out hover:scale-120 hover: " href="/index.html">
-            <img src="/Public/image/icon-salirV2.png" alt="Regresar" class="icon normal">
-            <img src="/Public/image/icon-salirV.png" alt="Regresar" class="icon hover">
-
+    <!-- ============ BOTÓN CERRAR (Responsive) ============ -->
+    <div class="fixed top-4 right-4 sm:top-6 sm:right-6 md:top-20 md:right-12 lg:right-80 z-50">
+        <a href="/index.html" 
+           class="block transition-all duration-300 hover:scale-110 hover:rotate-90">
+            <!-- Icono responsive -->
+            <img src="/Public/image/icon-salirV2.png" 
+                 alt="Regresar" 
+                 class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
         </a>
     </div>
 
-    <div class="wrapperOpc">
-        <div class="menu-toggle"><img src="/Public/image/icon-opc.png" alt=""></div>
-
-        <nav id="submenu-preguntas" class="hidden">
-
-
-            <a href="#" data-id="Pregunta_1">Pregunta 1</a>
-            <a href="#" data-id="Pregunta_2">Pregunta 2</a>
-            <a href="#" data-id="Pregunta_3">Pregunta 3</a>
-            <a href="#" data-id="Pregunta_4">Pregunta 4</a>
-            <a href="#" data-id="Pregunta_5">Pregunta 5</a>
-            <a href="#" data-id="Pregunta_6">Pregunta 6</a>
-            <a href="#" data-id="Pregunta_7">Pregunta 7</a>
-            <a href="#" data-id="Pregunta_8">Pregunta 8</a>
-            <a href="#" data-id="Pregunta_9">Pregunta 9</a>
-            <a href="#" data-id="Pregunta_10">Pregunta 10</a>
-
-        </nav>
-
+    <!-- ============ MENÚ TOGGLE (Responsive) ============ -->
+    <div class="fixed top-4 left-4 sm:top-6 sm:left-6 md:top-20 md:left-8 z-50">
+        <button class="menu-toggle transition-transform duration-300 hover:scale-110">
+            <img src="/Public/image/icon-opc.png" 
+                 alt="Menú" 
+                 class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
+        </button>
     </div>
 
-    <div class="conteinerQuestion">
+    <!-- ============ NAVEGACIÓN LATERAL (Responsive) ============ -->
+    <nav id="submenu-preguntas" 
+         class="hidden fixed top-0 left-0 h-full 
+                w-[280px] sm:w-[320px] md:w-[350px] lg:w-[400px]
+                bg-gray-100 shadow-2xl z-40 
+                pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6
+                transform -translate-x-full transition-transform duration-300 ease-in-out">
+        
+        <div class="space-y-2 sm:space-y-3">
+            <!-- Pregunta 1 -->
+            <a href="#" data-id="Pregunta_1" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 1
+            </a>
+            
+            <!-- Pregunta 2 -->
+            <a href="#" data-id="Pregunta_2" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 2
+            </a>
+            
+            <!-- Pregunta 3 -->
+            <a href="#" data-id="Pregunta_3" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 3
+            </a>
+            
+            <!-- Pregunta 4 -->
+            <a href="#" data-id="Pregunta_4" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 4
+            </a>
+            
+            <!-- Pregunta 5 -->
+            <a href="#" data-id="Pregunta_5" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 5
+            </a>
+            
+            <!-- Pregunta 6 -->
+            <a href="#" data-id="Pregunta_6" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 6
+            </a>
+            
+            <!-- Pregunta 7 -->
+            <a href="#" data-id="Pregunta_7" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 7
+            </a>
+            
+            <!-- Pregunta 8 -->
+            <a href="#" data-id="Pregunta_8" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 8
+            </a>
+            
+            <!-- Pregunta 9 -->
+            <a href="#" data-id="Pregunta_9" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 9
+            </a>
+            
+            <!-- Pregunta 10 -->
+            <a href="#" data-id="Pregunta_10" 
+               class="block px-4 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl
+                      font-sunshine text-brand-cream hover:text-brand-medium
+                      bg-cover bg-center rounded-lg
+                      hover:brightness-110 transition-all duration-300
+                      transform hover:scale-105"
+               style="background-image: url('../image/opc-1.png');">
+                Pregunta 10
+            </a>
+        </div>
+    </nav>
 
+    <!-- Overlay para cerrar menú en móvil -->
+    <div class="menu-overlay hidden fixed inset-0 bg-black/50 z-30"></div>
 
-        <h4 id="titulo">Pregunta </h4>
-        <p id="pregunta">Encuentra los videos desbloqueados</p>
+    <!-- ============ CONTENIDO PRINCIPAL (Responsive) ============ -->
+    <div class="container mx-auto px-4 h-screen flex flex-col items-center justify-center">
+        
+        <!-- Título responsive -->
+        <h1 id="titulo" 
+            class="font-quicksilver italic 
+                   text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+                   text-brand-dark text-center 
+                   mt-8 sm:mt-12 md:mt-16 lg:mt-0
+                   mb-2 sm:mb-4">
+            Pregunta
+        </h1>
+        
+        <!-- Subtítulo responsive -->
+        <p id="pregunta" 
+           class="font-staatliches 
+                  text-lg sm:text-xl md:text-2xl lg:text-3xl
+                  text-brand-dark text-center 
+                  mb-4 sm:mb-6 md:mb-8
+                  px-2 sm:px-4">
+            Encuentra los videos desbloqueados
+        </p>
 
-        <!-- aqui se muestra el video -->
-        <div class="cardQuestion">
-
-            <div class="card" id="videoContainer">
-                <img class="imgVideo" src="../image/box-question.png" alt="">
+        <!-- Card de video responsive -->
+        <div class="w-full max-w-[300px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[500px]">
+            <div id="videoContainer" 
+                 class="card bg-brand-cream/20 rounded-2xl shadow-2xl overflow-hidden
+                        p-2 sm:p-3 md:p-4
+                        backdrop-blur-sm">
+                <!-- Imagen/video responsive -->
+                <img class="imgVideo w-full h-auto object-contain rounded-xl" 
+                     src="../image/box-question.png" 
+                     alt="Video bloqueado">
             </div>
-
-
         </div>
 
-        <div class="submenu">
-
-            <div class="containerSelect">
-                <select name="Filtros" id="opcFiltro" class="wrapperFiltro">
-                    <option value="default" class="opc">Selecciona un filtro</option>
-                    <option value="1" class="opc">Filtro 1</option>
-                    <option value="2" class="opc">Filtro 2</option>
-                    <option value="3" class="opc">Filtro 3</option>
-                    <option value="4" class="opc">Filtro 4</option>
-                </select>
-            </div>
-
+        <!-- Filtro responsive -->
+        <div class="submenu mt-4 sm:mt-6 md:mt-8 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px]">
+            <select id="opcFiltro" 
+                    class="wrapperFiltro w-full px-4 py-2 sm:py-3
+                           rounded-xl border-2 border-brand-light
+                           font-sunshine text-brand-medium
+                           text-sm sm:text-base md:text-lg
+                           bg-white/90 backdrop-blur-sm
+                           focus:outline-none focus:border-brand-medium
+                           transition-all duration-300
+                           cursor-pointer">
+                <option value="default" class="opc py-2">Selecciona un filtro</option>
+                <option value="1" class="opc">Normal</option>
+                <option value="2" class="opc">Blanco y Negro</option>
+                <option value="3" class="opc">Sepia</option>
+                <option value="4" class="opc">Alto Contraste</option>
+            </select>
         </div>
     </div>
 
+    <!-- ============ SCRIPTS ============ -->
+    <script src="/Public/scripts/Trivia_Quest/videos.js"></script>
+    <script src="/Public/scripts/FiltroVideo.js"></script>
+    
+    <!-- Script para manejo del menú responsive -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.querySelector(".menu-toggle");
+            const submenu = document.querySelector("#submenu-preguntas");
+            const overlay = document.querySelector(".menu-overlay");
+
+            // Función para abrir menú
+            function openMenu() {
+                submenu.classList.add("active");
+                submenu.classList.remove("hidden");
+                submenu.style.transform = "translateX(0)";
+                overlay.classList.remove("hidden");
+                document.body.style.overflow = "hidden";
+            }
+
+            // Función para cerrar menú
+            function closeMenu() {
+                submenu.classList.remove("active");
+                submenu.style.transform = "translateX(-100%)";
+                overlay.classList.add("hidden");
+                document.body.style.overflow = "";
+                
+                // Ocultar después de la animación
+                setTimeout(() => {
+                    if (!submenu.classList.contains("active")) {
+                        submenu.classList.add("hidden");
+                    }
+                }, 300);
+            }
+
+            // Toggle menú
+            toggle.addEventListener("click", function (e) {
+                e.stopPropagation();
+                if (submenu.classList.contains("active")) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+
+            // Cerrar al hacer clic en overlay
+            overlay.addEventListener("click", closeMenu);
+
+            // Cerrar al hacer clic en un enlace del menú (en móvil)
+            submenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    if (window.innerWidth < 1024) { // Cerrar en tablets y móviles
+                        closeMenu();
+                    }
+                });
+            });
+
+            // Cerrar con tecla Escape
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape" && submenu.classList.contains("active")) {
+                    closeMenu();
+                }
+            });
+
+            // Ajustar al redimensionar ventana
+            window.addEventListener("resize", () => {
+                if (window.innerWidth >= 1024 && submenu.classList.contains("active")) {
+                    // En desktop el menú puede quedarse abierto
+                }
+            });
+        });
+    </script>
 </body>
-
-<script src="/Public/scripts/Trivia_Quest/videos.js"></script>
-<script src="/Public/scripts/FiltroVideo.js"></script>
-
 </html>
