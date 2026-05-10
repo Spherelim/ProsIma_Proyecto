@@ -1,35 +1,179 @@
-@font-face { font-family:"Afacado"; src:url(/Public/fonts/Afacad-VariableFont_wght.ttf) format("truetype"); }
-@font-face { font-family:"Quicksilver"; src:url(/Public/fonts/Quicksilver.ttf) format("truetype"); }
-@font-face { font-family:"Staatliches"; src:url(/Public/fonts/Staatliches-Regular.ttf) format("truetype"); }
-@font-face { font-family:"sunshine"; src:url(/Public/fonts/sunshineformulaDEMO.otf) format("opentype"); }
-
-:root {
-    --color-AC:#85B0F9; --color-AM:#3546F8; --color-AF:#1A1F7A;
-    --color-R:#C30007; --color-B:#D9D9D9;
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body { overflow:hidden; }
-
-/* Bloquear canvas/video fuera del visor */
-body > canvas { display:none !important; }
-body > video { display:none !important; }
-
-#camera-wrapper { contain:strict; overflow:hidden; }
-
-#camera-wrapper canvas { 
-    position:absolute !important; top:0 !important; left:0 !important;
-    width:100% !important; height:100% !important;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a-scene { 
-    position:absolute !important; top:0 !important; left:0 !important;
-    width:100% !important; height:100% !important;
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
 }
 
-@media (max-width:640px) {
-    #camera-wrapper { width:85% !important; border-radius:15px; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-@media (min-width:641px) and (max-width:1024px) {
-    #camera-wrapper { width:40% !important; }
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*aqui empieza el diseño de la pagina*/
+body {
+    overflow: hidden;
+    background-color: transparent;
+}
+
+
+.screen-detail {
+
+
+    background-image: url("/Public/image/ra_fondo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.fondo-conteiner {
+
+    background-image: url("/Public/image/div-camera.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1200px;
+    height: 640px;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-conteiner {
+    /*  background-image: url("/Public/image/camera-marco.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center; */
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+
+    display: grid;
+
+
+}
+
+.camera {
+    position: relative;
+    width: 400px;
+    height: 600px;
+
+}
+
+.arScene {
+    width: 400px;
+    height: 600px;
+}
+
+.menu-camera {
+    position: absolute;
+    top: 520px;
+    width: 400px;
+    height: 80px;
+    z-index: 1;
+}
+
+.ul-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #3546F8;
+    padding: 3px;
+    cursor: pointer;
+
+}
+
+.btnFolder {
+
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+.close-btn {
+
+    position: fixed;
+    top: 60px;
+    right: 200px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.icon.hover {
+    display: none;
+}
+
+a:hover .icon.normal {
+    display: none;
+}
+
+a:hover .icon.hover {
+    display: inline;
+}
+
+a-scene {
+    width: 100%;
+    height: 100vh; /* ocupa toda la pantalla */
+}
+
+
+@media (max-width: 480px) {
+
+
+  
+
 }

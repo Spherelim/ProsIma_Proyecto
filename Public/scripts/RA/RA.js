@@ -1,71 +1,360 @@
-// ============ BOTÓN FOLDER (ABRIR/CERRAR BAILES) ============
-const btnClose = document.getElementById("btnClose");
+
+const btnFolder = document.querySelector(".btnFolder");
 const folderIcon = document.getElementById("Folder");
 const btnAnim1 = document.getElementById("anim1");
 const btnAnim2 = document.getElementById("anim2");
-const guideText = document.getElementById('guide-text');
 
 let abierto = false;
 
-if (btnClose) {
-    btnClose.addEventListener("click", () => {
-        abierto = !abierto;
-        if (abierto) {
-            folderIcon.src = "/Public/image/folder-symlink-fill.png";
-            btnAnim1.style.display = "flex";
-            btnAnim2.style.display = "flex";
-        } else {
-            folderIcon.src = "/Public/image/icon-folder.png";
-            btnAnim1.style.display = "none";
-            btnAnim2.style.display = "none";
-            // Volver a idle
-            cambiarAnimacion('normal');
-        }
+btnFolder.addEventListener("click", () => {
+
+
+    abierto = !abierto;
+    if (abierto) {
+
+        folderIcon.src = "/Public/image/folder-symlink-fill.png";
+        btnAnim1.style.display = "inline-block";
+        btnAnim2.style.display = "flex";
+    } else {
+
+
+        folderIcon.src = "/Public/image/icon-folder.png";
+        btnAnim1.style.display = "none";
+        btnAnim2.style.display = "none";
+    }
+})
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.getElementById("anim1").addEventListener("click", function (e) {
+        const normal = document.querySelector("#normal")
+        const baile1 = document.querySelector("#Baile1");
+        const baile2 = document.querySelector("#Baile2");
+
+        //portugal
+        const portugalNormal = document.querySelector("#portugalNormal");
+        const portugal1 = document.querySelector("#Portugal1");
+        const portugal2 = document.querySelector("#Portugal2");
+
+
+        //Francia
+        const franciaNormal = document.querySelector("#franciaIdle");
+        const francia1 = document.querySelector("#Francia1");
+        const francia2 = document.querySelector("#Francia2");
+
+        //EUA
+        const EuaNormal = document.querySelector("#EuaNormal");
+        const Eua1 = document.querySelector("#Eua1");
+        const Eua2 = document.querySelector("#Eua2");
+
+        //España
+        const españaNormal = document.querySelector("#españaNormal");
+        const esp1 = document.querySelector("#españa1");
+        const esp2 = document.querySelector("#españa2");
+
+        //corea
+        const corea = document.querySelector("#coreaNormal");
+        const cor1 = document.querySelector("#corea1");
+        const cor2 = document.querySelector("#corea2");
+
+        //canada
+        const canada = document.querySelector("#canadaNormal");
+        const can1 = document.querySelector("#canada1");
+        const can2 = document.querySelector("#canada2");
+
+
+         //brasil
+        const brasil = document.querySelector("#BrasilNormal");
+        const brasil1 = document.querySelector("#brasil1");
+        const brasil2 = document.querySelector("#brasil2");
+
+        //Argentina
+        const argentina = document.querySelector("#argNormal");
+        const arg1 = document.querySelector("#arg1");
+        const arg2 = document.querySelector("#arg2");
+
+
+        //alemania
+        const alem = document.querySelector("#almNormal");
+        const alem1 = document.querySelector("#alm1");
+        const alem2 = document.querySelector("#alm2");
+
+        // Mostrar Baile1 y ocultar Baile2
+        normal.setAttribute('visible', 'false');
+        baile1.setAttribute('visible', 'true');
+        baile2.setAttribute('visible', 'false');
+
+        //portugal
+        portugalNormal.setAttribute('visible', 'false');
+        portugal1.setAttribute('visible', 'true');
+        portugal2.setAttribute('visible', 'false');
+
+
+        //Francia
+        franciaNormal.setAttribute('visible', 'false');
+        francia1.setAttribute('visible', 'true');
+        francia2.setAttribute('visible', 'false');
+
+
+        //EUA    
+        EuaNormal.setAttribute('visible', 'false');
+        Eua1.setAttribute('visible', 'true');
+        Eua2.setAttribute('visible', 'false');
+
+        //España
+        españaNormal.setAttribute('visible', 'false');
+        esp1.setAttribute('visible', 'true');
+        esp2.setAttribute('visible', 'false');
+
+        //corea
+        corea.setAttribute('visible', 'false');
+        cor1.setAttribute('visible', 'true');
+        cor2.setAttribute('visible', 'false');
+
+        //canada
+        canada.setAttribute('visible', 'false');
+        can1.setAttribute('visible', 'true');
+        can2.setAttribute('visible', 'false');
+
+        //brasil
+        brasil.setAttribute('visible', 'false');
+        brasil1.setAttribute('visible', 'true');
+        brasil2.setAttribute('visible', 'false');
+
+        //argentina
+        argentina.setAttribute('visible', 'false');
+        arg1.setAttribute('visible', 'true');
+        arg2.setAttribute('visible', 'false');
+
+        //alemania
+        alem.setAttribute('visible', 'false');
+        alem1.setAttribute('visible', 'true');
+        alem2.setAttribute('visible', 'false');
+    
+        // Si quieres agregar animación al modelo
+        baile1.setAttribute('animation-mixer', 'clip: *; loop: repeat');
     });
-}
 
-// ============ CAMBIAR ANIMACIONES ============
-function cambiarAnimacion(tipo) {
-    const paises = [
-        ["normal","Baile1","Baile2"],
-        ["portugalNormal","Portugal1","Portugal2"],
-        ["franciaIdle","Francia1","Francia2"],
-        ["EuaNormal","Eua1","Eua2"],
-        ["españaNormal","españa1","españa2"],
-        ["coreaNormal","corea1","corea2"],
-        ["canadaNormal","canada1","canada2"],
-        ["BrasilNormal","brasil1","brasil2"],
-        ["argNormal","arg1","arg2"],
-        ["almNormal","alm1","alm2"]
-    ];
+    document.getElementById("anim2").addEventListener("click", function (e) {
+        const normal = document.querySelector("#normal")
+        const baile1 = document.querySelector("#Baile1");
+        const baile2 = document.querySelector("#Baile2");
 
-    paises.forEach(([normalId, baile1Id, baile2Id]) => {
-        const n = document.getElementById(normalId);
-        const b1 = document.getElementById(baile1Id);
-        const b2 = document.getElementById(baile2Id);
-        if (!n || !b1 || !b2) return;
+        //portugal
+        const portugalNormal = document.querySelector("#portugalNormal");
+        const portugal1 = document.querySelector("#Portugal1");
+        const portugal2 = document.querySelector("#Portugal2");
 
-        if (tipo === 'normal') {
-            n.setAttribute('visible', 'true');
-            b1.setAttribute('visible', 'false');
-            b2.setAttribute('visible', 'false');
-        } else if (tipo === 'baile1') {
-            n.setAttribute('visible', 'false');
-            b1.setAttribute('visible', 'true');
-            b2.setAttribute('visible', 'false');
-        } else if (tipo === 'baile2') {
-            n.setAttribute('visible', 'false');
-            b1.setAttribute('visible', 'false');
-            b2.setAttribute('visible', 'true');
-        }
+        //Francia
+        const franciaNormal = document.querySelector("#franciaIdle");
+        const francia1 = document.querySelector("#Francia1");
+        const francia2 = document.querySelector("#Francia2");
+
+        //EUA
+        const EuaNormal = document.querySelector("#EuaNormal");
+        const Eua1 = document.querySelector("#Eua1");
+        const Eua2 = document.querySelector("#Eua2");
+
+        //España
+        const españaNormal = document.querySelector("#españaNormal");
+        const esp1 = document.querySelector("#españa1");
+        const esp2 = document.querySelector("#españa2");
+
+        //corea
+        const corea = document.querySelector("#coreaNormal");
+        const cor1 = document.querySelector("#corea1");
+        const cor2 = document.querySelector("#corea2");
+
+
+        //canada
+        const canada = document.querySelector("#canadaNormal");
+        const can1 = document.querySelector("#canada1");
+        const can2 = document.querySelector("#canada2");
+
+
+        //brasil
+        const brasil = document.querySelector("#BrasilNormal");
+        const brasil1 = document.querySelector("#brasil1");
+        const brasil2 = document.querySelector("#brasil2");
+
+        //Argentina
+        const argentina = document.querySelector("#argNormal");
+        const arg1 = document.querySelector("#arg1");
+        const arg2 = document.querySelector("#arg2");
+
+        //alemania
+        const alem = document.querySelector("#almNormal");
+        const alem1 = document.querySelector("#alm1");
+        const alem2 = document.querySelector("#alm2");
+
+       
+
+        // Mostrar Baile2 y ocultar Baile1
+        normal.setAttribute('visible', 'false');
+        baile2.setAttribute('visible', 'true');
+        baile1.setAttribute('visible', 'false');
+
+
+        //portugal
+        portugalNormal.setAttribute('visible', 'false');
+        portugal1.setAttribute('visible', 'false');
+        portugal2.setAttribute('visible', 'true');
+
+
+        //Francia
+        franciaNormal.setAttribute('visible', 'false');
+        francia1.setAttribute('visible', 'false');
+        francia2.setAttribute('visible', 'true');
+
+        //EUA
+        EuaNormal.setAttribute('visible', 'false');
+        Eua1.setAttribute('visible', 'false');
+        Eua2.setAttribute('visible', 'true');
+
+        //España
+        españaNormal.setAttribute('visible', 'false');
+        esp1.setAttribute('visible', 'false');
+        esp2.setAttribute('visible', 'true');
+
+        //corea
+        corea.setAttribute('visible', 'false');
+        cor1.setAttribute('visible', 'false');
+        cor2.setAttribute('visible', 'true');
+
+        //canada
+        canada.setAttribute('visible', 'false');
+        can1.setAttribute('visible', 'false');
+        can2.setAttribute('visible', 'true');
+
+        //brasil
+        brasil.setAttribute('visible', 'false');
+        brasil1.setAttribute('visible', 'false');
+        brasil2.setAttribute('visible', 'true');
+
+        //argentina
+        argentina.setAttribute('visible', 'false');
+        arg1.setAttribute('visible', 'false');
+        arg2.setAttribute('visible', 'true');
+
+        //alemania
+        alem.setAttribute('visible', 'false');
+        alem1.setAttribute('visible', 'false');
+        alem2.setAttribute('visible', 'true');
+
+        // Si quieres agregar animación al modelo
+        baile2.setAttribute('animation-mixer', 'clip: *; loop: repeat');
     });
-}
 
-if (btnAnim1) btnAnim1.addEventListener("click", () => cambiarAnimacion('baile1'));
-if (btnAnim2) btnAnim2.addEventListener("click", () => cambiarAnimacion('baile2'));
+    document.getElementById("btnClose").addEventListener("click", function (e) {
+        const normal = document.querySelector("#normal")
+        const baile1 = document.querySelector("#Baile1");
+        const baile2 = document.querySelector("#Baile2");
 
-// ============ OCULTAR TEXTO AL DETECTAR MARCADOR ============
-document.querySelectorAll('a-marker').forEach(marker => {
-    marker.addEventListener('markerFound', () => { if (guideText) guideText.style.opacity = '0'; });
-    marker.addEventListener('markerLost', () => { if (guideText) guideText.style.opacity = '1'; });
+
+        //portugal
+        const portugalNormal = document.querySelector("#portugalNormal");
+        const portugal1 = document.querySelector("#Portugal1");
+        const portugal2 = document.querySelector("#Portugal2");
+
+
+        //Francia
+        const franciaNormal = document.querySelector("#franciaIdle");
+        const francia1 = document.querySelector("#Francia1");
+        const francia2 = document.querySelector("#Francia2");
+
+
+        //EUA
+        const EuaNormal = document.querySelector("#EuaNormal");
+        const Eua1 = document.querySelector("#Eua1");
+        const Eua2 = document.querySelector("#Eua2");
+
+        //España
+        const españaNormal = document.querySelector("#españaNormal");
+        const esp1 = document.querySelector("#españa1");
+        const esp2 = document.querySelector("#españa2");
+
+
+        //corea
+        const corea = document.querySelector("#coreaNormal");
+        const cor1 = document.querySelector("#corea1");
+        const cor2 = document.querySelector("#corea2");
+
+        //canada
+        const canada = document.querySelector("#canadaNormal");
+        const can1 = document.querySelector("#canada1");
+        const can2 = document.querySelector("#canada2");
+
+        //brasil
+        const brasil = document.querySelector("#BrasilNormal");
+        const brasil1 = document.querySelector("#brasil1");
+        const brasil2 = document.querySelector("#brasil2");
+
+       
+        //Argentina
+        const argentina = document.querySelector("#argNormal");
+        const arg1 = document.querySelector("#arg1");
+        const arg2 = document.querySelector("#arg2");
+
+        //alemania
+        const alem = document.querySelector("#almNormal");
+        const alem1 = document.querySelector("#alm1");
+        const alem2 = document.querySelector("#alm2");
+
+        // Mostrar Baile1 y ocultar Baile2
+        normal.setAttribute('visible', 'true');
+        baile1.setAttribute('visible', 'false');
+        baile2.setAttribute('visible', 'false');
+
+        //portugal
+        portugalNormal.setAttribute('visible', 'true');
+        portugal1.setAttribute('visible', 'false');
+        portugal2.setAttribute('visible', 'false');
+
+        //Francia
+        franciaNormal.setAttribute('visible', 'true');
+        francia1.setAttribute('visible', 'false');
+        francia2.setAttribute('visible', 'false');
+
+        //EUA
+        EuaNormal.setAttribute('visible', 'true');
+        Eua1.setAttribute('visible', 'false');
+        Eua2.setAttribute('visible', 'false');
+
+        //España
+        españaNormal.setAttribute('visible', 'true');
+        esp1.setAttribute('visible', 'false');
+        esp2.setAttribute('visible', 'false');
+
+        //corea
+        corea.setAttribute('visible', 'true');
+        cor1.setAttribute('visible', 'false');
+        cor2.setAttribute('visible', 'false');
+
+        //canada
+        canada.setAttribute('visible', 'true');
+        can1.setAttribute('visible', 'false');
+        can2.setAttribute('visible', 'false');
+
+        //canada
+        brasil.setAttribute('visible', 'true');
+        brasil1.setAttribute('visible', 'false');
+        brasil2.setAttribute('visible', 'false');
+
+        //argentina
+        argentina.setAttribute('visible', 'true');
+        arg1.setAttribute('visible', 'false');
+        arg2.setAttribute('visible', 'false');
+
+        //alemania
+        alem.setAttribute('visible', 'true');
+        alem1.setAttribute('visible', 'false');
+        alem2.setAttribute('visible', 'false');
+
+    });
+
+
 });
+
