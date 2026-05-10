@@ -21,3 +21,10 @@ a:hover .icon.hover{display:inline}
 
 @media(max-width:640px){#camera-wrapper{width:85%!important;border-radius:15px}}
 @media(min-width:641px) and (max-width:1024px){#camera-wrapper{width:40%!important}}
+
+/* OCULTAR BOTONES AR/VR DE A-FRAME */
+.a-enter-vr-button,
+.a-enter-ar-button,
+.a-orientation-modal {
+    display: none !important;
+}
