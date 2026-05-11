@@ -14,6 +14,8 @@ function getDeviceType() {
                     && !isTablet;
     
     return { isMobile, isTablet };
+
+    
 }
 
 async function startCamera() {

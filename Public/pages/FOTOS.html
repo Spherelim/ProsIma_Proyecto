@@ -20,20 +20,21 @@
 
         <div class="camera-layout relative flex justify-center items-center"><br>
         
-            <div class="close-btn absolute z-2  top-8 lg:top-12 left-[40px] group">
+            <div class="close-btn absolute z-2  top-6 left-[15px] sm:top-8 sm:left-[20px]  md:top-22
+            md:left-[80px] lg:top-28 lg:left-[100px] group">
                 <a class="inline-block transition duration-300 ease-in-out hover:scale-120" href="/index.html">
-                    <img src="/Public/image/icon-salirV2.png" alt="Regresar" class="icon normal w-14 block group-hover:hidden">
-                    <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon hover w-14 hidden group-hover:block">
+                    <img src="/Public/image/icon-hover.png" alt="Regresar" class="icon normal w-20 md:w-24 block group-hover:hidden">
+                    <img src="/Public/image/icon-salir.png" alt="Regresar" class="icon hover w-20  md:w-24 hidden group-hover:block">
         
                 </a>
             </div>
 
 
             <!-- Esta es la camara -->
-            <div class="phone-camera rounded-[25px]    sm:w-max-[400px] sm:h-4/5  md:w-180 md:h-140 lg:w-275 lg:h-165">
+            <div class="phone-camera rounded-[25px] w-[350px] h-[600px]  sm:w-[400px] sm:h-[640px]  md:w-180 md:h-140 lg:w-275 lg:h-165">
 
                 <!-- prende la camara automaticamente -->
-                <video id="camara" class="border-8 border-[#3546F8] rounded-2xl" autoplay playsinline></video>
+                <video id="camara" class="border-4  md:border-[50px]  lg:border-[80px] border-[#3546F8] rounded-4xl " autoplay playsinline></video>
 
 
             </div>
@@ -42,9 +43,9 @@
             <!-- Pone el filtro encima de la camara -->
             <img id="overlay" class="absolute  pointer-events-none " src="" alt="">
 
-            <div class="preview-box absolute bottom-7/8 left-9/12  md:bottom-5/6  md:left-10/12 lg:bottom-5/6 lg:left-250 z-2">
+            <div class="preview-box absolute bottom-[500px] left-9/12 sm:bottom-5/6 sm:left-9/12 md:bottom-8/12  md:left-9/12 lg:bottom-8/12 lg:left-220 z-2">
                 <img id="preview" src="/Public/image/previewPhoto.jfif" alt="Preview"
-                    class="w-14 h-14 rounded-full border-2 border-[#3546F8]">
+                    class="w-18 h-18 md:w-24 md:h-24 rounded-full border-2 border-[#3546F8]">
             </div>
 
             <canvas id="canvas" style="display:none;"></canvas>
@@ -55,7 +56,7 @@
     </div>
 
     <!-- Menú de filtros -->
-    <div class="subFiltro relative flex justify-center items-center gap-4 bottom-36 z-2">
+    <div class="subFiltro relative flex justify-center items-center gap-4 bottom-33 z-2">
 
         <ul class="flex gap-4">
             <li><button id="btnFoto" class=""> <img src="/Public/image/btnFoto.png" alt=""></button></li>
