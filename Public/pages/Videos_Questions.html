@@ -197,25 +197,21 @@
             </div>
         </div>
 
-        <!-- Filtro responsive -->
+        <!-- Filtro responsive con panel de controles integrado -->
         <div class="submenu mt-4 sm:mt-6 md:mt-8 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px]">
             <select id="opcFiltro" 
                     class="wrapperFiltro w-full px-4 py-2 sm:py-3
-                           rounded-xl border-2 border-brand-light
-                           font-sunshine text-brand-medium
-                           text-sm sm:text-base md:text-lg
-                           bg-white/90 backdrop-blur-sm
-                           focus:outline-none focus:border-brand-medium
-                           transition-all duration-300
-                           cursor-pointer">
-                <option value="default" class="opc py-2">Selecciona un filtro</option>
-                <option value="1" class="opc">Normal</option>
-                <option value="2" class="opc">Blanco y Negro</option>
-                <option value="3" class="opc">Sepia</option>
-                <option value="4" class="opc">Alto Contraste</option>
+                        rounded-xl border-2 border-brand-light
+                        font-sunshine text-brand-medium
+                        text-sm sm:text-base md:text-lg
+                        bg-white/90 backdrop-blur-sm
+                        focus:outline-none focus:border-brand-medium
+                        transition-all duration-300
+                        cursor-pointer">
+                <option value="default">Normal</option>
             </select>
+            <!-- Los controles se añaden aquí dinámicamente -->
         </div>
-    </div>
 
     <!-- ============ SCRIPTS ============ -->
     <script src="/Public/scripts/Trivia_Quest/videos.js"></script>

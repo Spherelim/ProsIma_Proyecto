@@ -1,6 +1,4 @@
-//* videos.js - Versión corregida
-
-//*Este es para mandar los datos a titulo y pregunta
+// videos.js - Modificado para mostrar video correctamente
 document.addEventListener("DOMContentLoaded", () => {
     const tituloEl = document.getElementById("titulo");
     const preguntaEl = document.getElementById("pregunta");
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(([dataPreguntas, dataVideos]) => {
             preguntas = dataPreguntas;
 
-            // Cargar estado guardado de videos si existe
             const videosGuardados = localStorage.getItem('videoData');
             console.log("Videos guardados:", videosGuardados);
             
@@ -33,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     submenu.addEventListener("click", (e) => {
         e.preventDefault();
-        const link = e.target.closest("a"); // Mejor que verificar tagName
+        const link = e.target.closest("a");
         if (link) {
             const id = link.getAttribute("data-id");
             console.log("ID seleccionado:", id);
@@ -42,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function mostrarPregunta(id) {
-        // Busca la pregunta en el objeto preguntas 
         const pregunta = preguntas[id];
         console.log("Pregunta encontrada:", pregunta);
 
@@ -54,9 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Video asociado:", videoAsociado);
 
             if (videoAsociado && videoAsociado.Desbloqueado) {
+                // Limpiar y crear nuevo video
                 videoContainer.innerHTML = `
                     <div class="cardQuestion">
-                        <div class="card">
+                        <div class="card relative">
                             <video id="videoPlayer" class="videoPlayer w-full h-auto rounded-xl" controls>
                                 <source src="${videoAsociado.Ruta}" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
@@ -64,13 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                     </div>
                 `;
-
-                // Siempre pondrá el filtro aunque cambie de video
-                if (typeof aplicarFiltroActual === 'function') {
-                    aplicarFiltroActual();
-                }
-
-                console.log("✅ Video mostrado para:", id);
+                
+                console.log(" Video mostrado para:", id);
+                
+                // Disparar evento para que los filtros se apliquen
+                const event = new CustomEvent('videoLoaded', { detail: { id: id } });
+                document.dispatchEvent(event);
             } else {
                 videoContainer.innerHTML = `
                     <img class="imgVideo w-full h-auto object-contain rounded-xl" 
@@ -80,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (!pregunta.Acertivo) console.log("❌ Pregunta no acertada");
                 if (videoAsociado && !videoAsociado.Desbloqueado) console.log("🔒 Video no desbloqueado");
-                if (!videoAsociado) console.log("⚠️ No hay video asociado");
+                if (!videoAsociado) console.log(" No hay video asociado");
             }
         } else {
             console.error("No se encontró la pregunta con id:", id);
