@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "Afacado";
     src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
@@ -44,7 +43,7 @@
 }
 
 /*aqui empieza el diseño de la pagina*/
-body{
+body {
     overflow: hidden;
     background-color: transparent;
 }
@@ -52,18 +51,18 @@ body{
 
 .screen-detail {
 
-  
+
     background-image: url("/Public/image/ra_fondo.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
     height: 100%;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+
+
 
 }
 
@@ -73,8 +72,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 1200px;
-    height: 640px;
+    width: 1400px;
+    height: 800px;
     border-radius: 25px;
 
     display: flex;
@@ -83,16 +82,12 @@ body{
 }
 
 .camera-conteiner {
-   /*  background-image: url("/Public/image/camera-marco.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center; */
+   
     width: 400px;
     height: 600px;
     border-radius: 25px;
 
-    display: grid;
-
+   
 
 }
 
@@ -100,54 +95,50 @@ body{
     position: relative;
     width: 400px;
     height: 600px;
-    
+
 }
 
-.arScene {
-    width: 400px;
-    height: 600px;
-}
 
 .menu-camera {
-   position: absolute;
-   top: 520px;
-   width: 400px;
-   height: 80px;
-   z-index: 1;
+    position: absolute;
+    top: 680px;
+    width: 400px;
+    height: 80px;
+    z-index: 1;
 }
 
-.ul-icons{
+.ul-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
-.btn{
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    
-}
-
-.btnFolder{
-
+.btn {
     width: 60px;
     height: 60px;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     border-radius: 50%;
     border: 2px solid #3546F8;
     padding: 3px;
     cursor: pointer;
-    
+
 }
+
+.btnFolder {
+
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+
+}
+
 .close-btn {
 
     position: fixed;
-    top: 60px;
-    right: 200px;
+    top: 80px;
+    right: 280px;
     width: 80px;
     height: 80px;
     cursor: pointer;
@@ -164,4 +155,197 @@ a:hover .icon.normal {
 
 a:hover .icon.hover {
     display: inline;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+
+  
+.fondo-conteiner {
+
+    background-image: url("/Public/image/div-camera.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 600px;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.close-btn {
+
+    position: fixed;
+    top: 130px;
+    right: 150px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-camera {
+    position: absolute;
+    top: 550px;
+    width: 400px;
+    height: 80px;
+    z-index: 1;
+}
+
+
+.btn {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #3546F8;
+    padding: 3px;
+    cursor: pointer;
+
+}
+
+.btnFolder {
+
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+
+}
+
+
+
+@media (max-width: 640px) {
+
+
+  
+.fondo-conteiner {
+
+    background-image: url("/Public/image/div-camera.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.close-btn {
+
+    position: fixed;
+    top: 120px;
+    right: 120px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-camera {
+    position: absolute;
+    top: 550px;
+    width: 400px;
+    height: 80px;
+    z-index: 1;
+}
+
+
+.btn {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #3546F8;
+    padding: 3px;
+    cursor: pointer;
+
+}
+
+.btnFolder {
+
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  
+.fondo-conteiner {
+
+    background-image: url("/Public/image/div-camera.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+
+    display: hidden;
+   /*  justify-content: center;
+    align-items: center; */
+}
+
+
+.close-btn {
+
+    position: fixed;
+    top: 130px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-camera {
+    position: absolute;
+    top: 550px;
+    width: 400px;
+    height: 80px;
+    z-index: 1;
+}
+
+
+.btn {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #3546F8;
+    padding: 3px;
+    cursor: pointer;
+
+}
+
+.btnFolder {
+
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+
+
 }

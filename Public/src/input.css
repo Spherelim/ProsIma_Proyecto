@@ -1,0 +1,49 @@
+
+
+:root{
+    --color-AC:#85B0F9;
+    --color-AM:#3546F8;
+    --color-AF:#1A1F7A;
+    --color-R:#C30007;
+    --color-B:#D9D9D9;
+    --letra-Afacado:'Afacado', Afacad-VariableFont_wght;
+    --letra-Quicksilver:'Quicksilver', Quicksilver;
+    --letra-Staatliches:'Staatliches', Staatliches-Regular;
+    --letra-sunshine:'sunshine', sunshineformulaDEMO;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Afacado";
+    src: url(/Public/fonts/Afacad-VariableFont_wght.ttf)format("truetype")
+}
+
+
+@font-face {
+    font-family: "Quicksilver";
+    src: url(/Public/fonts/Quicksilver.ttf)format("truetype")
+}
+
+
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(/Public/fonts/Staatliches-Regular.ttf)format("truetype")
+}
+
+
+
+@font-face {
+    font-family: "sunshine";
+    src: url(/Public/fonts/sunshineformulaDEMO.otf)format("opentype")
+}
+
+
+
+
+@import "tailwindcss";

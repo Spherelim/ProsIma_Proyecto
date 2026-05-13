@@ -5,23 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soccer Scan</title>
-    <link rel="stylesheet" href="/Public/CSS/Trivia_Preguntas.css">
+    <!-- <link rel="stylesheet" href="/Public/CSS/Trivia_Preguntas.css"> -->
     <link rel="stylesheet" href="/Public/CSS/messages.css">
-    
+    <link rel="stylesheet" href="../src/output.css">
+
 </head>
 
-<body>
+<body
+    class="bg-[url('/Public/image/blueFound.png')] bg bg-center bg-no-repeat bg-cover  overflow-y-hidden  lg:bg-repeat  grid place-items-center h-screen ">
 
-    <div class="Preguntas">
+    <div class="containerQuestion grid gap-10 justify-items-center">
 
-        <h4 id="titulo"></h4>
-        <p id="pregunta"></p>
 
-    </div>
+        <div class="Preguntas ">
 
-    <div class="wrapper-preguntas">
+            <h4 id="titulo"
+                class="font-[Quicksilver] italic text-[50px] sm:text-[55px]  md:text-[65px] lg:text-[80px] text-[#D9D9D9] text-center ">
+            </h4>
+            <p id="pregunta"
+                class="font-[Staatliches] text-[27px] sm:text-[27px] md:text-[28px] lg:text-[40px] text-[#D9D9D9] text-center  lg:p-0">
+            </p>
 
-        <!-- <ul class="primeraFila">
+        </div>
+
+        <div class="wrapper-preguntas grid grid-rows-2  gap-2 md:gap-4 lg:gap-5">
+
+
+            <!-- <ul class="primeraFila">
             <li class="btn">A) Alemania</li>
             <li class="btn">B) Brasil</li>
 
@@ -33,13 +43,23 @@
             <li class="btn">D) Argentina</li>
         </ul> -->
 
-    </div>
+        </div>
 
 
-    <div class="submenu">
-        <button onclick="window.location.href='Trivia_Portada.html'" id="btnBack"  class="btnClick">Salir</button>
-        <button onclick="siguientePregunta()" id="btnNext" class="btnClick">Siguiente</button>
+        <div class="submenu w-20 h-10 sm:w-22 sm:h-10 md:w-25 md:h-10  lg:w-30 lg:h-10  bg-[#D9D9D9]  font-[sunshine] text-[22px] sm:text-[25] md:text-[28] lg:text-[30px]  text-[#3546F8]
+                border-none rounded-[15px] shadow-[4px_4px_10px_#1f1e1e]
+                mb-[ 20px] flex justify-center items-center">
+        <button onclick="window.location.href='../../../index.html'" id="btnBack" class="btnClick  ">Salir</button>
+        <!-- <button onclick="siguientePregunta()" id="btnNext" class="btnClick">Siguiente</button> -->
+
+
+        </div>
+
     </div>
+    
+
+
+
 
     <script src="../scripts/Trivia_Quest/Preguntas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
